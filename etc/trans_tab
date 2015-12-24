@@ -1,5 +1,6 @@
 #trans_code  appname    timeout maxproc
 2380         tcopSvr    60      50
+2381         tcopSvr    60      50
 0001         tcopSvr    60      50
 0002         tcopSvr    60      50
 0003         tcopSvr    60      50

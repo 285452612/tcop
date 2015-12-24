@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<ITEMDICT>
+    <XMLITEM>
+        <!-- 银行接口相关的元素定义 -->
+        <SysCode            FMT='M=7'       DESC='外系统代码'/>
+        <TxCode             FMT='M=4'       DESC='交易代码'/>
+        <ClearDate          FMT='M=8'       DESC='交易发起方日期'/>
+        <CliTxSeq           FMT='M-20'      DESC='交易发起方交易流水'/>
+        <TxSeq              FMT='M=8'       DESC='企业服务系统的交易流水'/>
+        <strMAC             FMT='M=16'      DESC='报文MAC'/>
+        <SuccFlag           FMT='M=1'       DESC='成功标志'/>
+        <RetCode            FMT='M-5'       DESC='错误码'/>
+        <RetMsg             FMT='M-60'      DESC='错误信息'/>
+        <Result             FMT='M=1'       DESC='交易结果'/>
+        <TxFlag             FMT='M=1'       DESC='签到签退/操作标志'/>
+        <Account            FMT='M-32'      DESC='账号'/>
+        <AcctName           FMT='M-60'      DESC='户名'/>
+        <TxUnitCode         FMT='M=9'       DESC='机构代码'/>
+        <OpUnitCode         FMT='M=9'       DESC='开户机构代码'/>
+        <OpenUnit           FMT='O=9'       DESC='开户机构'/>
+        <Amount             FMT='M-16'      DESC='交易金额'/>
+        <AcctBal            FMT='M-16'      DESC='账户余额'/>
+        <AvailBal           FMT='M-16'      DESC='可用余额'/>
+        <OrgAmount          FMT='M-16'      DESC='原交易金额'/>
+        <TxType             FMT='M=5'       DESC='交易类型'/>
+        <PayAcctName        FMT='M-60'      DESC='付款人名称'/>
+        <Purpose            FMT='M-60'      DESC='附言'/>
+        <OrgClearDate       FMT='M=8'       DESC='原清算日期'/>
+        <OrgTxSeq           FMT='M-20'      DESC='原交易流水'/>
+        <BillType           FMT='M=6'       DESC='票据类型'/>
+        <BillCode           FMT='M-20'      DESC='票据号码'/>
+        <IntDate            FMT='O=8'       DESC='起息日期'/>
+        <BillAmt            FMT='M-16'      DESC='票据金额'/>
+        <BillDate           FMT='M=8'       DESC='出票日期'/>
+        <BillUnit           FMT='M-10'      DESC='开户行'/>
+        <EnterPrise         FMT='M-60'      DESC='单位名称'/>
+        <PayPwd             FMT='O=10'      DESC='支付密码'/>
+        <AgNo               FMT='O-60'      DESC='协议号'/>
+        <BeneAcctNo         FMT='O-32'      DESC='收款账号'/>
+        <BeneAcctName       FMT='O-60'      DESC='收款户名'/>
+        <AcctState          FMT='M=1'       DESC='账户状态'/>
+    </XMLITEM>
+</ITEMDICT>

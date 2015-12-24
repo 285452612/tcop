@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>30</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+                                            [                               1]操作员信息查询
+                                                         查询日期:[2               ]
+
+┌──────┬───┬────┬──┬───┬──┬────────┬────┬──────┬──────┬──────┬────┐
+│   机构号   │操作员│ 姓  名 │级别│ 状态 │规则│    交易限额    │注册日期│最近登录日期│最近登录时间│密码修改日期│注销日期│
+</ReportHeader>
+<ReportBody>
+├──────┼───┼────┼──┼───┼──┼────────┼────┼──────┼──────┼──────┼────┤
+│[    1     ]│[2   ]│[3     ]│[4 ]│[5   ]│[6 ]│[7             ]│[8     ]│[9         ]│[   10     ]│[   11     ]│[ 12   ]│
+</ReportBody>
+<ReportFooter>
+└──────┴───┴────┴──┴───┴──┴────────┴────┴──────┴──────┴──────┴────┘
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

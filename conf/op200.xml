@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 信息类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opRefid/>
+    <opClassid/>
+    <opOriginator/>
+    <opAcceptor/>
+    <opInoutflag/>
+    <opOWorkDate/>
+    <opORefId/>
+    <opOOriginator/>
+    <opOutbank/>
+    <opInbank/>
+    <opOInoutflag/>
+    <opNoteType/>
+    <opNoteNo/>
+    <opDcflag/>
+    <opIssueDate/>
+    <opSettlAmt/>
+    <opIssueAmt/>
+    <opPayingAcct/>
+    <opPayer/>
+    <opBeneAcct/>
+    <opBeneName/>
+    <opPayKey/>
+    <opTestKey/>
+    <opAgreement/>
+    <opMsgTitle/>
+    <opMsgContent/>
+    <opMsgReContent/>
+    <opReplyflag/>
+    <opReadflag/>
+    <opPrtnum/>
+    <opWriter/>
+    <opAuditor/>
+    <opRegressDate/>
+    <opRegressRefid/>
+    <opQueryState/>
+    <opInputer/>
+    <opChecker/>
+</INPUT>
+<OUTPUT><opOreserved1/><opOreserved2/><opOreserved3/><opOreserved4/><opOreserved5/>
+</OUTPUT></BODY><TAIL/>
+</ROOT>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="GB18030" ?> 
+<PACK>
+    <OUTPUT>
+        <UFTP>
+            <MsgHdrRs>
+                <RefId/>
+                <TrnCode/>
+                <SvcClass/>
+                <Originator/>
+                <WorkDate/>
+                <Result/>
+                <Desc/>
+                <MAC/>
+                <Reserve/>
+            </MsgHdrRs>
+            <SettlInfo>
+                <ClearState/>
+                <ClearDate/>
+                <ClearRound/>
+                <WorkRound/>
+                <ClearArea/>
+                <TruncFlag/>
+                <ExchArea/>
+                <ExchRoute/>
+                <Fee/>
+                <BankFee/>
+                <FeePayer/>
+            </SettlInfo>
+            <NoteInfo>
+                <PayingAcct/>
+                <BeneAcct/>
+                <NoteNo/>
+                <IssueDate/>
+            </NoteInfo>
+            <BankData>
+                <GUIYLS/>
+                <SHKRZH/>
+                <TCHTCH/>
+                <TISHXI/>
+                <JIO1JE/>
+                <ZHANGH/>
+                <BENPLX/>
+            </BankData>
+        </UFTP>
+    </OUTPUT>
+</PACK>

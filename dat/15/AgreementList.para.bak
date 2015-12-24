@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>25</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+┏━━┯━━━━━┯━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━┓
+┃状态│ 收款单位 │              付款账号          │                                     付款户名                                   │             用户号           ┃
+</ReportHeader>
+<ReportBody>
+┠──┼─────┼────────────────┼────────────────────────────────────────┼───────────────┨
+┃[1 ]│[       2]│[3                             ]│[4                                                                             ]│[5                           ]┃
+</ReportBody>
+<ReportFooter>
+┗━━┷━━━━━┷━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━┛
+ 记录数:[1    ]                                 打印时间:[2                  ]                                                      操作员: [3               ]
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

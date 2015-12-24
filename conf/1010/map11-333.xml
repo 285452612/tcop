@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+    <INPUT>
+        <opTermno       RULE='//RefId'/>
+        <opWorkdate     RULE='//WorkDate'/>
+    </INPUT>
+    <OUTPUT>
+        <opResponseCode RULE='//Result'/>
+        <opResponseInfo RULE='//Desc'/>
+        <opTreserved1   RULE='//Reserve'/>
+    </OUTPUT>
+</MAP>

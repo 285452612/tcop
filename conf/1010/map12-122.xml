@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opOperid             RULE='//AcctOper'/>
+  <opOriginator         RULE='//Originator'/>
+  <opWorkdate           RULE='//ExchgDate'/>
+  <opWorkround          RULE='//ExchgRound'/>
+  <opInnerBank          RULE='//TermId'/>
+</INPUT>
+<OUTPUT>
+    <opTCRetinfo        RULE='//Desc'/>
+</OUTPUT>
+</MAP>

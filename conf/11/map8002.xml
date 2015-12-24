@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <ClearDate      RULE='//opWorkdate'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode    RULE='//RetCode'/>
+        <opBKRetinfo    RULE='//RetMsg'/>
+        <opHreserved1   RULE='//strMAC'/>
+    </OUTPUT>
+</PACK>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>99999</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader/>
+<ReportHeader>
+
+
+**对帐不平,下面进行明细对帐**
+
+
+ 数据来源  提出行号   提出流水 提入行号 借贷 票据种类     票据号码 收款人帐号                       付款人帐号                                   金额
+--------------------------------------------------------------------------------------------------------------------------------------------------
+</ReportHeader>
+<ReportBody>
+ [1     ]: [2   ] [         3] [4   ]   [ 5] [     6] [         7] [8                             ] [9                             ][             10]
+</ReportBody>
+<ReportFooter>
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

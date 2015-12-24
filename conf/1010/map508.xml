@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opOperid       RULE='//AcctOper'/>
+    <opInnerBank    RULE='//TermId'/>
+    <opOperPwd      RULE='//Pwd'/>
+</INPUT>
+<OUTPUT>
+    <opWorkdate     RULE='//WorkDate'/>
+    <opOrganid      RULE='//Originator'/>
+    <opOperName     RULE='//Name'/>
+    <opOperClass    RULE='//OperType'/>
+    <opAmtLimit     RULE='//AmtLimit'/>
+    <opOperRights   RULE='//OperRole' TYPE='X'/>
+    <opWorkdate     RULE='//Reserve'/>
+</OUTPUT>
+</MAP>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <Account        RULE='//opAcctNo'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode    RULE='//RetCode'/>
+        <opBKRetinfo    RULE='//RetMsg'/>
+        <opAcctName     RULE='//AcctName'/>
+        <opAcctOrgid    RULE='//OpenUnit'/>
+        <opAcctBalance  RULE='//AcctBal'/>
+        <opAcctAvailBal RULE='//AvailBal'/>
+        <opAcctState    RULE='//AcctState'/>
+    </OUTPUT>
+</PACK>

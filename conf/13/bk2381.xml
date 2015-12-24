@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>2381</BKTrnCode>
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKDCFlag>1</BKDCFlag>
+        <BKXZFlag>1</BKXZFlag>
+        <BKNoteNo/>
+        <BKAcctNo/>
+        <BKAmount/>
+        <BKDFAcctId/>
+        <BKSummaryCode>104</BKSummaryCode>
+        <BKCashPrjId>11111</BKCashPrjId>
+        <BKDrawType/>
+        <BKPassword/>
+        <BKTranDate/>
+        <BKSysTrackId/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKAcctNo/>
+            <BKAcctBal/>
+            <BKAcctName/>
+            <BKDFAcctBal/>
+            <BKCompanyName/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

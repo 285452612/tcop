@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>1</Lines>
+<PageBreak>0</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader></PageHeader>
+<ReportHeader></ReportHeader>
+<ReportBody>
+   提出流水[1         ]             [30   ]         [2  ] [3]  [4]               [5         ]
+          [6   ]     [7                           ]     [9   ]     [10                          ]
+                     [8                           ]                [11                          ]
+  
+            [12                            ]              [13                            ]
+            [14                                     ]     [16                                     ]
+            [15                                     ]     [17                                     ]
+ 
+            [18                                            ] 
+                                                            [19][20                     ]
+          [21                                                        ]
+                                                              [22            ]   [23             ]
+          原凭证种类:[24                     ]
+    付款人开户行:[25                                     ]
+    收款人开户行:[26                                     ]
+    [31                                                  ][32                                    ]
+           [27  ]                    打印次数:[28 ]   前置流水:[29      ]
+    </ReportBody>
+<ReportFooter></ReportFooter>
+<PageFooter></PageFooter>
+</Report>

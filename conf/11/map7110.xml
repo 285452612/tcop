@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!--补记 收妥-->
+<PACK>
+    <INPUT>
+        <ClearDate      RULE='//opWorkdate'/>
+        <CliTxSeq       RULE='//opOreserved1'/>
+        <strMAC         RULE='//opHreserved1'/>
+        <TxUnitCode     RULE='//opInnerorganid'/>
+        <Account        RULE='//opBeneacct'/>
+        <AcctName       RULE='//opBenename'/>
+        <Amount         RULE='//opSettlamt'/>
+        <TxType         RULE='//opTermno'/>
+        <Purpose        RULE='//opPurpose'/>
+        <PayAcctName    RULE='//opPayname'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode    RULE='//RetCode'/>
+        <opBKRetinfo    RULE='//RetMsg'/>
+        <opHostSerial   RULE='//TxSeq'/>
+        <opOreserved1   RULE='//ClearDate'/>
+    </OUTPUT>
+</PACK>

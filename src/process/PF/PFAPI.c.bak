@@ -1,0 +1,56 @@
+#include "PFAPI.h"
+#include "interface.h"
+
+#define  ORG_BANK   "8973"   
+#define  ORG_CENTER "0133"
+//个人密码转加密
+int ConvertPersonKey( int flag, char *oacctno, char *dacctno, char *opwd, char *orgid, char *dpwd )
+{
+    int ret =0;
+    char sacctno[14]={0};
+
+    if ( flag == 1 ) //提出
+    {
+        BKINFO("提出....");
+        BKINFO("***OACCTNO[%s] DACCTNO=[%s] ***", oacctno, dacctno);
+        ret = UnionTransPIN( 1, orgid, oacctno, opwd, 1, ORG_CENTER, dacctno, dpwd );
+    }
+    else if( flag == 2 ) //提入
+    {
+        BKINFO("提入...");
+        ret = UnionTransPIN( 1, ORG_CENTER, oacctno, opwd, 1, ORG_BANK, dacctno, dpwd );
+    }
+
+    BKINFO("***Ret[%d] BankPwd=[%s]***", ret, dpwd);
+    //关闭连接
+    UnionReleaseHsmConn();
+
+    return ret;
+}
+//工作密钥写入
+int WriteKey(  char *key, char *mac )
+{
+    int ret =0;
+    char skey[97], smac[33];
+    char rkey[97], rmac[33];
+
+    BKINFO("***KEY[%s]MAC[%s]***", key, mac);
+
+    memset( smac, 0, sizeof(smac) );
+    memset( skey, 0, sizeof(skey) );
+    ret = UnionGetWorkKey(1, ORG_CENTER, skey, smac); 
+    BKINFO("***Ret[%d]SKEY[%s]***", ret, skey );
+
+    memset( rkey, 0, sizeof(rkey) );
+    memset( rmac, 0, sizeof(rmac) );
+    sprintf( rmac,"%-32s","");
+    //sprintf( rkey,"%-32s%32s", key, skey+32 );
+    sprintf( rkey,"%-48s%048d", key, 0 );
+    rkey[96]=0x00;
+
+    BKINFO("***RKEY[%s]RMAC[%s]***", rkey, rmac);
+    ret = UnionImport3DESWorkKey(1, ORG_CENTER, rkey, rmac); 
+    BKINFO("***Ret[%d]***", ret );
+
+    return ret;
+}

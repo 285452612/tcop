@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opAcctNo       RULE='//AcctId'/>
+    <opAcctName     RULE='//Name'/>
+    <opAcctOrgid    RULE='//InterBankNo'/>
+    <opAgreement    RULE='//Agreement'/>
+    <opAcctType     RULE='//AcctType'/>
+    <opAcctAttr     RULE='//AcctAttr'/>
+    <opBankid       RULE='//OpenBank'/>
+    <opPsBankid     RULE='//PSBankId'/>
+    <opCurcode      RULE='//CurCode'/>
+    <opCurtype      RULE='//CurType'/>
+    <opBasicAcctLic RULE='//BasicAcctLic'/>
+    <opIndustid     RULE='//IndustId'/>
+    <opState        RULE='//AcctStat'/>
+    <opOpenDate     RULE='//OpenDate'/>
+    <opRegDate      RULE='//RegDate'/>
+    <opCancelDate   RULE='//CancelDate'/>
+    <opLastTrndt    RULE='//LastTrndt'/>
+    <opExpDate      RULE='//ExpDate'/>
+    <opCtrlFlag     RULE='//CtrlFlag'/>
+</INPUT>
+<PHRSP>
+    <opTCRetcode    RULE='//Result'/>
+    <opTCRetinfo    RULE='//Desc'/>
+</PHRSP>
+<OUTPUT>
+</OUTPUT>
+</MAP>

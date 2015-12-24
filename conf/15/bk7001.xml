@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 提出贷记直接扣客户账 -->
+<PACK>
+    <INPUT>
+        <BKTrnCode>0001</BKTrnCode>
+        <BKSysCode/>
+        <BKOrgId/>
+        <BKOperNo/>
+        <BKRefId/>
+        <BKAmount/>
+        <BKCurCode/>
+        <BKCurType/>
+        <BKClearDate/>
+        <BKPayerAcctNo/>
+        <BKPayerAcctName/>
+        <BKPayerBankNo/>
+        <BKBeneAcctNo>951210011426803004</BKBeneAcctNo>
+        <BKBeneAcctName>资金清算应付款-提出贷方</BKBeneAcctName>
+        <BKBeneBankNo/>
+        <BKNoteType/>
+        <BKNoteNo/>
+        <BKPayKey/>
+        <BKMemo/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='0'>
+            <BKRspHead/>
+            <BKResult0/>
+            <BKIssueDate/>
+            <BKHostSerialNo/>
+        </RESPONSE>
+        <RESPONSE FLAG='1'>
+            <BKRspHead/>
+            <BKResult/>
+            <BKRetmsg/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

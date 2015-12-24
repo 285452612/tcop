@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>30</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+                               [                               1]机构信息查询
+                                                查询日期:[2               ]
+
+┌───┬───┬──┬────┬────┬───────────────┬─────┬──────┬───┬──┐
+│ 行号 │清算行│标志│提出代理│提入代理│            简  称            │  联系人  │  联系电话  │地区号│线路│
+</ReportHeader>
+<ReportBody>
+├───┼───┼──┼────┼────┼───────────────┼─────┼──────┼───┼──┤
+│[1   ]│[2   ]│[3] │[4     ]│[5     ]│[6                           ]│[7       ]│[8         ]│[9   ]│[10]│
+</ReportBody>
+<ReportFooter>
+└───┴───┴──┴────┴────┴───────────────┴─────┴──────┴───┴──┘
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

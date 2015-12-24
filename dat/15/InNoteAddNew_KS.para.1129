@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>99999</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+</ReportHeader>
+<ReportBody>
+
+
+提出行号:[1                       ]提入行号:[2         ]   工作日期:[3       ] [4  ] 提出流水:[5             ]
+原凭证种类:[6                             ]原凭证号码:[7         ]      原凭证日期:[8       ]
+
+付款人户名:[9                                                                 ]
+付款人账号:[10                            ]    开户行:[11                                                        ]
+
+收款人户名:[12                                                                ]
+收款人帐号:[13                            ]    开户行:[14                                                        ]
+
+
+金额:[15  ] [16                                            ] 小写:[17]  [18                     ]
+
+
+摘要:[19                                                   ] 协议号:[20                                           ]
+
+税票信息:[21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ]
+
+
+
+
+
+      打印时间:[22                 ]        打印次数:[23 ]          操作员:[24          ]前置流水:[25           ]
+
+
+
+
+
+
+
+
+
+</ReportBody>
+<ReportFooter>
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opOperid             RULE='//AcctOper'/>
+  <opNoteno             RULE='//TrnCtl/BeginSeq'/>
+  <opNotenoEnd          RULE='//TrnCtl/EndSeq'/>
+  <opInnerBank          RULE='//TermId'/>
+  <opReserved           RULE='//Reserve'/>
+</INPUT>
+<OUTPUT>
+    <opTCRetinfo        RULE='//Desc'/>
+</OUTPUT>
+</MAP>

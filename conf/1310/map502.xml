@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opOperid       RULE='//AcctOper'/>
+    <opInnerBank    RULE='//TermId'/>
+</INPUT>
+<OUTPUT>
+</OUTPUT>
+</MAP>

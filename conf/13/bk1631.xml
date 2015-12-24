@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1631</BKTrnCode>
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKGrantOperId/>
+        <BKXZFlag>1</BKXZFlag>
+        <BKAccountType>0</BKAccountType>
+        <BKNoteType>99</BKNoteType>
+        <BKNoteId/>
+        <BKAcctNo/>
+        <BKDrawType>3</BKDrawType>
+        <BKIssueDate/>
+        <BKZPPassword/>
+        <BKCancelSerial/>
+        <BKAmount/>
+        <BKPayerAcctName/>
+        <BKPayerAcctNo/>
+        <BKBeneAcctName/>
+        <BKInwardOrgId/>
+        <BKInwardName/>
+        <BKRouteId>2</BKRouteId>
+        <BKDFExchgNo/>
+        <BKAttachNumber/>
+        <BKSummaryCode/>
+        <BKCashPrjId/>
+        <BKPayLevel/>
+        <BKRegionOrgId/>
+        <BKMemo>收妥业务,不出回单</BKMemo>
+        <BKCurType>01</BKCurType>
+        <BKPassword/>
+        <BKTrack2Content/>
+        <BKTrack3Content/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKClientName/>
+            <BKCancelSerial/>
+            <BKExchgRound/>
+            <BKExchgSerial/>
+            <BKOrgName/>
+            <BKAcctBal/>
+            <BKCheckDesc/>
+            <BKAvailBal/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

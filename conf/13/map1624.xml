@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKOrgId RULE='//opBankno'/>
+        <BKOperId RULE='//opOperid'/>
+        <BKAcctNo RULE='//Beneacct'/>
+        <BKAmount RULE='//Settlamt'/>
+        <!--BKNoteId RULE='//Noteno'/-->
+        <BKDFAcctNo RULE='//Payacct'/>
+        <!--BKSummaryCode RULE='//Memo'/-->
+        <BKDFAcctName RULE='//Payname'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode RULE='//BKResult'/>
+        <opRetinfo RULE='//BKErrinfo'/>
+        <opHostSerial RULE='//BKOperSerial'/>
+    </OUTPUT>
+</PACK>

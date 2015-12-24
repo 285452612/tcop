@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1623</BKTrnCode>
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKAcctNo/>
+        <BKAmount/>
+        <BKLimitAmount/>
+        <BKIssueDate/>
+        <BKNoteType/>
+        <BKNoteId/>
+        <BKDrawType/>
+        <BKZPPassword/>
+        <BKDFAcctNo/>
+        <BKDFExchgNo>00002</BKDFExchgNo>
+        <BKSummaryCode>103</BKSummaryCode>
+        <BKRouteId>1</BKRouteId>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKExchgDate/>
+            <BKExchgRound/>
+            <BKExchgSerial/>
+            <BKOrgName/>
+            <BKClientName/>
+            <BKCheckDesc/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

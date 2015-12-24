@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 系统管理类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opTableName/>
+    <opArgsName/>
+    <opBeneid/>
+    <opUserid/>
+    <opUsername/>
+    <opClassid/>
+    <opCityid/>
+    <opInputname/>
+    <opPayacct/>
+    <opPayname/>
+    <opPayertype/>
+    <opBankid/>
+    <opPsbankid/>
+    <opAddr/>
+    <opPostalcode/>
+    <opLiknkman/>
+    <opPhone1/>
+    <opPhone2/>
+    <opAgreementid/>
+    <opAmtlimit/>
+    <opEnddate/>
+    <opState/>
+    <opInneragreement/>
+    <opDcflag/>
+    <opExchground/>
+</INPUT><OUTPUT><opArgsValue/><opOreserved1/><opOreserved2/><opOreserved3/><opReserved/>
+</OUTPUT></BODY>
+<TAIL/></ROOT>

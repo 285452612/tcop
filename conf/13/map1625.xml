@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKOrgId RULE='//opBankno'/>
+        <BKOperId RULE='//opOperid'/>
+        <BKCancelSerial RULE='//Refid'/>
+        <BKAcctNo RULE='//Payacct'/>
+        <BKAmount RULE='//Settlamt'/>
+        <BKNoteId RULE='//Noteno'/>
+        <BKDFAcctNo RULE='//Reserved'/>     <!--对方帐号可能是收款帐号也可能是付款帐号 由应用判断统一存放在Reserved节点中-->
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode RULE='//BKResult'/>
+        <opRetinfo RULE='//BKErrinfo'/>
+        <opHostSerial RULE='//BKOperSerial'/>
+    </OUTPUT>
+</PACK>

@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="gb18030"?>
+<Root>
+
+<Transaction code="sz35" desc="集中业务下载登记簿交易">
+<Request type="sop" opptrcode="9935" packfmt="Osz351@S">
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="9935" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"   type="const" value="1015"  desc="节点号"/>
+<Item name="/UFTP/TrnCtl/WorkDate"   type="sop" value="JIOYRQ" desc="交易日期"/>
+<Item name="/UFTP/TrnCtl/ExchgRound" type="sop" value="JIOHCC" desc="交换场次"/>
+<Item name="/UFTP/TrnCtl/DCFlag"     type="sop" value="JIEDBZ" dll="dll/libconvert.so" func="cvt_dcflag" expr="" desc="借贷标志"/>
+</Request>
+<Response type="xml" packfmt="Osz352@R">
+<Item name="BAOBLJ" length="80" type="xml" value="//Reserve" desc="报表路径"/>
+</Response>
+</Transaction>
+
+<!--
+<Transaction code="sz80" desc="报表打印">
+<Request type="sop" opptrcode="" packfmt="Osz801@S">
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="sop" value="HKBZZZ" dll="dll/libconvert.so" func="cvt_print" expr="" desc="操作类型"/>
+</Request>
+<Response type="xml" packfmt="Osz802@R">
+<Item name="BAOBLJ" length="80" type="xml" value="//Reserve" desc="报表路径"/>
+</Response>
+</Transaction>
+-->
+
+<Transaction code="sz76" desc="对帐">
+<Request type="sop" opptrcode="" packfmt="Osz761@S">
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="1605" desc="交易代码"/>
+<Item name="/UFTP/SysStatus/WorkDate" type="sop" value="JIOHRQ" desc="工作日期"/>
+<Item name="/UFTP/SysStatus/WorkRound" type="sop" value="JIOHCC" desc="工作场次"/>
+</Request>
+<Response type="xml" packfmt="Osz762@R">
+<Item name="BAOBLJ" length="80" type="xml" value="//Reserve" desc="报表路径"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz36" desc="提出借记">
+<Request type="sop" opptrcode="0001" packfmt="Osz361@S">
+<Item name="/UFTP/MsgHdrRq/RefId" type="sop" value="FQHHAO" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="0001" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"      value="1015"  desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/Originator"  value="PDSBNO" dll="dll/libconvert.so" func="cvt_bankid2exchno" expr="" desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"    value="FQHHAO"  desc="提入行号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"    value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/MsgHdrRq/AcctOper"    value="PDUSID"  desc="交易柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"      value="PDSBNO"  desc="机构代码"/>
+<Item name="/UFTP/NoteInfo/DCFlag" type="const"  value="1"  desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="1" desc="凭证种类"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="02" desc="凭证种类"/>
+-->
+<Item name="/UFTP/NoteInfo/NoteNo"                  value="PNGZXH"  desc="凭证序号"/>
+<Item name="/UFTP/NoteInfo/IssueDate"               value="CHUPRQ"  desc="出票日期"/>
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="FUKRZH"  desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRXM"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="SHKRZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank" type="const"   value=""        desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode" type="const"    value="CNY"     desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType" type="const"    value="0"       desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/LimitAmt" type="const"   value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt" type="const"    value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"  type="const"    value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey" type="const"    value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="ZHFUMM"  desc="支付密码,协议号"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="SZBPMY"  desc="密押本票"/>
+<Item name="/UFTP/NoteInfo/Purpose"                 value="XINX03"  desc="事由用途"/>
+<Item name="/UFTP/SettlInfo/TruncFlag"              value="BIAOZI"  desc="截留标志"/>
+<Item name="/UFTP/BankData/TJJXTS" value="TJJXTS" desc="计息天数"/>
+<Item name="/UFTP/BankData/ZHNGDH" value="ZHNGDH" desc="终端号"/>
+<Item name="/UFTP/BankData/CHSHDM" value="CHSHDM" desc="城市代码"/>
+<Item name="/UFTP/BankData/QSZXDH" value="QSZXDH" desc="清算中心代号"/>
+<Item name="/UFTP/BankData/SHFOBZ" value="SHFOBZ" desc="待销账标志"/>
+<Item name="/UFTP/BankData/PDWSNO" value="PDWSNO" desc="终端号TTY"/>
+<Item name="/UFTP/BankData/XIOZXH" value="XIOZXH" desc="销账序号"/>
+<Item name="/UFTP/BankData/ZHYODM" value="ZHYODM" desc="摘要代码"/>
+<Item name="/UFTP/BankData/TJRZFS" value="TJRZFS" desc="入账方式"/>
+<Item name="/UFTP/BankData/FENHDM" value="FENHDM" desc="分行代码"/>
+<Item name="/UFTP/BankData/PNGZPH" value="PNGZPH" desc="凭证批号"/>
+<Item name="/UFTP/BankData/PNGZZL" value="PNGZZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/PNG1ZL" value="PNG1ZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/PNGZZZ" value="PNGZZZ" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/BEIZXX" value="BEIZXX" desc="备注信息"/>
+<Item name="/UFTP/BankData/JIZHFS" value="JIZHFS" desc="入帐方式"/>
+<Item name="/UFTP/BankData/QTJYMA" type="const" value="sz36" desc="前台交易码"/>
+</Request>
+<Response type="xml" packfmt="Osz362@R" form="Osz362@R">
+<Item name="GUIYLS" length="12" type="xml" value="/UFTP/MsgHdrRs/Reserve" desc="柜员流水号"/>
+<Item name="TCHTCH" length="20" type="xml" value="/UFTP/MsgHdrRs/MAC" desc="同城提出号"/>
+<Item name="YJLXZE" length="15" type="xml" value="//YJLXZE" desc="应计利息"/>
+<Item name="PNGZZL" length="2"  type="xml" value="//PNGZZL" desc="凭证种类"/>
+<Item name="BAOBLJ" length="80" type="xml" value="//BAOBLJ" desc="报表路径"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz37" desc="提出贷记">
+<Request type="sop" opptrcode="0002" packfmt="Osz371@S">
+<Item name="/UFTP/MsgHdrRq/RefId" type="sop" value="FQHHAO" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="0002" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"      value="1015"  desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/Originator"  value="PDSBNO" dll="dll/libconvert.so" func="cvt_bankid2exchno" expr="" desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"    value="FQHHAO"  desc="提入行号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"    value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/MsgHdrRq/AcctOper"    value="PDUSID"  desc="交易柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"      value="PDSBNO"  desc="机构代码"/>
+<Item name="/UFTP/NoteInfo/DCFlag" type="const"  value="2"  desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="2" desc="凭证种类"/>
+-->
+<Item name="/UFTP/NoteInfo/NoteNo"                  value="PNGZXH"  desc="凭证序号"/>
+<Item name="/UFTP/NoteInfo/IssueDate"               value="QNFARQ"  desc="出票日期"/>
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="FUKRZH"  desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRXM"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="SHKRZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank" type="const"   value=""        desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode" type="const"    value="CNY"  desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType" type="const"    value="0"    desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/LimitAmt"                value="ZHFUED"  desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt" type="const"    value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"  type="const"    value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey" type="const"    value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="ZHFUMM"  desc="支付密码,协议号"/>
+<Item name="/UFTP/NoteInfo/Purpose"                 value="XINX03"  desc="事由用途"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBank"       value="ZJCYHH"  desc="对方行号"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBankName"   value="ZZAIDZ"  desc="对方行名"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/SettlInfo/TruncFlag"              value="BIAOZI"  desc="截留标志"/>
+<Item name="/UFTP/BankData/PDWSNO" value="PDWSNO" desc="终端号TTY"/>
+<Item name="/UFTP/BankData/ZHNGDH" value="ZHNGDH" desc="终端号"/>
+<Item name="/UFTP/BankData/CHSHDM" value="CHSHDM" desc="城市代码"/>
+<Item name="/UFTP/BankData/QSZXDH" value="QSZXDH" desc="清算中心代号"/>
+<Item name="/UFTP/BankData/SHFOBZ" value="SHFOBZ" desc="待销账标志"/>
+<Item name="/UFTP/BankData/XIOZXH" value="XIOZXH" desc="销账序号"/>
+<Item name="/UFTP/BankData/ZHYODM" value="ZHYODM" desc="摘要代码"/>
+<Item name="/UFTP/BankData/FENHDM" value="FENHDM" desc="分行代码"/>
+<Item name="/UFTP/BankData/PNGZPH" value="PNGZPH" desc="凭证批号"/>
+<Item name="/UFTP/BankData/PNGZZL" value="PNGZZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/PNG1ZL" value="PNG1ZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/PNGZZZ" value="PNGZZZ" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/BEIZXX" value="BEIZXX" desc="备注信息"/>
+<Item name="/UFTP/BankData/QTJYMA" type="const" value="sz37" desc="前台交易码"/>
+</Request>
+<Response type="xml" packfmt="Osz372@R">
+<Item name="GUIYLS" length="12" type="xml" value="/UFTP/MsgHdrRs/Reserve" desc="柜员流水号"/>
+<Item name="TCHTCH" length="20" type="xml" value="/UFTP/MsgHdrRs/MAC" desc="同城提出号"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz38" desc="提入借方确认入账">
+<Request type="sop" opptrcode="0111" packfmt="Osz381@S">
+<Item name="/UFTP/MsgHdrRq/RefId" type="sop" value="SHHUDH" desc="提回流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="0111" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"      value="1015"  desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/Originator"  value="FQHHAO"  desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"    value="QISHHH"  desc="提入行交换号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"    value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/MsgHdrRq/AcctOper"    value="PDUSID"  desc="交易柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"      value="PDSBNO"  desc="机构代码"/>
+<Item name="/UFTP/NoteInfo/DCFlag" type="const"  value="1"  desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="2" desc="凭证种类"/>
+-->
+<Item name="/UFTP/NoteInfo/NoteNo"                  value="PNGZXH"  desc="凭证序号"/>
+<Item name="/UFTP/NoteInfo/IssueDate"               value="QNFARQ"  desc="签发日期"/>
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="FUKRZH"  desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRXM"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="SHKRZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank" type="const"   value=""        desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode" type="const"    value="CNY"  desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType" type="const"    value="0"    desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt" type="const"    value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"  type="const"    value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey" type="const"    value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="ZHFUMM"  desc="支付密码,协议号"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="SZBPMY"  desc="密押本票"/><!--加判断条件-->
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/SettlInfo/ExchgRound"             value="TRJHCC"  desc="提入交换场次"/>
+<Item name="/UFTP/BankData/ZHNGDH" value="ZHNGDH" desc="终端号"/>
+<Item name="/UFTP/BankData/CHSHDM" value="CHSHDM" desc="城市代码"/>
+<Item name="/UFTP/BankData/QSZXDH" value="QSZXDH" desc="清算中心代号"/>
+<Item name="/UFTP/BankData/SHFOBZ" value="SHFOBZ" desc="待销账标志"/>
+<Item name="/UFTP/BankData/XIOZXH" value="XIOZXH" desc="销账序号"/>
+<Item name="/UFTP/BankData/ZHYODM" value="ZHYODM" desc="摘要代码"/>
+<Item name="/UFTP/BankData/BEIZXX" value="BEIZXX" desc="备注信息"/>
+<Item name="/UFTP/BankData/FENHDM" value="FENHDM" desc="分行代码"/>
+<Item name="/UFTP/BankData/PNGZPH" value="PNGZPH" desc="凭证批号"/>
+<Item name="/UFTP/BankData/PNGZZL" value="PNGZZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/BENPLX" value="BENPLX" desc="本票类型"/>
+<Item name="/UFTP/BankData/HUIPMY" value="HUIPMY" desc="汇票密押"/>
+<Item name="/UFTP/BankData/YEWUXZ" value="YEWUXZ" desc="业务性质"/>
+<Item name="/UFTP/BankData/MSGSNO" value="MSGSNO" desc="报文序列号"/>
+<Item name="/UFTP/BankData/YNGYJG" value="YNGYJG" desc="签发行机构号"/>
+<Item name="/UFTP/BankData/KAIHHM" value="KAIHHM" desc="持票人开户行"/>
+<Item name="/UFTP/BankData/ZJCYHH" value="ZJCYHH" desc="签发行联号"/>
+<Item name="/UFTP/BankData/DJIESH" value="DJIESH" desc="预扣款编号"/>
+<Item name="/UFTP/BankData/JYDZLX" value="JYDZLX" desc="业务种类"/>
+<Item name="/UFTP/BankData/QTJYMA" type="const" value="sz38" desc="前台交易码"/>
+</Request>
+<Response type="xml" packfmt="Osz382@R">
+<Item name="GUIYLS" length="12" type="xml" value="//GUIYLS" desc="柜员流水号"/>
+<Item name="TCHTCH" length="20" type="xml" value="//TCHTCH" desc="同城提出号"/>
+<Item name="BENPLX" length="1"  type="xml" value="//BENPLX" desc="本票类型"/>
+<Item name="PNGZHH" length="8"  type="xml" value="//Noteno" desc="凭证号"/>
+<Item name="ZHANGH" length="20" type="xml" value="//ZHANGH" desc="账号"/>
+<Item name="JIO1JE" length="15" type="xml" value="//Settlamt" desc="金额"/>
+<Item name="SHKRZH" length="32" type="xml" value="//Beneacct" desc="收款人账号"/>
+<Item name="SHKRXM" length="62" type="xml" value="//Benename" desc="收款人名称"/>
+<Item name="KEHZWM" length="62" type="xml" value="//KEHZWM" desc="客户中文名"/>
+<Item name="TISHXI" length="62" type="xml" value="//TISHXI" desc="提示信息"/>
+<Item name="QNFARQ" length="8" type="xml" value="//Issuedate" desc="签发日期"/>
+<Item name="WAIGDM" length="12" type="xml" value="//WAIGDM" desc="签发行联行号"/>
+<Item name="QFHLHM" length="62" type="xml" value="//QFHLHM" desc="签发行联行名"/>
+<Item name="BEIZXX" length="42" type="xml" value="//BEIZXX" desc="备注信息"/>
+<Item name="FUKRZH" length="32" type="xml" value="//Payingacct" desc="付款人账号"/>
+<Item name="XIOZXH" length="17" type="xml" value="//XIOZXH" desc="销账序号"/>
+<Item name="TRJHCC" length="1" type="xml" value="//Exchground" desc="提入交换场次"/>
+<Item name="CHPRQC" length="62" type="xml" value="//CHPRQC" desc="出票人全称"/>
+<Item name="CDXYBH" length="16" type="xml" value="//CDXYBH" desc="承兑协议编号"/>
+<Item name="JYDSDM" length="12" type="xml" value="//Benebank" desc="收款行号"/>
+<Item name="SHKHHM" length="62" type="xml" value="//" desc="收款行名"/>
+<Item name="CHPRZH" length="32" type="xml" value="//CHPRZH" desc="持票人账号"/>
+<Item name="CHPRMC" length="62" type="xml" value="//CHPRMC" desc="支票人名称"/>
+<Item name="KAIHHM" length="62" type="xml" value="//KAIHHM" desc="开户行名"/>
+<Item name="BZHJZH" length="20" type="xml" value="//BZHJZH" desc="保证金账号"/>
+<Item name="BZJSXH" length="1" type="xml" value="//BZJSXH" desc="保证金到期扣款顺序"/>
+<Item name="DAOQRQ" length="8" type="xml" value="//DAOQRQ" desc="到期日"/>
+<Item name="SXIORQ" length="8" type="xml" value="//SXIORQ" desc="生效日期"/>
+<Item name="YCHPZT" length="1" type="xml" value="//YCHPZT" desc="银行承兑汇票状态"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz39" desc="账户查询">
+<Request type="sop" opptrcode="1004" packfmt="Osz391@S">
+<Item name="/UFTP/MsgHdrRq/TrnCode" type="const" value="1004" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Sender" type="const" value="999"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Recver" type="const" value="109"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Originator" type="const" value="090010" desc=""/>
+<Item name="/UFTP/MsgHdrRq/Acceptor" value="FQHHAO" desc="交换行"/>
+<Item name="/UFTP/AcctDetail/OpenBank" value="FQHHAO"  desc="开户行"/>
+<Item name="/UFTP/AcctDetail/AcctId" value="FAKAWJ"  desc="账号"/>
+</Request>
+<Response type="xml" packfmt="Osz392@R">
+<Item name="FQHHAO" length="12" type="xml" value="/UFTP/AcctDetail/OpenBank"/>
+<Item name="XINX02" length="32" type="xml" value="/UFTP/AcctDetail/Name"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz40" desc="冲正交易">
+<Request type="sop" opptrcode="0113" packfmt="Osz401@S">
+<Item name="/UFTP/MsgHdrRq/RefId" type="sop" value="QANTLS" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="0113" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"   type="const" value="1015"  desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"              value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/BankData/PDWSNO"  value="PDWSNO" desc="终端号TTY"/>
+<grid name="Fsz401">
+<Item name="/UFTP/NoteInfo/NoteNo"  value="PNGZHH"  desc="凭证号"/>
+<Item name="/UFTP/NoteInfo/DCFlag"  value="JIEDBZ"  desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/SettlAmt" value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/BankData/GUIYLS"  value="GUIYLS"  desc="柜员流水号"/>
+<Item name="/UFTP/BankData/KMUHAO"  value="KMUHAO"  desc="科目号"/>
+<Item name="/UFTP/BankData/JIOYSJ"  value="JIOYSJ"  desc="交易时间"/> 
+<Item name="/UFTP/BankData/YEWUDH"  value="YEWUDH"  desc="业务代码"/> 
+<Item name="/UFTP/BankData/XNZHBZ"  value="XNZHBZ"  desc="现转标志"/>
+<Item name="/UFTP/BankData/ZHANGH"  value="ZHANGH"  desc="账号"/> 
+<Item name="/UFTP/BankData/SHOQGY"  value="SHOQGY"  desc="授权柜员"/>
+<Item name="/UFTP/BankData/KEHUZH"  value="KEHUZH"  desc="客户账号"/>
+<Item name="/UFTP/BankData/SHUNXH"  value="SHUNXH"  desc="顺序号"/>
+<Item name="/UFTP/BankData/KHZHLX"  value="KHZHLX"  desc="客户账号类型"/>
+<Item name="/UFTP/BankData/ZHUZWM"  value="ZHUZWM"  desc="账号中文名"/>
+<Item name="/UFTP/BankData/ZHHUYE"  value="ZHHUYE"  desc="账户余额"/>
+</grid>
+</Request>
+<Response type="xml" packfmt="Osz402@R">
+<Item name="JIOHRQ"   type="xml"    value="//WorkDate"  desc="被冲正交易日期"/>
+<Item name="YNGYLS"   type="xml"    value="//YNGYLS"  desc="被冲正柜员流水号"/>
+<Item name="CZFLBS"   type="xml"    value="//CZFLBS"  desc="被冲正会计分录笔数"/>
+<Item name="CZDJBS"   type="xml"    value="//CZDJBS"  desc="被冲正登记簿记录笔数"/>
+<Item name="GUIYLS"   type="xml"    value="//GUIYLS"  desc="柜员流水号"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz41" desc="提入借记退票交易">
+<Request type="sop" opptrcode="0007" packfmt="Osz411@S">
+<Item name="/UFTP/MsgHdrRq/RefId"                   value="FQHHAO" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"    type="const" value="0007"    desc="交易代码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass"   type="const" value="1"       desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Originator"              value="FQHHAO"  desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"                value="QISHHH"  desc="提入行交换号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"                value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/MsgHdrRq/Sender"                  value=""        desc="发起方"/>
+<Item name="/UFTP/MsgHdrRq/Recver"     type="const" value="1015"    desc="接收方"/>
+<Item name="/UFTP/NoteInfo/DCFlag"     type="const" value="1"       desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="2" desc="凭证种类"/>
+-->
+<Item name="/UFTP/NoteInfo/NoteNo"                  value="PNGZXH"  desc="凭证序号"/>
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="FUKRZH"  desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRXM"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="SHKRZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank"   type="const" value=""        desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode"    type="const" value="CNY"     desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType"    type="const" value="0"       desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt"    type="const" value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"     type="const" value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey"    type="const" value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/AuthDevId"  type="const" value=""        desc="安全设备编号"/>
+<Item name="/UFTP/NoteInfo/ExchgRound"              value="TRJHCC"  desc="提入交换场次"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/BankData/PNGZPH"                  value="PNGZPH" desc="凭证批号"/>
+<Item name="/UFTP/BankData/ZHYODM"                  value="ZHYODM" desc="摘要代码"/>
+<Item name="/UFTP/BankData/FENHDM"                  value="FENHDM" desc="分行代码"/>
+<Item name="/UFTP/BankData/QSZXDH"                  value="QSZXDH" desc="清算中心代号"/>
+<Item name="/UFTP/BankData/PNGZZL"                  value="PNGZZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/PNG1ZL"                  value="PNG1ZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/PNGZZZ"                  value="PNGZZZ" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/BEIZXX"                  value="BEIZXX" desc="备注信息"/>
+<Item name="/UFTP/BankData/QTJYMA"     type="const" value="sz41" desc="前台交易码"/>
+</Request>
+<Response type="xml" packfmt="Osz412@R">
+<Item name="GUIYLS" type="xml" value="//GUIYLS" desc="柜员流水号"/>
+<Item name="FUKRZH" type="xml" value="//Payingacct" desc="付款人帐号"/>
+<Item name="SHKRZH" type="xml" value="//Beneacct" desc="收款人帐号"/>
+<Item name="JIO1JE" type="xml" value="//Settlamt" desc="交易金额"/>
+<Item name="TCHTCH" type="xml" value="//TCHTCH" desc="同城提出号"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz42" desc="提入贷记退票交易">
+<Request type="sop" opptrcode="0007" packfmt="Osz421@S">
+<Item name="/UFTP/MsgHdrRq/RefId"                   value="FQHHAO" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"    type="const" value="0007"    desc="交易代码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass"   type="const" value="1"       desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Originator"              value="FQHHAO"  desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"                value="QISHHH"  desc="提入行交换号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"                value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/MsgHdrRq/Sender"                  value=""        desc="发起方"/>
+<Item name="/UFTP/MsgHdrRq/Recver"     type="const" value="1015"    desc="接收方"/>
+<Item name="/UFTP/NoteInfo/DCFlag"     type="const" value="2"       desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="2" desc="凭证种类"/>
+-->
+<Item name="/UFTP/NoteInfo/NoteNo"                  value="PNGZXH"  desc="凭证序号"/>
+<Item name="/UFTP/NoteInfo/IssueDate"               value="QNFARQ"  desc="出票日期"/>
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="FUKRZH"  desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRXM"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="SHKRZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank"   type="const" value=""        desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode"    type="const" value="CNY"     desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType"    type="const" value="0"       desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/IssueAmt"                value="ZHFUED"  desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt"    type="const" value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"     type="const" value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey"    type="const" value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/AuthDevId"  type="const" value=""        desc="安全设备编号"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="ZHFUMM"  desc="支付密码,协议号"/>
+<Item name="/UFTP/NoteInfo/Purpose"                 value="XINX03"  desc="事由用途"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBank"       value="ZJCYHH"  desc="对方行号"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBankName"   value="ZZAIDZ"  desc="对方行名"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/SettlInfo/TruncFlag"              value="BIAOZI" desc="截留标志"/>
+<Item name="/UFTP/BankData/TCHTCH"                  value="TCHTCH" desc="同城提出号"/>
+<Item name="/UFTP/BankData/FAKAHM"                  value="FAKAHM" desc="发卡行名称"/>
+<Item name="/UFTP/BankData/JIOHLX"                  value="JIOHLX" desc="交换类型"/>
+<Item name="/UFTP/BankData/PNGZPH"                  value="PNGZPH" desc="凭证批号"/>
+<Item name="/UFTP/BankData/BEIZXX"                  value="BEIZXX" desc="备注信息"/>
+<Item name="/UFTP/BankData/QSZXDH"                  value="QSZXDH" desc="清算中心代号"/>
+</Request>
+<Response type="xml" packfmt="Osz422@R">
+<Item name="GUIYLS" type="xml" value="//GUIYLS" desc="柜员流水号"/>
+<Item name="JIOHRQ" type="xml" value="//WorkDate" desc="交换日期"/>
+<Item name="QISHHH" type="xml" value="//QISHHH" desc="清算行行号"/>
+<Item name="JIOHLX" type="xml" value="//JIOHLX" desc="交换类型"/>
+<Item name="FUKRXM" type="xml" value="//PayingName" desc="付款人姓名"/>
+<Item name="SHKRXM" type="xml" value="//BeneName" desc="收款人姓名"/>
+<Item name="PNGZZL" type="xml" value="//NoteType" desc="凭证种类"/>
+<Item name="PNGZXH" type="xml" value="//NoteNo" desc="凭证序号"/>
+<Item name="JIO1JE" type="xml" value="//SettlAmt" desc="交易金额"/>
+<Item name="XIOZXH" type="xml" value="//XIOZXH" desc="销帐序号"/>
+<Item name="TISHXI" type="xml" value="//TISHXI" desc="提示信息"/>
+<Item name="TCHTCH" type="xml" value="//TCHTCH" desc="同城提出号"/>
+<Item name="QNFARQ" type="xml" value="//IssueDate" desc="签发日期"/>
+<Item name="FUKRZH" type="xml" value="//PayingAcct" desc="付款人帐号"/>
+<Item name="SHKRZH" type="xml" value="//BeneAcct" desc="收款人帐号"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz43" desc="提入贷方确认入账交易">
+<Request type="sop" opptrcode="0104" packfmt="Osz431@S">
+<Item name="/UFTP/MsgHdrRq/RefId" type="sop" value="FQHHAO" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="0104" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"                value="1015"  desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/AcctOper"              value="FUHEGY"  desc="复核柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"                value="YNGYJG"  desc="营业机构"/>
+<Item name="/UFTP/TrnCtl/DCFlag"    type="const"  value="2"  desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="2" desc="凭证种类"/>
+-->
+<Item name="/UFTP/TrnCtl/IssueDate"               value="CHUPRQ"  desc="出票日期"/>
+<Item name="/UFTP/TrnCtl/WorkDate"                value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/TrnCtl/PayingAcct"              value="FUKRZH"  desc="付款账号"/>
+<Item name="/UFTP/TrnCtl/Payer"                   value="FUKRXM"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/IssueDate"              value="CHUPRQ" desc="出票日期"/>
+<Item name="/UFTP/TrnCtl/BeneAcct"                value="SHKRZH"  desc="收款账号"/>
+<Item name="/UFTP/TrnCtl/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/TrnCtl/BeneBank" type="const"   value=""        desc="收款行号"/>
+<Item name="/UFTP/TrnCtl/CurCode"  type="const"   value="CNY"  desc="币种"/>
+<Item name="/UFTP/TrnCtl/CurType"  type="const"   value="0"    desc="钞汇类型"/>
+<Item name="/UFTP/TrnCtl/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/TrnCtl/NoteNo"                value="PNGZHH"  desc="凭证号"/>
+<Item name="/UFTP/TrnCtl/ExchgRound"                value="JIOHCC"  desc="交换场次"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/BankData/JYDZLX" value="JYDZLX" desc="业务种类"/>
+<Item name="/UFTP/BankData/PNGZZL" value="PNGZZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/PNGZPH" value="PNGZPH" desc="凭证批号"/>
+<Item name="/UFTP/BankData/ZYWXYH" value="ZYWXYH" desc="中间业务协议号"/>
+<Item name="/UFTP/BankData/KAIHHM" value="KAIHHM" desc="持票人开户行"/>
+<Item name="/UFTP/BankData/ZJCYHH" value="ZJCYHH" desc="直接参与行号"/>
+<Item name="/UFTP/BankData/SBHHAO" value="SBHHAO" desc="收报行行号"/>
+<Item name="/UFTP/BankData/HUOBFH" value="HUOBFH" desc="货币符号"/>
+<Item name="/UFTP/BankData/FUKURQ" value="FUKURQ" desc="付款日期"/>
+<Item name="/UFTP/BankData/WAIGDM" value="WAIGDM" desc="外管代码"/>
+<Item name="/UFTP/BankData/JIOHLX" value="JIOHLX" desc="交换类型"/>
+<Item name="/UFTP/BankData/FUHEBZ" value="FUHEBZ" desc="复核标志"/>
+<Item name="/UFTP/BankData/RUZHRQ" value="RUZHRQ" desc="入账日期"/>
+<Item name="/UFTP/BankData/WEITRQ" value="WEITRQ" desc="委托日期"/>
+<Item name="/UFTP/BankData/RUZHBZ" value="RUZHRQ" desc="入账标志"/>
+<Item name="/UFTP/BankData/HXIOZT" value="HXIOZT" desc="核销状态"/>
+<Item name="/UFTP/BankData/TUIHBZ" value="TUIHBZ" desc="退汇标志"/>
+<Item name="/UFTP/BankData/LZBWZT" value="LZBWZT" desc="来帐报文状态"/>
+<Item name="/UFTP/BankData/FUKUQX" value="FUKUQX" desc="付款期限"/>
+<Item name="/UFTP/BankData/SHULIA" value="SHULIA" desc="数量"/>
+<Item name="/UFTP/BankData/QISHBS" value="QISHBS" desc="起始笔数"/>
+<Item name="/UFTP/BankData/CXUNBS" value="CXUNBS" desc="查询笔数"/>
+<Item name="/UFTP/BankData/JYDZLX" value="JYDZLX" desc="交易对帐类型"/>
+<Item name="/UFTP/BankData/SHKHHM" value="SHKHHM" desc="收款行名"/>
+<Item name="/UFTP/BankData/FUHEGY" value="FUHEGY" desc="复核柜员"/>
+<Item name="/UFTP/BankData/FHGYLS" value="FHGYLS" desc="复核柜员流水号"/>
+<Item name="/UFTP/BankData/PZHTJH" value="PZHTJH" desc="凭证提交号"/>
+<Item name="/UFTP/BankData/JINBRQ" value="JINBRQ" desc="经办日期"/>
+</Request>
+<Response type="xml" packfmt="Osz432@R">
+<grid name="Fsz431">
+<Item name="JYDZLX"   type="xml"   value="//JYDZLX"  desc="业务种类"/>
+<Item name="TCHTCH"   type="xml"   value="//TCHTCH"  desc="同城提出号"/>
+<Item name="JIOHLX"   type="xml"   value="//JIOHLX"  desc="交换类型"/>
+<Item name="JIOHRQ"   type="xml"   value="//WorkDate"  desc="交换日期"/>
+<Item name="JIOHCC"   type="xml"   value="//ExchgRound"  desc="交换日期"/>
+<Item name="CHUPRQ"   type="xml"   value="//IssueDate"  desc="出票日期"/>
+<Item name="WEITRQ"   type="xml"   value="//WEITRQ"  desc="委托日期"/>
+<Item name="LZBWZT"   type="xml"   value="//LZBWZT"  desc="止付标志"/>
+<Item name="PZHTJH"   type="xml"   value="//PZHTJH"  desc="止付序号"/>
+<Item name="JINBRQ"   type="xml"   value="//JINBRQ"  desc="止付日期"/>
+<Item name="FUKURQ"   type="xml"   value="//FUKURQ"  desc="提示付款日期"/>
+<Item name="RUZHRQ"   type="xml"   value="//RUZHRQ"  desc="入账日期"/>
+<Item name="JIO1JE"   type="xml"   value="//SettlAmt"  desc="交易金额"/>
+<Item name="RUZHBZ"   type="xml"   value="//RUZHBZ"  desc="入帐标志"/>
+<Item name="FUHEBZ"   type="xml"   value="//FUHEBZ"  desc="复核标志"/>
+<Item name="FUHEGY"   type="xml"   value="//FUHEGY"  desc="复核柜员"/>
+<Item name="FHGYLS"   type="xml"   value="//FHGYLS"  desc="复核柜员流水"/>
+<Item name="SHKRZH"   type="xml"   value="//BeneAcct"  desc="收款人帐号"/>
+<Item name="SHKRXM"   type="xml"   value="//BeneName"  desc="收款人名称"/>
+<Item name="WAIGDM"   type="xml"   value="//WAIGDM"  desc="外管代码"/>
+<Item name="PNGZZL"   type="xml"   value="//PNGZZL"  desc="凭证种类"/>
+<Item name="PNGZPH"   type="xml"   value="//PNGZPH"  desc="凭证批号"/>
+<Item name="PNGZHH"   type="xml"   value="//NoteNo"  desc="凭证序号"/>
+<Item name="SBHHAO"   type="xml"   value="//SBHHAO"  desc="接收行行号"/>
+<Item name="ZJCYHH"   type="xml"   value="//ZJCYHH"  desc="收款行支付号"/>
+<Item name="FUKRZH"   type="xml"   value="//PayingAcct"  desc="付款人帐号"/>
+<Item name="ZYWXYH"   type="xml"   value="//ZYWXYH"  desc="交易序号"/>
+<Item name="FUKRXM"   type="xml"   value="//PayingName"  desc="付款人名称"/>
+<Item name="HUOBFH"   type="xml"   value="//HUOBFH"  desc="货币符号"/>
+<Item name="HXIOZT"   type="xml"   value="//HXIOZT"  desc="回执标志"/>
+<Item name="TUIHBZ"   type="xml"   value="//TUIHBZ"  desc="退票标志"/>
+<Item name="FUKUQX"   type="xml"   value="//FUKUQX"  desc="回执期限"/>
+<Item name="SHULIA"   type="xml"   value="//SHULIA"  desc="数量"/>
+<Item name="SHKHHM"   type="xml"   value="//SHKHHM"  desc="收款行名"/>
+</grid>
+</Response>
+</Transaction>
+
+<Transaction code="sz44" desc="提入借方确认入账查询交易">
+<Request type="sop" opptrcode="0104" packfmt="Osz441@S">
+<Item name="/UFTP/MsgHdrRq/RefId" type="sop" value="FQHHAO" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="0104" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"                value="1015"  desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/TermId"                value="YNGYJG"  desc="营业机构"/>
+<Item name="/UFTP/TrnCtl/DCFlag"    type="const"  value="1"  desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="2" desc="凭证种类"/>
+-->
+<Item name="/UFTP/TrnCtl/WorkDate"                value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/TrnCtl/PayingAcct"              value="FUKRZH"  desc="付款账号"/>
+<Item name="/UFTP/TrnCtl/Payer"                   value="FUKRXM"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/TrnCtl/BeneAcct"                value="SHKRZH"  desc="收款账号"/>
+<Item name="/UFTP/TrnCtl/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/TrnCtl/BeneBank" type="const"   value=""        desc="收款行号"/>
+<Item name="/UFTP/TrnCtl/CurCode"  type="const"   value="CNY"  desc="币种"/>
+<Item name="/UFTP/TrnCtl/CurType"  type="const"   value="0"    desc="钞汇类型"/>
+<Item name="/UFTP/TrnCtl/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/TrnCtl/ExchgRound"                value="TRJHCC"  desc="交换场次"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/BankData/PNGZZL" value="PNGZZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/JIOHLX" value="JIOHLX" desc="交换类型"/>
+<Item name="/UFTP/BankData/RUZHBZ" value="RUZHBZ" desc="入账标志"/>
+<Item name="/UFTP/BankData/TUIHBZ" value="TUIHBZ" desc="退汇标志"/>
+<Item name="/UFTP/BankData/QISHBS" value="QISHBS" desc="起始笔数"/>
+<Item name="/UFTP/BankData/CXUNBS" value="CXUNBS" desc="查询笔数"/>
+</Request>
+<Response type="xml" packfmt="Osz442@R">
+<grid name="Fsz441">
+<Item name="SHHUDH"   type="xml"   value="//SHHUDH"  desc="业务流水号"/>
+<Item name="QSZXDH"   type="xml"   value="//QSZXDH"  desc="清算中心代号"/>
+<Item name="JIOHRQ"   type="xml"   value="//WorkDate"  desc="交换日期"/>
+<Item name="JIOHLX"   type="xml"   value="//JIOHLX"  desc="交换类型"/>
+<Item name="FQHHAO"   type="xml"   value="//Acceptor"  desc="提出行交换号"/>
+<Item name="QISHHH"   type="xml"   value="//Originator"  desc="提入交换号"/>
+<Item name="TCHTCH"   type="xml"   value="//TCHTCH"  desc="同城提出号"/>
+<Item name="JIO1JE"   type="xml"   value="//SettlAmt"  desc="交易金额"/>
+<Item name="JIOHCC"   type="xml"   value="//ExchgRound"  desc="交换场次"/>
+<Item name="FUHEBZ"   type="xml"   value="//FUHEBZ"  desc="复核标志"/>
+<Item name="PNGZZL"   type="xml"   value="//PNGZZL"  desc="凭证种类"/>
+<Item name="PNGZPH"   type="xml"   value="//PNGZPH"  desc="凭证批号"/>
+<Item name="PNGZXH"   type="xml"   value="//PNGZXH"  desc="凭证号"/>
+<Item name="GUIYLS"   type="xml"   value="//GUIYLS"  desc="柜员流水号"/>
+<Item name="FHGYLS"   type="xml"   value="//FHGYLS"  desc="复核柜员流水"/>
+<Item name="TUIHBZ"   type="xml"   value="//TUIHBZ"  desc="退票标志"/>
+<Item name="TUIPLY"   type="xml"   value="//TUIPLY"  desc="退票理由"/>
+<Item name="RUZHBZ"   type="xml"   value="//RUZHBZ"  desc="入帐标志"/>
+<Item name="FUKRZH"   type="xml"   value="//PayingAcct"  desc="付款人帐号"/>
+<Item name="FUKRXM"   type="xml"   value="//PayingName"  desc="付款人名称"/>
+<Item name="WAIGDM"   type="xml"   value="//WAIGDM"  desc="外管代码"/>
+<Item name="SHKRZH"   type="xml"   value="//BeneAcct"  desc="收款人帐号"/>
+<Item name="SHKRXM"   type="xml"   value="//BeneName"  desc="收款人名称"/>
+<Item name="ZJCYHH"   type="xml"   value="//ZJCYHH"  desc="收款行支付号"/>
+<Item name="SBHHAO"   type="xml"   value="//SBHHAO"  desc="接收行行号"/>
+<Item name="SHKHHM"   type="xml"   value="//SHKHHM"  desc="收款行名"/>
+<Item name="BEIZXX"   type="xml"   value="//BEIZXX"  desc="备注信息"/>
+</grid>
+</Response>
+</Transaction>
+
+<Transaction code="sz45" desc="提入贷方确认入账">
+<Request type="sop" opptrcode="0111" packfmt="Osz451@S">
+<Item name="/UFTP/MsgHdrRq/RefId" type="sop" value="FQHHAO" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="0111" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass" type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"      value="1015"  desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/Originator"  value="FQHHAO"  desc="提出行号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"    value="SBHHAO"  desc="提入行号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"    value="JIOHRQ"  desc="交换日期"/>
+<Item name="/UFTP/MsgHdrRq/AcctOper"    value="PDUSID"  desc="交易柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"      value="PDSBNO"  desc="机构代码"/>
+<Item name="/UFTP/NoteInfo/DCFlag" type="const"  value="2"  desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType" type="const" value="" desc="凭证种类"/>
+<!--
+<Item name="/UFTP/NoteInfo/NoteType" type="sop" value="PNGZZL" dll="dll/libconvert.so" func="cvt_notetype" expr="2" desc="凭证种类"/>
+-->
+<Item name="/UFTP/NoteInfo/NoteNo"                  value="PNGZXH"  desc="凭证序号"/>
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="ZHA1ZH"  desc="付款人账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRMC"  desc="付款名称"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="DUIFZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="XINX01"  desc="收款名称"/>
+<Item name="/UFTP/NoteInfo/BeneBank" type="const"   value=""        desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode" type="const"    value="CNY"  desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType" type="const"    value="0"    desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt" type="const"    value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"  type="const"    value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/Purpose"                 value="TUIPLY"  desc="事由用途"/>
+<Item name="/UFTP/NoteInfo/TestKey" type="const"    value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/SettlInfo/ExchgRound"             value="JIOHCC"  desc="交换场次"/>
+<Item name="/UFTP/BankData/PDWSNO"  value="PDWSNO" desc="终端号TTY"/>
+<Item name="/UFTP/BankData/QSZXDH" value="QSZXDH" desc="清算中心代号"/>
+<Item name="/UFTP/BankData/PNGZPH" value="PNGZPH" desc="凭证批号"/>
+<Item name="/UFTP/BankData/PNGZZL" value="PNGZZL" desc="行内凭证种类,接口用"/>
+<Item name="/UFTP/BankData/ZHANGH" value="ZHANGH" desc="入账账号"/>
+<Item name="/UFTP/BankData/ZHUZWM" value="ZHUZWM" desc="账户名称"/>
+<Item name="/UFTP/BankData/JIOHLX" value="JIOHLX" desc="交换类型"/>
+</Request>
+<Response type="xml" packfmt="Osz452@R">
+<Item name="GUIYLS" length="12" type="xml" value="//GUIYLS" desc="柜员流水号"/>
+<Item name="TISHXI" length="62" type="xml" value="//TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz73" desc="个人通存">
+<Request type="sop" opptrcode="0013" packfmt="Osz731@S">
+<Item name="/UFTP/MsgHdrRq/RefId"      type="sop"   value="FQHHAO"  dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"    type="const" value="0002"    desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass"   type="const" value="1"       desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"                  value="1015"    desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/Originator"              value="PDSBNO"  dll="dll/libconvert.so" func="cvt_bankid2exchno" expr="" desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"                value="SKHHAO"  desc="提入行号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"   type="const" value="20110120" desc="交换日期"/><!-- 暂时默认 -->
+<Item name="/UFTP/MsgHdrRq/AcctOper"                value="PDUSID"  desc="交易柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"                  value="PDSBNO"  desc="机构代码"/>
+<Item name="/UFTP/NoteInfo/DCFlag"     type="const" value="2"       desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType"   type="const" value="73"      desc="凭证种类"/>
+<Item name="/UFTP/NoteInfo/NoteNo"                  value=""  desc="凭证序号"/><!-- 暂无  -->
+<Item name="/UFTP/NoteInfo/IssueDate"               value=""  desc="出票日期"/><!-- 暂时默认 -->
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="ZYZCZH"  desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRMC"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="ZYZRZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank"   type="const" value="SKHHAO"  desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode"    type="const" value="CNY"     desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType"    type="const" value="0"       desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/LimitAmt"                value=""        desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt"    type="const" value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"     type="const" value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey"    type="const" value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="JIOYMM"  desc="支付密码,协议号"/>
+<Item name="/UFTP/NoteInfo/Purpose"                 value="FUYANN"  desc="事由用途"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBank"       value="SKHHAO"  desc="对方行号"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBankName"   value="SHKHMC"  desc="对方行名"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/SettlInfo/TruncFlag"              value=""  desc="截留标志"/>
+<Item name="/UFTP/BankData/SXFYLY" type="sop" value="SXFYLY" desc="通存业务模式(0现金1转账)"/>
+<Item name="/UFTP/BankData/SHURFS" type="sop" value="SHURFS" desc="输入方式(0磁条1芯片)"/>
+<Item name="/UFTP/BankData/ZHJNZL" type="sop" value="ZHJNZL" desc="付款人证件种类"/>
+<Item name="/UFTP/BankData/ZHJHAO" type="sop" value="ZHJHAO" desc="付款人证件号码"/>
+<Item name="/UFTP/BankData/PRONAM" type="sop" value="PRONAM" desc="收款人地址电话"/>
+<Item name="/UFTP/BankData/DLRZZL" type="sop" value="DLRZZL" desc="收款人证件种类"/>
+<Item name="/UFTP/BankData/DLRZJH" type="sop" value="DLRZJH" desc="收款人证件号码"/>
+</Request>
+<Response type="xml" packfmt="Osz732@R">
+<Item name="TISHXI" length="62" type="xml" value="" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz74" desc="个人通兑">
+<Request type="sop" opptrcode="0014" packfmt="Osz741@S">
+<Item name="/UFTP/MsgHdrRq/RefId"      type="sop"   value="FQHHAO"  dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"    type="const" value="0002"    desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass"   type="const" value="1"       desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"                  value="1015"    desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/Originator"              value="PDSBNO"  dll="dll/libconvert.so" func="cvt_bankid2exchno" expr="" desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"                value="SKHHAO"  desc="提入行号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"   type="const" value="20110120" desc="交换日期"/><!-- 暂时默认 -->
+<Item name="/UFTP/MsgHdrRq/AcctOper"                value="PDUSID"  desc="交易柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"                  value="PDSBNO"  desc="机构代码"/>
+<Item name="/UFTP/NoteInfo/DCFlag"     type="const" value="2"       desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType"   type="const" value="74"      desc="凭证种类"/>
+<Item name="/UFTP/NoteInfo/NoteNo"                  value=""  desc="凭证序号"/><!-- 暂无  -->
+<Item name="/UFTP/NoteInfo/IssueDate"               value=""  desc="出票日期"/><!-- 暂时默认 -->
+<Item name="/UFTP/NoteInfo/PayingAcct"              value="ZYZCZH"  desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                   value="FUKRMC"  desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="const" value=""        desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                value="ZYZRZH"  desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                value="SHKRXM"  desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank"   type="const" value="SKHHAO"  desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode"    type="const" value="CNY"     desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType"    type="const" value="0"       desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                value="JIO1JE"  desc="交易金额"/>
+<Item name="/UFTP/NoteInfo/LimitAmt"                value=""        desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/RemnAmt"    type="const" value="0.00"    desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"     type="const" value=""        desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey"    type="const" value=""        desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="JIOYMM"  desc="支付密码,协议号"/>
+<Item name="/UFTP/NoteInfo/Purpose"                 value="FUYANN"  desc="事由用途"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBank"       value="SKHHAO"  desc="对方行号"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBankName"   value="SHKHMC"  desc="对方行名"/>
+<Item name="/UFTP/NoteInfo/ExtraData/TrnDetail" type="const" value="" dll="dll/libconvert.so" func="get_trndetail" expr="" desc="交易明细"/>
+<Item name="/UFTP/SettlInfo/TruncFlag"              value=""  desc="截留标志"/>
+<Item name="/UFTP/BankData/SXFYLY" type="sop" value="SXFYLY" desc="通存业务模式(0现金1转账)"/>
+<Item name="/UFTP/BankData/SHURFS" type="sop" value="SHURFS" desc="输入方式(0磁条1芯片)"/>
+<Item name="/UFTP/BankData/ZHJNZL" type="sop" value="ZHJNZL" desc="付款人证件种类"/>
+<Item name="/UFTP/BankData/ZHJHAO" type="sop" value="ZHJHAO" desc="付款人证件号码"/>
+<Item name="/UFTP/BankData/PRONAM" type="sop" value="PRONAM" desc="收款人地址电话"/>
+<Item name="/UFTP/BankData/DLRZZL" type="sop" value="DLRZZL" desc="收款人证件种类"/>
+<Item name="/UFTP/BankData/DLRZJH" type="sop" value="DLRZJH" desc="收款人证件号码"/>
+</Request>
+<Response type="xml" packfmt="Osz742@R">
+<Item name="TISHXI" length="62" type="xml" value="" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz75" desc="个人通存通兑补打印">
+<Request type="sop" opptrcode="0014" packfmt="Osz751@S">
+<Item name="" type="sop" value="JIOYRQ" desc="交易日期"/>
+<Item name="" type="sop" value="GUIYLS" desc="柜员流水号"/>
+</Request>
+<Response type="xml" packfmt="Osz752@R">
+<Item name="TISHXI" length="62"  type="xml" value="" desc="提示信息"/>
+<Item name="ZYZCZH" length="20"  type="xml" value="" desc="中间业务转出帐号"/>
+<Item name="FUKRMC" length="62"  type="xml" value="" desc="付款人名称"/>
+<Item name="ZHJNZL" length="1"   type="xml" value="" desc="证件种类"/>
+<Item name="ZHJHAO" length="20"  type="xml" value="" desc="证件号码"/>
+<Item name="ZYZRZH" length="20"  type="xml" value="" desc="中间业务转入帐号"/>
+<Item name="SHKRXM" length="62"  type="xml" value="" desc="收款人姓名"/>
+<Item name="PRONAM" length="60"  type="xml" value="" desc="收款人地址电话"/>
+<Item name="DLRZZL" length="1"   type="xml" value="" desc="代理人证件种类"/>
+<Item name="DLRZJH" length="20"  type="xml" value="" desc="代理人证件号码"/>
+<Item name="SKHHAO" length="11"  type="xml" value="" desc="收款行号"/>
+<Item name="SHKHMC" length="62"  type="xml" value="" desc="收款行名称"/>
+<Item name="FUYANN" length="220" type="xml" value="" desc="附言"/>
+<Item name="JIO1JE" length="15"  type="xml" value="" desc="交易金额"/>
+</Response>
+</Transaction>
+
+<Transaction code="sz79" desc="查询查复">
+<Request type="sop" opptrcode="8101" packfmt="Osz791@S">
+<Item name="/UFTP/MsgHdrRq/TrnCode"       type="const" value="8101" desc="交易码"/>
+<Item name="/UFTP/MsgHdrRq/Sender"        type="const" value="999"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Recver"        type="const" value="109"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Originator"    type="const" value="090010" desc=""/>
+<Item name="/UFTP/MsgHdrRq/SvcClass"      type="const" value="1" desc="业务类型"/>
+<Item name="/UFTP/QueryInfo/QueryId"      type="const" value="QUERYID" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="查询书编号"/>
+<Item name="/UFTP/QueryInfo/QueryType"    type="sop" value="CXCFLX" desc="查询类型"/>
+<Item name="/UFTP/QueryInfo/InputOper"    type="sop" value="JIZGGY" desc="录入操作员"/>
+<Item name="/UFTP/QueryInfo/CheckOper"    type="sop" value="FUHEGY" desc="复核操作员"/>
+<Item name="/UFTP/QueryInfo/DCFlag"       type="sop" value="JIEDBZ" dll="dll/libconvert.so" func="cvt_dcflag" expr="" desc="借贷标志"/>
+<Item name="/UFTP/QueryInfo/NoteType"     type="const" value="" desc="凭证种类"/>
+<Item name="/UFTP/QueryInfo/NoteNo"       type="sop" value="PNGZXH" desc="凭证号"/>
+<Item name="/UFTP/QueryInfo/SettlAmt"     type="sop" value="JIO1JE" desc="凭证金额"/>
+<Item name="/UFTP/QueryInfo/IssueDate"    type="sop" value="QNFARQ" desc="签发日期"/>
+<Item name="/UFTP/QueryInfo/TradeDate"    type="sop" value="JIOYRQ" desc="原交易日期"/>
+<Item name="/UFTP/QueryInfo/RefId"        type="sop" value="JIOYLS" desc="原交易流水"/>
+<Item name="/UFTP/QueryInfo/OutBank"      type="sop" value="QISHHH" desc="原交易提出行号"/>
+<Item name="/UFTP/QueryInfo/InBank"       type="sop" value="FQHHAO" desc="原交易提入行号"/>
+<Item name="/UFTP/QueryInfo/Agreement"    type="sop" value="ZHFUMM" desc="支付密码"/>
+<Item name="/UFTP/QueryInfo/PayKey"       type="sop" value="YASHJW" desc="查询查复书提出行密押"/>
+<Item name="/UFTP/QueryInfo/TestKey"      type="sop" value="YASHJN" desc="查询查复书中心密押"/>
+<Item name="/UFTP/QueryInfo/PayingAcct"   type="sop" value="FUKRZH" desc="付款账号"/>
+<Item name="/UFTP/QueryInfo/Payer"        type="sop" value="FUKRXM" desc="付款姓名"/>
+<Item name="/UFTP/QueryInfo/BeneAcct"     type="sop" value="SHKRZH" desc="收款账号"/>
+<Item name="/UFTP/QueryInfo/BeneName"     type="sop" value="SHKRXM" desc="收款人姓名"/>
+<Item name="/UFTP/QueryInfo/RegressDate"  type="sop" value="TUIHRQ" desc="退划日期"/>
+<Item name="/UFTP/QueryInfo/RegressrefId" type="sop" value="QXGYLS" desc="退划流水"/>
+<Item name="/UFTP/QueryInfo/Purpose"      type="sop" value="XINX03" desc="查询查复事由"/>
+<Item name="/UFTP/BankData/PNGZZL"        type="sop" value="PNGZZL" desc="凭证种类"/>
+<Item name="/UFTP/BankData/QTJYMA"        type="const" value="sz79" desc="前台交易码"/>
+</Request>
+<Response type="sop" packfmt="Osz792@R">
+<Item name="TISHXI" length="62" type="xml" value="/UFTP/MsgHdrRs/Desc" desc="处理结果"/>
+</Response>
+</Transaction>
+
+<Transaction code="0810" desc="账户管理">
+<Request type="sop" opptrcode="" packfmt="O08101@S">
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="sop" value="HKBZZZ" dll="dll/libconvert.so" func="cvt_caozuotype" expr="" desc="操作类型"/>
+<Item name="/UFTP/MsgHdrRq/Sender" type="const" value="999"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Recver" type="const" value="109"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Originator" type="const" value="090010" desc=""/>
+<Item name="/UFTP/MsgHdrRq/Acceptor" type="sop" value="JIAOHH" desc="交换号"/>
+<Item name="/UFTP/AcctDetail/OpenBank" type="sop" value="YSHOQH" desc="开户行号"/>
+<Item name="/UFTP/AcctDetail/AcctId" type="sop" value="DUIFZH" desc="企业账号"/>
+<Item name="/UFTP/AcctDetail/Name"      type="sop" value="XINX01" desc="企业名称"/>
+<Item name="/UFTP/AcctDetail/DueDate" type="sop" value="KAIHRQ" dll="dll/libconvert.so" func="cvt_DueDate" expr="XIOHRQ" desc="开户日期"/>
+<!--
+<Item name="/UFTP/AcctDetail/DueDate" type="sop" value="XIOHRQ" desc="销户日期"/>
+-->
+<Item name="/UFTP/AcctDetail/AcctAttr" type="sop" value="ZHANGT" desc="账户性质"/>
+<Item name="/UFTP/AcctDetail/AcctStat" type="sop" value="ZHUNGT" desc="账户状态"/>
+<Item name="/UFTP/AcctDetail/IndustId"  type="sop" value="QIYEDM" desc="单位标准代码"/>
+<Item name="/UFTP/AcctDetail/BasicAcctLic" type="sop" value="HUOBMC" desc="开户许可证"/>
+<Item name="/UFTP/AcctDetail/AcctType" type="const" value="1" desc="账户类型"/>
+<Item name="/UFTP/AcctDetail/CurCode" type="const" value="CNY" desc="币种"/>
+<Item name="/UFTP/AcctDetail/CurType" type="const" value="0" desc="汇钞类型"/>
+<Item name="/UFTP/BankData/MAIRBZ" type="sop" value="MAIRBZ" desc="企业性质编号"/>
+<Item name="/UFTP/BankData/ZZHAOM"  type="sop" value="ZZHAOM" desc="证件号码"/>
+<Item name="/UFTP/BankData/DJIESH" type="sop" value="DJIESH" desc="有效证件编号（营业执照号码"/>
+<Item name="/UFTP/BankData/FRENMC" type="sop" value="FRENMC" desc="法人代表"/>
+<Item name="/UFTP/BankData/TSHPZH" type="sop" value="TSHPZH" desc="国税登记号"/>
+<Item name="/UFTP/BankData/BEIYZF" type="sop" value="BEIYZF" desc="地税登记号"/>
+<Item name="/UFTP/BankData/ZHUCZJ" type="sop" value="ZHUCZJ" desc="注册资本"/>
+<Item name="/UFTP/BankData/HUOBFH" type="sop" value="HUOBFH" desc="企业信誉等级"/>
+<Item name="/UFTP/BankData/MYLSHO" type="sop" value="MYLSHO" desc="贷款卡号"/>
+<Item name="/UFTP/BankData/HKBZZZ" type="sop" value="HKBZZZ" desc="操作类型"/>
+</Request>
+<Response type="xml" packfmt="O08102@R">
+<Item name="ZFXTZT" length="2"  type="xml" value="//Result" dll="dll/libconvert.so" func="cvt_result" expr="" desc="成功标志"/>
+<!--
+<Item name="ZFXTZT" length="2"  type="xml" value="/UFTP/BankData/ZFXTZT" desc="成功标志"/>
+-->
+<Item name="XINX01" length="60" type="xml" value="/UFTP/AcctDetail/Name" desc="企业名称"/>
+<Item name="KAIHRQ" length="8"  type="xml" value="/UFTP/AcctDetail/DueDate" desc="开户日期"/>
+<!--
+<Item name="XIOHRQ" length="8"  type="xml" value="/UFTP/AcctDetail/DueDate" desc="销户日期"/>
+-->
+<Item name="ZHANGT" length="1"  type="xml" value="/UFTP/AcctDetail/AcctAttr" desc="账户性质"/>
+<Item name="ZZHAOM" length="32" type="xml" value="/UFTP/BankData/ZZHAOM" desc="营业执照号码"/>
+<Item name="QIYEDM" length="20" type="xml" value="/UFTP/AcctDetail/IndustId" desc="单位标准代码"/>
+<Item name="HUOBMC" length="12" type="xml" value="/UFTP/AcctDetail/BasicAcctLic" desc="开户许可证号"/>
+<Item name="DJIESH" length="20" type="xml" value="/UFTP/BankData/DJIESH" desc="有效证件编号"/>
+<Item name="FRENMC" length="22" type="xml" value="/UFTP/BankData/FRENMC" desc="法人代表"/>
+<Item name="TSHPZH" length="20" type="xml" value="/UFTP/BankData/TSHPZH" desc="国税登记号"/>
+<Item name="BEIYZF" length="20" type="xml" value="/UFTP/BankData/BEIYZF" desc="地税登记号"/>
+<Item name="ZHUCZJ" length="13" type="xml" value="/UFTP/BankData/ZHUCZJ" desc="注册资本"/>
+<Item name="HUOBFH" length="3"  type="xml" value="/UFTP/BankData/HUOBFH" desc="企业信誉等级"/>
+<Item name="MYLSHO" length="18" type="xml" value="/UFTP/BankData/MYLSHO" desc="贷款卡号"/>
+<Item name="ZHUNGT" length="1"  type="xml" value="/UFTP/AcctDetail/AcctStat" desc="账户状态"/>
+<Item name="MAIRBZ" length="2"  type="xml" value="/UFTP/BankData/MAIRBZ" desc="企业性质编号"/>
+<Item name="SHFOBZ" length="1"  type="xml" value="/UFTP/BankData/SHFOBZ" desc="许可标志"/>
+</Response>
+</Transaction>
+
+<Transaction code="0917" desc="支付密码机具管理">
+<Request type="sop" opptrcode="1011" packfmt="O09171@S">
+<Item name="/UFTP/MsgHdrRq/TrnCode"  type="const" value="1011" desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/Sender" type="const" value="999"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Recver" type="const" value="109"     desc=""/>
+<Item name="/UFTP/MsgHdrRq/Originator" type="const" value="090010" desc=""/>
+<Item name="/UFTP/AppaDetail/AcctBank" type="sop" value="FUKRHH" desc="开户行号"/>
+<Item name="/UFTP/AppaDetail/ApparatusId" type="sop" value="JIJUHH" desc="机具号"/>
+<Item name="/UFTP/AppaDetail/AcctId" type="sop" value="FKRZHH" desc="账号"/>
+<Item name="/UFTP/AppaDetail/OperType" type="sop" value="CAOZBZ" desc="操作标志"/>
+<Item name="/UFTP/AppaDetail/OperTime" type="sop" value="JIOYRQ" desc="操作时间"/>
+</Request>
+<Response type="xml" packfmt="O09172@R">
+<Item name="TISHXI" length="62" type="xml" value="/UFTP/MsgHdrRs/Result" desc="处理结果"/>
+</Response>
+</Transaction>
+
+</Root>

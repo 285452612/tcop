@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1649</BKTrnCode> <!--本票核押-->
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKGrantOperId/>
+        <BKFunctionFlag>4</BKFunctionFlag>
+        <BKIssueDate/>
+        <BKIssueRegion/>
+        <BKHPNo/>
+        <BKHPAmount/>
+        <BKHPCipher/>
+        <BKSenderBank/>
+        <BKReceiverBank/>
+        <BKIssueBank/>
+        <BKCashBank/>
+        <BKBeneAcctNo/>
+        <BKBeneName/>
+        <BKUseFlag>0</BKUseFlag>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKFunctionFlag/>
+            <BKIssueDate/>
+            <BKIssueRegion/>
+            <BKHPNo/>
+            <BKAmount/>
+            <BKHPCipher/>
+            <BKSenderBank/>
+            <BKReceiverBank/>
+            <BKIssueBank/>
+            <BKCashBank/>
+            <BKBeneAcctNo/>
+            <BKBeneName/>
+            <BKCompanyName/>    <!--校验结果-->
+            <BKUseFlag/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

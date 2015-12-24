@@ -1,0 +1,67 @@
+#!/bin/env python
+#encoding=utf-8
+
+import socket, os, sys, string
+
+datafile = 'xy.emu'
+rspError = 0
+
+def GetRspData(tcode):
+    msg = ''
+    lines = map(lambda s : s.strip(), open(datafile).readlines())
+
+    try:
+        print 'tcode=[' + str(tcode) + ']'
+        if rspError:
+            index = lines.index('[ERROR]')
+            msg = lines[index+1]
+        else:
+            bidx = lines.index(tcode + '[')
+            eidx = lines.index(tcode + ']')
+            for line in lines[bidx+1:eidx]:
+                if '=' in line:
+                    idx = line.index('=')
+                    way = line[idx-1]
+                    len = int(line[0:idx-1])
+                    val = line[idx+1:]
+                    if way == 'L':
+                        val = val.rjust(len)
+                    elif way == 'R':
+                        val = val.ljust(len)
+                    #print 'val:[' + val + ']'
+                    msg += val
+                else:
+                    msg += line
+    except Exception, e:
+        print Exception,":", e
+        msg = '99999:未找到对应的响应报文配置'
+
+    return msg.replace(':', '')
+
+   
+if __name__ == '__main__':    
+    #print '[' + GetRspData('2380') + ']'
+    try:
+        commaddr = os.getenv('TCOP_BANKADDR', 'localhost:6789:30')
+        (ip, port, timeout) = commaddr.split(':')
+        print 'Usage: XYEmu [ERROR CODE]'
+
+        if len(sys.argv[1:]):
+            rspError = 1
+
+        print 'Server is started\n[%s:%s]waiting for connection...\n'%(ip, port)
+
+        a=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        a.bind((ip, int(port)))
+        a.listen(5)
+        while 1:
+            cs,ca=a.accept()
+            msg=cs.recv(5)
+            msg=cs.recv(1024)
+            print 'recved[' + str(len(msg)) + '][' + msg + ']\n'
+            msg = GetRspData(msg[0:4])
+            print 'sended[' + str(len(msg)) + '][' + msg + ']\n\n'
+            cs.send('zzzzz' + msg)
+    except Exception,ex:
+           print Exception,":",ex
+

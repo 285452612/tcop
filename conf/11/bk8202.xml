@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!-- 账户查询 -->
+<PACK>
+  <INPUT>
+    <ROOT>
+      <HEAD>
+        <SysCode>3214001</SysCode>
+        <TxCode>8202</TxCode>
+        <ClearDate/>
+        <CliTxSeq/>
+        <strMAC/>
+      </HEAD>
+      <PARAM>
+        <Account/>
+      </PARAM>
+    </ROOT>
+  </INPUT>
+  <OUTPUT>
+    <RESPONSE FLAG='0'>
+      <ROOT>
+        <HEAD>
+          <SysCode/>
+          <TxCode/>
+          <ClearDate/>
+          <TxSeq/>
+          <SuccFlag/>
+          <RetCode/>
+          <RetMsg/>
+        </HEAD>
+        <PARAM>
+          <Account/>
+          <OpenUnit/>
+          <AcctName/>
+          <AcctBal/>
+          <AvailBal/>
+          <AcctState/>
+        </PARAM>
+      </ROOT>
+    </RESPONSE>
+  </OUTPUT>
+</PACK>

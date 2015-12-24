@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opOperid       RULE='//AcctOper'/>
+    <opClassid      RULE='//SvcClass'/>
+    <opOriginator   RULE='//Originator'/>
+    <opClearround   RULE='//ClearRound'/>
+    <opStartdate    RULE='//StartDate'/>
+    <opEnddate      RULE='//EndDate'/>
+</INPUT>
+<OUTPUT>
+    <opTCRetinfo    RULE='//Desc'/>
+    <opFilenames    RULE='//Reserve'/>
+</OUTPUT>
+</MAP>

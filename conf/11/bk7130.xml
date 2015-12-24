@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!-- 补记 -->
+<PACK>
+  <INPUT>
+    <ROOT>
+      <HEAD>
+        <SysCode>3214001</SysCode>
+        <TxCode>8130</TxCode>
+        <ClearDate/>
+        <CliTxSeq/>
+        <strMAC/>
+      </HEAD>
+      <PARAM>
+        <PayAccount>3205010001013105010000000001</PayAccount>
+        <RecAccount>3205010001012625130000000001</RecAccount>
+        <TxUnitCode/>
+        <Amount/>
+        <Brief>非截留提出借记帐</Brief>
+      </PARAM>
+    </ROOT>
+  </INPUT>
+  <OUTPUT>
+    <RESPONSE FLAG='0'>
+      <ROOT>
+        <HEAD>
+          <SysCode/>
+          <TxCode/>
+          <ClearDate/>
+          <TxSeq/>
+          <SuccFlag/>
+          <RetCode/>
+          <RetMsg/>
+        </HEAD>
+        <PARAM>
+        </PARAM>
+      </ROOT>
+    </RESPONSE>
+  </OUTPUT>
+</PACK>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<TABLES>
+    <bankinfo ID='601' R='1' SEP='|'>
+        <bankid/>
+        <bankabbr/>
+    </bankinfo>
+    <organinfo ID='601' R='1' SEP='|'>
+        <orgid/>
+        <orgname/>
+        <orgabbr/>
+        <orgtype/>
+        <orglevel/>
+        <parent/>
+        <attechorg/>
+        <presproxy/>
+        <acptproxy/>
+        <svclist/>
+        <region/>
+        <linkman/>
+        <phone/>
+        <state/>
+        <exchflag/>
+        <exchregion/>
+        <enabledate/>
+        <disabledate/>
+        <exchroute/>
+    </organinfo>
+    <noteinfo ID='601' R='1' SEP='|'>
+        <notetype/>
+        <name/>
+        <classid/>
+        <dcflag/>
+        <enableflag/>
+        <dupcheck/>
+        <validperiod/>
+        <trnexpdays/>
+        <truncflag/>
+        <transflag/>
+        <authtype/>
+        <feepayer/>
+        <classid/>
+        <cleartype/>
+        <acctchktype/>
+        <notedesc/>
+    </noteinfo>
+</TABLES>

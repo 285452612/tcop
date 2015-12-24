@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//QueryId'/>
+  <opOriginator         RULE='//MsgHdrRq/Acceptor'/>
+  <opWorkdate           RULE='//MsgHdrRq/WorkDate'/>
+  <opChecker            RULE='//AcctOper'/>
+  <opOWorkDate          RULE='//OWorkDate'/>
+  <opMsgReContent       RULE='//Purpose'/>
+  <opRegressDate        RULE='//RegressDate'/>
+  <opRegressRefid       RULE='//RegressRefId'/>
+</INPUT>
+<OUTPUT>
+  <Result               RULE='//opTCRetcode'/>
+  <Desc                 RULE='//opTCRetinfo'/>
+</OUTPUT>
+</MAP>

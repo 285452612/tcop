@@ -1,0 +1,20 @@
+drop table agreement
+go
+create table agreement 
+(
+ nodeid               int                            not null,
+ unitcode    char(12)    not null ,
+ opertype    char(1)     not null ,
+ agreement   char(44)   not null ,
+ benebank    char(12)    ,
+ beneacct    char(36)    not null ,
+ benename    char(60)    not null ,
+ paybank     char(12)    ,
+ payacct     char(36)    not null ,
+ payname     char(60)    not null 
+)
+go
+create unique index agreement_idx1 on agreement(agreement, payacct, beneacct)
+go
+create unique index agreement_idx2 on agreement(payacct, beneacct)
+go

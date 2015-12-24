@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<CZTC>
+    <Tran OPTCODE='1004' TCTCODE='31' IOFLAG='1' TimePeriod='60' ExchgNoPos='85'/>
+    <Tran OPTCODE='1001' TCTCODE='31' TimePeriod='60' ExchgNoPos='85'/>
+    <Tran OPTCODE='1002' TCTCODE='31' TimePeriod='60' ExchgNoPos='85'/>
+    <Tran OPTCODE='1003' TCTCODE='31' TimePeriod='60' ExchgNoPos='85'/>
+    <Tran OPTCODE='2' TCTCODE='11' TimePeriod='60' ExchgNoPos='44'/>
+    <Tran OPTCODE='1' TCTCODE='11' TimePeriod='60' ExchgNoPos='44'/>
+    <ExchgNo ID='780' ADDRESS='137.40.1.66' PORT='1400'/>
+    <ExchgNo ID='781' ADDRESS='137.40.1.66' PORT='1400'/>
+    <ExchgNo ID='782' ADDRESS='137.40.1.66' PORT='1400'/>
+</CZTC>

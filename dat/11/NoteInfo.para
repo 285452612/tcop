@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>30</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+                             [                                    1]凭证种类查询
+                                             查询日期:[2               ]
+
+┏━━━━┯━━━━━━━━━━━━━━━┯━━━━━┯━━━━━━┯━━━┯━━┯━━━┯━━━━━━━━━━━━━━━┓
+┃凭证代码│           凭证名称           │ 业务类型 │重复检查标志│ 截留 │借贷│ 启用 │             描述             ┃
+</ReportHeader>
+<ReportBody>
+┠────┼───────────────┼─────┼──────┼───┼──┼───┼───────────────┨
+┃[   1  ]│[2                           ]│[  3     ]│[     4    ]│[  5 ]│[ 6]│[ 7  ]│[8                           ]┃
+</ReportBody>
+<ReportFooter>
+┗━━━━┷━━━━━━━━━━━━━━━┷━━━━━┷━━━━━━┷━━━┷━━┷━━━┷━━━━━━━━━━━━━━━┛
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 用于定义同城系统是结构报文的对应的XML格式的报文,tc+地区号+平台(基础)交易码.xml -->
+<PACK>
+    <Notetype/>
+    <Noteno/>
+</PACK>

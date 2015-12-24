@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>10</Lines>
+<PageBreak>32</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+   账号:[1                             ] 户名:[2                                         ]
+   序号         业务种类            交易金额         凭证号码       日期    性质  远程  
+  ───┬──────────┬────────┬───────┬────┬──┬───
+</ReportHeader>
+<ReportBody>
+  [   1]│[2                 ]│[             3]│[           4]│[5     ]│[ 6]│[ 7]  
+</ReportBody>
+<ReportFooter>
+  ───┴──────────┴────────┴───────┴────┴──┴───
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

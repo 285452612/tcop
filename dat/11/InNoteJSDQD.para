@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>25</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+        [                                  1]提入交换凭证计数单清单
+    [2                               ]                          清算场次:[3]
+  ┌───┬──┬──────────────┬──────────────┐
+  │  提  │交换│          提入借方          │          提入贷方          │
+  │  出  │    ├────┬─────────┼────┬─────────┤
+  │  行  │场次│  笔数  │      金  额      │  笔数  │      金  额      │
+</ReportHeader>
+<ReportBody>
+  ├───┼──┼────┼─────────┼────┼─────────┤
+  │[ 1  ]│[2 ]│[     3]│[               4]│[     5]│[               6]│
+</ReportBody>
+<ReportFooter>
+  ├───┴──┼────┼─────────┼────┼─────────┤
+  │   总  计   │[     1]│[               2]│[     3]│[               4]│
+  └──────┴────┴─────────┴────┴─────────┘
+  提入行:[5   ][6                                     ] 操作员:[7           ]
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

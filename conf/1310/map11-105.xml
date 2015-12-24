@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+    <INPUT>
+        <opInoutflag          RULE='//InOutFlag'/>
+        <opRefid              RULE='//TrnCtl/RefId'/>
+        <opOriginator         RULE='//TrnCtl/Originator'/>
+        <opWorkdate           RULE='//TrnCtl/WorkDate'/>
+    </INPUT>
+    <OUTPUT>
+        <opOriginator         RULE='//Content//Originator'/>
+        <opRefid              RULE='//Content//RefId'/>
+        <opTctcode            RULE='//Content//TrnCode'/>
+        <opWorkdate           RULE='//Content//WorkDate'/>
+        <opInputer            RULE='//Content//AcctOper'/>
+        <opAcceptor           RULE='//Content//Acceptor'/>
+        <opNotetype           RULE='//NoteType'/>
+        <opNoteno             RULE='//NoteNo'/>
+        <opDcflag             RULE='//DCFlag'/>
+        <opClassid            RULE='//SvcClass'/>
+        <opPayacct            RULE='//PayingAcct'/>
+        <opPayname            RULE='//Payer'/>
+        <opPaybank            RULE='//PayingBank'/>
+        <opBeneacct           RULE='//BeneAcct'/>
+        <opBenename           RULE='//BeneName'/>
+        <opBenebank           RULE='//BeneBank'/>
+        <opSettlamt           RULE='//SettlAmt'/>
+        <opIssuedate          RULE='//IssueDate'/>
+        <opCurtype            RULE='//CurType'/>
+        <opCurcode            RULE='//CurCode'/>
+        <opAgreement          RULE='//Agreement'/>
+        <opPurpose            RULE='//Purpose'/>
+        <opFeePayer           RULE='//FeePayer'/>
+        <opFee                RULE='//Fee'/>
+        <opClearstate         RULE='//ClearState'/>
+        <opOppBankName        RULE='//OppBankName'/>
+        <opOppCustAddr        RULE='//OppCustAddr'/>
+        <opOppBank            RULE='//OppBank'/>
+        <opOppBankAddr        RULE='//OppBankAddr'/>
+        <opPrintFlag          RULE='//PrintFlag'/>
+        <opPS                 RULE='//PS'/>
+    </OUTPUT>
+</MAP>

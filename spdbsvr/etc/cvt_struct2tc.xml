@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="gb18030"?>
+<Root>
+
+<Transaction code="0002" desc="批量贷记电子信息">
+<Request type="struct" opptrcode="0002">
+<Item name="/UFTP/MsgHdrRq/RefId"      type="const"   value="" dll="dll/libconvert.so" func="gen_serial" expr="99999999" desc="提出流水"/>
+<Item name="/UFTP/MsgHdrRq/TrnCode"    type="const"   value="0002"   desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass"   type="const"   value="1"      desc="业务类型"/>
+<Item name="/UFTP/MsgHdrRq/Recver"     type="const"   value="1015"   desc="节点号"/>
+<Item name="/UFTP/MsgHdrRq/WorkDate"   type="const"   value=""       desc="工作日期"/>
+<Item name="/UFTP/MsgHdrRq/Originator" type="struct"  value="TCHUHH"     set="5"    desc="提出行交换号"/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"   type="struct"  value="TRUHHH"     set="6"    desc="提入行交换号"/>
+<Item name="/UFTP/MsgHdrRq/AcctOper"   type="struct"  value="TCHHCZYH"   set="27"   desc="交易柜员"/>
+<Item name="/UFTP/MsgHdrRq/TermId"     type="struct"  value="ZHONDHAO"   set="26"   desc="终端号"/>
+<Item name="/UFTP/MsgHdrRq/Reserve"    type="const"   value="1"  desc="老同城标志位"/>
+<Item name="/UFTP/NoteInfo/DCFlag"     type="const"   value="2"                     desc="借贷标志"/>
+<Item name="/UFTP/NoteInfo/NoteType"   type="struct"  value="PIOJUZL"    set="7"    desc="凭证种类"/>
+<Item name="/UFTP/NoteInfo/NoteNo"     type="struct"  value="PZHHAO"     set="8"    desc="凭证序号"/>
+<Item name="/UFTP/NoteInfo/IssueDate"  type="struct"  value="QIANFRQ"    set="9"    dll="dll/libconvert.so" func="cvt_DateL2S" expr=""    desc="出票日期"/>
+<Item name="/UFTP/NoteInfo/PayingAcct"                value="FUKRZHH"    set="13"   desc="付款账号"/>
+<Item name="/UFTP/NoteInfo/Payer"                     value="FUKRHUM"    set="14"   desc="付款户名"/>
+<Item name="/UFTP/NoteInfo/PayingBank" type="struct"  value="FUKRKHHH"   set="15"   desc="付款行号"/>
+<Item name="/UFTP/NoteInfo/BeneAcct"                  value="SHKRZHH"    set="10"    desc="收款账号"/>
+<Item name="/UFTP/NoteInfo/BeneName"                  value="SHKRHUM"    set="11"   desc="收款户名"/>
+<Item name="/UFTP/NoteInfo/BeneBank"   type="struct"  value="SHKRKHHH"   set="12"   desc="收款行号"/>
+<Item name="/UFTP/NoteInfo/CurCode"    type="const"   value="CNY"          desc="币种"/>
+<Item name="/UFTP/NoteInfo/CurType"    type="const"   value="0"            desc="钞汇类型"/>
+<Item name="/UFTP/NoteInfo/SettlAmt"                  value="JINE"       set="18"   dll="dll/libconvert.so" func="cent_2_amt" expr="%.2f" desc= "交易金额"/>
+<Item name="/UFTP/NoteInfo/IssueAmt"   type="struct"  value="XIANE"      set="19"   desc="支付限额"/>
+<Item name="/UFTP/NoteInfo/PayKey"     type="const" value=""       desc="提出押"/>
+<Item name="/UFTP/NoteInfo/TestKey"    type="const" value=""       desc="中心密押"/>
+<Item name="/UFTP/NoteInfo/Agreement"               value="ZHFMM"       set="20" desc="支付密码,协议号"/>
+<Item name="/UFTP/NoteInfo/Purpose"                 value="SHIYYT"      set="22" desc="事由用途"/>
+<Item name="/UFTP/NoteInfo/ExtraData/OppBank"   type="struct"  value="DUIFHHH"    set="16"   desc="提入行号"/>
+</Request>
+<Response type="xml">
+</Response>
+</Transaction>
+
+<Transaction code="0043" desc="账户查询">
+<Request type="struct" opptrcode="1004">
+<Item name="/UFTP/MsgHdrRq/TrnCode"    type="const" value="1004"   desc="同城交易码"/>
+<Item name="/UFTP/MsgHdrRq/SvcClass"   type="const" value="1"      desc=""/>
+<Item name="/UFTP/MsgHdrRq/Sender"     type="const" value="999"    desc=""/>
+<Item name="/UFTP/MsgHdrRq/Recver"     type="const" value="109"    desc=""/>
+<Item name="/UFTP/MsgHdrRq/Originator" type="const" value="090010" desc=""/>
+<Item name="/UFTP/MsgHdrRq/Acceptor"                value="" set="3" desc="交换行"/>
+<Item name="/UFTP/AcctDetail/OpenBank"              value="" set="2" desc="开户行"/>
+<Item name="/UFTP/AcctDetail/AcctId"                value="" set="4" desc="账号"/>
+</Request>
+<Response type="xml">
+</Response>
+</Transaction>
+
+</Root>

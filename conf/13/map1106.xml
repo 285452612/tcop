@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKOrgId RULE='//opBankno'/>    <!--行内机构号-->
+        <BKOperId RULE='//opOperid'/>
+        <BKErrOperSerial RULE='//opHreserved1'/>    <!--柜员流水号平台报文存放opHreserved1节点-->
+        <BKAmount RULE='//Settlamt'/>
+        <!--BKDFNoteNo RULE='//Noteno'/-->
+        <!--BKDFAcctNo RULE='//Payacct'/-->
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode RULE='//BKResult'/>
+        <opRetinfo RULE='//BKErrinfo'/>
+        <opHostSerial RULE='//BKOperSerial'/>
+        <opOreserved1 RULE='//BKErrOperSerial'/>
+    </OUTPUT>
+</PACK>

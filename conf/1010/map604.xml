@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+        <opBeneid           RULE='//BeneId'/>
+        <opUserid           RULE='//UserId'/>
+        <opClassid          RULE='//SVCId'/>
+        <opPayacct          RULE='//PayingAcct'/>
+        <opAgreementid      RULE='//AgreementId'/>
+</INPUT>
+<OUTPUT>
+</OUTPUT>
+</MAP>

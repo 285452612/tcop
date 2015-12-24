@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//RefId'/>
+  <!--
+  <opOperid             RULE='//AcctOper'/>
+  <opChecker            RULE='//AcctOper'/>
+  -->
+  <opChecker            RULE='//PDUSID'/>
+  <opOperid             RULE='//PDUSID'/>
+  <opClassid            RULE='//SvcClass'/>
+  <opOriginator         RULE='//Originator'/>
+  <opAcceptor           RULE='//Acceptor'/>
+  <opWorkdate           RULE='//WorkDate'/>
+  <opInnerBank          RULE='//TermId'/>
+  <opInnerorganid       RULE='//TermId'/>
+  <opDcflag             RULE='//DCFlag'/>
+  <opNotetype           RULE='//NoteType'/>
+  <opNoteno             RULE='//NoteNo'/>
+  <opCurcode            RULE='//CurCode'/>
+  <opCurtype            RULE='//CurType'/>
+  <opIssuedate          RULE='//IssueDate'/>
+  <opSettlamt           RULE='//SettlAmt'/>
+  <opIssueamt           RULE='//IssueAmt'/>
+  <opRemnamt            RULE='//RemnAmt'/>
+  <opPayacct            RULE='//PayingAcct'/>
+  <opPayname            RULE='//Payer'/>
+  <opPaybank            RULE='//PayingBank'/>
+  <opBeneacct           RULE='//BeneAcct'/>
+  <opBenename           RULE='//BeneName'/>
+  <opBenebank           RULE='//BeneBank'/>
+  <opAgreement          RULE='//Agreement'/>
+  <opPurpose            RULE='//Purpose'/>
+  <opPaykey             RULE='//PayKey'/>
+  <opClearround         RULE='//ClearRound'/>
+  <opWorkround          RULE='//WorkRound'/>
+  <opExchgdate          RULE='//ExchgDate'/>
+  <opExchground         RULE='//ExchgRound'/>
+  <opCleardate          RULE='//ClearDate'/>
+  <opClearstate         RULE='//ClearState'/>
+  <opTruncflag          RULE='//TruncFlag'/>
+  <opReserved           RULE='//Reserve'/>
+  <opMac                RULE='//MAC'/>
+  <opTrackInfo2         RULE='//Track2'/>
+  <opQSZXDH             RULE='//QSZXDH'/>
+  <opSHFOBZ             RULE='//SHFOBZ'/>
+  <opXIOZXH             RULE='//XIOZXH'/>
+  <opZHYODM             RULE='//ZHYODM'/>
+  <opBEIZXX             RULE='//BEIZXX'/>
+  <opFENHDM             RULE='//FENHDM'/>
+  <opPNGZPH             RULE='//PNGZPH'/>
+  <opZHNGDH             RULE='//ZHNGDH'/> 
+  <opCHSHDM             RULE='//CHSHDM'/>
+  <opPNGZZL             RULE='//PNGZZL'/>
+  <opPDWSNO             RULE='//PDWSNO'/>
+  <opCID2XX             RULE='//CID2XX'/>
+  <opSNCDAO             RULE='//SNCDAO'/>
+  <opCD22XX             RULE='//CD22XX'/>
+  <opCID3XX             RULE='//CID3XX'/>
+  <opTJRZFS             RULE='//TJRZFS'/>
+  <opSYSPINSEED         RULE='//SYSPINSEED'/>
+  <opSYSLENGTH          RULE='//SYSLENGTH'/>
+  <opSYSMACVALUE        RULE='//SYSMACVALUE'/>
+  <opSYSMACSBNO         RULE='//SYSMACSBNO'/>
+  <opSYSSADDR           RULE='//SYSSADDR'/>
+  <opSYSDADDR           RULE='//SYSDADDR'/>
+  <opSYSRSRVD           RULE='//SYSRSRVD'/>
+  <opSYSEFLAG           RULE='//SYSEFLAG'/>
+  <opSYSSEQNUM          RULE='//SYSSEQNUM'/>
+  <opSYSMACFLAG         RULE='//SYSMACFLAG'/>
+  <opSYSMKEYVER         RULE='//SYSMKEYVER'/>
+  <opTCHTCH             RULE='//TCHTCH'/>
+  <opTUIPLX             RULE='//TUIPLX'/>
+  <opXINX03             RULE='//XINX03'/>
+  <opSHFEBZ             RULE='//SHFEBZ'/>
+  <opSHKRZH             RULE='//SHKRZH'/>
+  <opFUKRZH             RULE='//FUKRZH'/>
+  <opSHKRXM             RULE='//SHKRXM'/>
+  <opFUKRXM             RULE='//FUKRXM'/>
+  <opPDQTLS             RULE='//PDQTLS'/>
+  <opZIJNQX             RULE='//ZIJNQX'/>
+  <opPNG1ZL             RULE='//PNG1ZL'/>
+  <opQISHHH             RULE='//QISHHH'/>
+  <opPDAUPS             RULE='//PDAUPS'/>
+  <opPDAUUS             RULE='//PDAUUS'/>
+  <opPDAUCF             RULE='//PDAUCF'/>
+  <opPDAUCN             RULE='//PDAUCN'/>
+  <opPDOFF1             RULE='//PDOFF1'/>
+  <opPDOFF2             RULE='//PDOFF2'/>
+</INPUT>
+<PHRSP>
+  <opTCRetcode        RULE='//Result'/>
+  <opTCRetinfo        RULE='//Desc'/>
+  <opTruncflag        RULE='//TruncFlag'/>
+  <opExchground       RULE='//ExchgRound'/>
+  <opExchgdate        RULE='//ExchgDate'/>
+  <opWorkround        RULE='//WorkRound'/>
+  <opCleardate        RULE='//ClearDate'/>
+  <opClearstate       RULE='//ClearState'/>
+  <opClearround       RULE='//ClearRound'/>
+  <opRegioncode       RULE='//ClearArea'/>
+  <opFee              RULE='//Fee'/>
+  <opFeePayer         RULE='//FeePayer'/>
+  <opGUIYLS             RULE='//GUIYLS'/>
+  <opTCHTCH             RULE='//TCHTCH'/>
+  <opPNGZZL             RULE='//PNGZZL'/>
+</PHRSP>
+<OP2REQ>
+  <opAgreement        RULE='//Agreement'/>
+  <!--
+  <opOperid           RULE='//AcctOper'/>
+  -->
+</OP2REQ>
+<OUTPUT>
+  <opFee                RULE='/UFTP/SettlInfo/BankFee'/>
+  <opHostSerial         RULE='/UFTP/MsgHdrRs/Reserve'/>
+  <opOreserved3         RULE='/UFTP/MsgHdrRs/MAC'/>
+  <opPNGZZL             RULE='/UFTP/SettlInfo/PNGZZL'/>
+  <opYJLXZE             RULE='/UFTP/SettlInfo/YJLXZE'/>
+  <opZHANGH             RULE='/UFTP/SettlInfo/ZHANGH'/>
+  <opJIGOMC             RULE='/UFTP/SettlInfo/JIGOMC'/>
+  <opKEHZWM             RULE='/UFTP/SettlInfo/KEHZWM'/>
+  <opSHMUMC             RULE='/UFTP/SettlInfo/SHMUMC'/>
+  <opHUOBMC             RULE='/UFTP/SettlInfo/HUOBMC'/>
+  <opNIANNN             RULE='/UFTP/SettlInfo/NIANNN'/>
+  <opYUEFEN             RULE='/UFTP/SettlInfo/YUEFEN'/>
+  <opRIIIII             RULE='/UFTP/SettlInfo/RIIIII'/>
+  <opFEILZL             RULE='/UFTP/SettlInfo/FEILZL'/>
+  <opZHQ1DM             RULE='/UFTP/SettlInfo/ZHQ1DM'/>
+  <opGUIYLS             RULE='/UFTP/SettlInfo/ZHYODM'/>
+  <opJIOYJE             RULE='/UFTP/SettlInfo/JIOYJE'/>
+  <opSHULNG             RULE='/UFTP/SettlInfo/SHULNG'/>
+  <opSHXFJE             RULE='/UFTP/SettlInfo/SHXFJE'/>
+  <opSHSHJE             RULE='/UFTP/SettlInfo/SHSHJE'/>
+  <opJIO1GY             RULE='/UFTP/SettlInfo/JIO1GY'/>
+</OUTPUT>
+</MAP>

@@ -1,0 +1,9 @@
+* * * * * /home/tcop/bin/start.sh
+0 23 * * * /home/tcop/bin/archive.sh
+10 23 * * * /home/tcop/bin/clear_tmp.sh
+30 23 * * * /home/tcop/bin/bcpout.sh opdb
+30 21 * * * /home/tcop/bin/bcpout_table_day.sh opdb 
+10 22 * * * /home/tcop/bin/bcp_table.sh opdb acctjour 30
+00 07 * * * /home/tcop/bin/checkday.sh
+00 21 * * * /home/tcop/bin/hdx_zx.sh > /tmp/hdx.log
+15 21 * * * /home/tcop/bin/hdx_tcjh.sh >> /tmp/hdx.log

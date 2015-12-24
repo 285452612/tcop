@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKOrgId RULE='//opBankno'/>
+        <BKOperId RULE='//opOperid'/>
+        <BKAcctNo RULE='//opAcctNo'/>
+    </INPUT>
+    <OUTPUT>
+        <opAcctName RULE='//BKAcctName'/>
+        <opRetcode RULE='//BKResult'/>
+        <opRetinfo RULE='//BKErrinfo'/>
+    </OUTPUT>
+</PACK>

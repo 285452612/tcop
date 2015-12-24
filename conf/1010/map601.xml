@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opTableName    RULE='//Reserve'/>
+</INPUT>
+<OUTPUT>
+    <opFilenames    RULE='//Reserve'/>
+</OUTPUT>
+</MAP>

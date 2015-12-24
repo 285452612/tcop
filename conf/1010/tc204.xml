@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB18030" ?> 
+<PACK>
+    <OUTPUT>
+    <UFTP>
+    <MsgHdrRs>
+    <RefId/><TrnCode/><SvcClass/><Originator/><WorkDate/><Result/><Desc/><MAC/><Reserve/>
+    </MsgHdrRs>
+    <QueryInfo><QueryId/><QueryType/><OutBank/><InBank/><TradeDate/><RefId/><NoteType/><DCFlag/><NoteNo/><IssueDate/><SettlAmt/><PayingAcct/><Payer/><BeneAcct/><BeneName/><Purpose/><InputOper/><CheckOper/></QueryInfo>
+    </UFTP>
+    </OUTPUT>
+</PACK>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>5</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+
+                         [                           1]邮件查询
+                                  [2            ] 至 [3            ]
+
+</ReportHeader>
+<ReportBody>
+ 发送行: [1           ]
+ 发件人: [2     ]                             [3]
+ 主  题: [4                                                           ]
+ -----------------------------------------------------------------------------
+ 内  容: [5                                                                                                                                                                                                                                                                                                           ]
+
+ 接收日期[6       ] 时间[7     ]                        邮件编号[8           ]
+
+
+</ReportBody>
+<ReportFooter>
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

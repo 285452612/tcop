@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<TABLES>
+    <bankinfo ID='601' R='1' SEP='|'>
+        <bankid/>
+        <bankabbr/>
+    </bankinfo>
+    <organinfo ID='601' R='1' SEP='|'>
+        <orgid/>
+        <orgname/>
+        <orgabbr/>
+        <orgtype/>
+        <orglevel/>
+        <parent/>
+        <attechorg/>
+        <presproxy/>
+        <acptproxy/>
+        <svclist/>
+        <region/>
+        <linkman/>
+        <phone/>
+        <state/>
+        <exchflag/>
+        <exchregion/>
+        <enabledate/>
+        <disabledate/>
+        <exchroute/>
+    </organinfo>
+    <noteinfo ID='601' R='1' SEP='|'>
+        <notetype/>
+        <name/>
+        <classid/>
+        <dcflag/>
+        <enableflag/>
+        <dupcheck/>
+        <validperiod/>
+        <trnexpdays/>
+        <truncflag/>
+        <transflag/>
+        <authtype/>
+        <feepayer/>
+        <classid/>
+        <cleartype/>
+        <acctchktype/>
+        <notedesc/>
+    </noteinfo>
+    <codetype ID='601' R='1' SEP='|'>
+        <typeid/>
+        <typename/>
+    </codetype>
+    <generalcode ID='601' R='1' SEP='|'>
+        <codetype/>
+        <codeid/>
+        <codename/>
+    </generalcode>
+    <agreement ID='603' COLS='PART' C='1'>
+        <nodeid         RULE='//opNodeid'       TYPE='I'/>
+        <beneid         RULE='//opBeneid'/>
+        <userid         RULE='//opUserid'/>
+        <username       RULE='//opUsername'/>
+        <svcid          RULE='//opClassid'/>
+        <cityid         RULE='//opCityid'/>
+        <!--
+        <inputname      RULE='//opInputname'/>
+        -->
+        <inputtime      RULE='//opInputtime'/>
+        <payingacct     RULE='//opPayacct'/>
+        <payer          RULE='//opPayname'/>
+        <payertype      RULE='//opPayertype'/>
+        <bankid         RULE='//opBankid'/>
+        <psbankid       RULE='//opPsbankid'/>
+        <addr           RULE='//opAddr'/>
+        <postalcode     RULE='//opPostalcode'/>
+        <linkman        RULE='//opLiknkman'/>
+        <phone1         RULE='//opPhone1'/>
+        <phone2         RULE='//opPhone2'/>
+        <agreementid    RULE='//opAgreementid'/>
+        <amtlimit       RULE='//opAmtlimit'     TYPE='D'/>
+        <operdate       RULE='//opTrdate'/>
+        <opertime       RULE='//opTrtime'/>
+        <enddate        RULE='//opEnddate'/>
+        <state          RULE='//opState'        VALUE='1'/>
+        <innerbankno    RULE='//opInnerBank'/>
+        <inneragreement RULE='//opInneragreement'/>
+    </agreement>
+    <trnjour ID='901' COLS='PART' C='1'>
+        <nodeid         RULE='//SeqNo'       TYPE='I'/>
+        <workdate       RULE='//WorkDate'/>
+        <refid          RULE='//RefId'/>
+        <inoutflag      RULE='//InOutFlag'/>
+        <trncode        RULE='//TrnCode'/>
+        <classid        RULE='//SvcClass'     TYPE='I'/>
+        <presdate       RULE='//PresDate'/>
+        <prestime       RULE='//PresTime'/>
+        <originator     RULE='//Originator'/>
+        <acceptor       RULE='//Acceptor'/>
+        <dcflag         RULE='//DCFlag'/>
+        <notetype       RULE='//NoteType'/>
+        <noteno         RULE='//NoteNo'/>
+        <curcode        RULE='//CurCode'/>
+        <curtype        RULE='//CurType'/>
+        <issuedate      RULE='//IssueDate'/>
+        <settlamt       RULE='//SettlAmt'       TYPE='D'/>
+        <issueamt       RULE='//IssueAmt'       TYPE='D'/>
+        <remnamt        RULE='//RemnAmt'        TYPE='D'/>
+        <payingacct     RULE='//PayingAcct'/>
+        <payer          RULE='//Payer'/>
+        <payingbank     RULE='//PayingBank'/>
+        <pcbank         RULE='//PCBank'/>
+        <beneacct       RULE='//BeneAcct'/>
+        <benename       RULE='//BeneName'/>
+        <benebank       RULE='//BeneBank'/>
+        <bcbank         RULE='//BCBank'/>
+        <agreement      RULE='//Agreement'/>
+        <purpose        RULE='//Purpose'/>
+        <memo           RULE='//Memo'/>
+        <paykey         RULE='//PayKey'/>
+        <workround      RULE='//WorkRound'    TYPE='C'/>
+        <cleardate      RULE='//ClearDate'/>
+        <clearround     RULE='//ClearRound'   TYPE='C'/>
+        <cleartime      RULE='//ClearTime'/>
+        <clearstate     RULE='//ClearState'/>
+        <truncflag      RULE='//TruncFlag'/>
+        <reserved       RULE='//Reserve'/>
+        <fee            RULE='//Fee'          TYPE='D'/>
+        <feepayer       RULE='//FeePayer'/>
+        <extraxml       RULE='//ExtraData'    TYPE='X'/>
+    </trnjour>
+</TABLES>

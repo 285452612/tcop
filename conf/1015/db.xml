@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<TABLES>
+    <trnjour COLS='PART' C='1' U='1'>
+        <nodeid         RULE='//opNodeid'       C='1'   TYPE='I'/>
+        <workdate       RULE='//opWorkdate'     C='1'/>
+        <refid          RULE='//opRefid'        C='1'/>
+        <inoutflag      RULE='//opInoutflag'    C='1'/>
+        <regioncode     RULE='//opRegioncode'   C='1'/>
+        <trncode        RULE='//opTctcode'      C='1'/>
+        <classid        RULE='//opClassid'      TYPE='I' VALUE='0'/>
+        <presdate       RULE='//opTrdate'     C='1'/>
+        <prestime       RULE='//opTrtime'     C='1'/>
+        <originator     RULE='//opOriginator'   C='1'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <innerorganid   RULE='//opInnerorganid'/>
+        <dcflag         RULE='//opDcflag'/>
+        <notetype       RULE='//opNotetype'/>
+        <noteno         RULE='//opNoteno'/>
+        <curcode        RULE='//opCurcode'/>
+        <curtype        RULE='//opCurtype'/>
+        <issuedate      RULE='//opIssuedate'/>
+        <settlamt       RULE='//opSettlamt'       TYPE='D'/>
+        <issueamt       RULE='//opIssueamt'       TYPE='D'/>
+        <remnamt        RULE='//opRemnamt'        TYPE='D'/>
+        <payingacct     RULE='//opPayacct'/>
+        <payer          RULE='//opPayname'/>
+        <payingbank     RULE='//opPaybank'/>
+        <pcbank         RULE='//opPcbank'/>
+        <beneacct       RULE='//opBeneacct'/>
+        <benename       RULE='//opBenename'/>
+        <benebank       RULE='//opBenebank'/>
+        <bcbank         RULE='//opBcbank'/>
+        <agreement      RULE='//opAgreement'/>
+        <purpose        RULE='//opPurpose'/>
+        <memo           RULE='//opMemo'/>
+        <acctoper       RULE='//opOperid'       C='1'/>
+        <paykey         RULE='//opPaykey'/>
+        <workround      RULE='//opWorkround'              TYPE='C'/>
+        <cleardate      RULE='//opCleardate'      C='1'/>
+        <clearround     RULE='//opClearround'     C='1'   TYPE='C'/>
+        <cleartime      RULE='//opCleartime'      C='1'/>
+        <clearstate     RULE='//opClearstate'     C='1'/>
+        <truncflag      RULE='//opTruncflag'/>
+        <fee            RULE='//opFee'          TYPE='D'/>
+        <feepayer       RULE='//opFeePayer'/>
+        <exchgdate      RULE='//opExchgdate'/>
+        <exchground     RULE='//opExchground'       TYPE='C'/>
+        <reserved       RULE='//opReserved'/>
+        <extraxml       RULE='//EXTRA'                  TYPE='X'/>
+    </trnjour>
+    <trnjour ID='105' ALIAS='htrnjour' R='1'>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <inoutflag      RULE='//opInoutflag'/>
+        <regioncode     RULE='//opRegioncode'/>
+        <trncode        RULE='//opTctcode'/>
+        <classid        RULE='//opClassid'/>
+        <originator     RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <dcflag         RULE='//opDcflag'/>
+        <notetype       RULE='//opNotetype'/>
+        <noteno         RULE='//opNoteno'/>
+        <curcode        RULE='//opCurcode'/>
+        <curtype        RULE='//opCurtype'/>
+        <issuedate      RULE='//opIssuedate'/>
+        <settlamt       RULE='//opSettlamt'/>
+        <issueamt       RULE='//opIssueamt'/>
+        <remnamt        RULE='//opRemnamt'/>
+        <payingacct     RULE='//opPayacct'/>
+        <payer          RULE='//opPayname'/>
+        <payingbank     RULE='//opPaybank'/>
+        <beneacct       RULE='//opBeneacct'/>
+        <benename       RULE='//opBenename'/>
+        <benebank       RULE='//opBenebank'/>
+        <agreement      RULE='//opAgreement'/>
+        <purpose        RULE='//opPurpose'/>
+        <memo           RULE='//opMemo'/>
+        <acctoper       RULE='//opInputer'/>
+        <auditor        RULE='//opChecker'/>
+        <paykey         RULE='//opPaykey'/>
+        <clearstate     RULE='//opClearstate'/>
+        <result         RULE='//opRetcode'/>
+        <truncflag      RULE='//opTruncflag'/>
+        <feepayer       RULE='//opFeePayer'/>
+        <fee            RULE='//opFee'/>
+        <feeflag        RULE='//opFeeflag'/>
+        <stflag         RULE='//opStflag'/>
+        <chkflag        RULE='//opChkflag'/>
+        <tpflag         RULE='//opTpflag'/>
+        <reserved       RULE='//opReserved'/>
+        <extraxml       RULE='//EXTRA'          TYPE='X'/>
+    </trnjour>
+    <trnjour ID='109' R='1'>
+        <workdate       RULE='//MsgHdrRq/WorkDate'/>
+        <refid          RULE='//MsgHdrRq/RefId'/>
+        <classid        RULE='//MsgHdrRq/SvcClass'/>
+        <originator     RULE='//MsgHdrRq/Originator'/>
+        <acceptor       RULE='//Acceptor'/>
+        <dcflag         RULE='//DCFlag'/>
+        <notetype       RULE='//NoteType'/>
+        <noteno         RULE='//NoteNo'/>
+        <curcode        RULE='//CurCode'/>
+        <curtype        RULE='//CurType'/>
+        <issuedate      RULE='//IssueDate'/>
+        <settlamt       RULE='//SettlAmt'/>
+        <issueamt       RULE='//IssueAmt'/>
+        <remnamt        RULE='//RemnAmt'/>
+        <payingacct     RULE='//PayingAcct'/>
+        <payer          RULE='//Payer'/>
+        <payingbank     RULE='//PayingBank'/>
+        <beneacct       RULE='//BeneAcct'/>
+        <benename       RULE='//BeneName'/>
+        <benebank       RULE='//BeneBank'/>
+        <agreement      RULE='//Agreement'/>
+        <purpose        RULE='//Purpose'/>
+        <acctoper       RULE='//AcctOper'/>
+        <auditor        RULE='//Auditor'/>
+        <paykey         RULE='//PayKey'/>
+        <clearstate     RULE='//SettlInfo/ClearState'/>
+        <result         RULE='//Content//Result'/>
+        <truncflag      RULE='//TruncFlag'/>
+    </trnjour>
+    <trnjour ID='120' R='1'>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <inoutflag      RULE='//opInoutflag'/>
+        <regioncode     RULE='//opRegioncode'/>
+        <trncode        RULE='//opTctcode'/>
+        <classid        RULE='//opClassid'/>
+        <originator     RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <dcflag         RULE='//opDcflag'/>
+        <notetype       RULE='//opNotetype'/>
+        <noteno         RULE='//opNoteno'/>
+        <curcode        RULE='//opCurcode'/>
+        <curtype        RULE='//opCurtype'/>
+        <issuedate      RULE='//opIssuedate'/>
+        <settlamt       RULE='//opSettlamt'/>
+        <issueamt       RULE='//opIssueamt'/>
+        <remnamt        RULE='//opRemnamt'/>
+        <payingacct     RULE='//opPayacct'/>
+        <payer          RULE='//opPayname'/>
+        <payingbank     RULE='//opPaybank'/>
+        <beneacct       RULE='//opBeneacct'/>
+        <benename       RULE='//opBenename'/>
+        <benebank       RULE='//opBenebank'/>
+        <agreement      RULE='//opAgreement'/>
+        <purpose        RULE='//opPurpose'/>
+        <memo           RULE='//opMemo'/>
+        <acctoper       RULE='//opInputer'/>
+        <auditor        RULE='//opChecker'/>
+        <paykey         RULE='//opPaykey'/>
+        <clearstate     RULE='//opClearstate'/>
+        <result         RULE='//opRetcode'/>
+        <truncflag      RULE='//opTruncflag'/>
+        <feepayer       RULE='//opFeePayer'/>
+        <fee            RULE='//opFee'/>
+        <reserved       RULE='//opReserved'/>
+        <extraxml       RULE='//EXTRA'          TYPE='X'/>
+    </trnjour>
+    <acctjour COLS='PART' C='1'>
+        <nodeid         RULE='//opNodeid'       TYPE='I'/>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <inoutflag      RULE='//opInoutflag'/>
+        <originator     RULE='//opOriginator'/>
+        <trncode        RULE='//opTrcode'/>
+        <acctserial     RULE='//opHostSerial'/>
+        <acctorg        RULE='//opInnerBank'/>
+        <acctoper       RULE='//opOperid'/>
+        <reserved1      RULE='//opHreserved5'/>
+        <result         RULE='//opRetcode' VALUE='0'/>
+    </acctjour>
+    <feelist COLS='PART' C='1'>
+        <nodeid         RULE='//opNodeid'       TYPE='I'/>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <inoutflag      RULE='//opInoutflag'/>
+        <originator     RULE='//opOriginator'/>
+        <feedate        RULE='//opTrdate'/>
+        <acctno         RULE='//opPayacct'/>
+        <amount         RULE='//opSettlamt'   TYPE='D'/>
+        <reserved1      RULE='//opNotetype'/>
+    </feelist>
+</TABLES>

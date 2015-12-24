@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GB18030" ?> 
+<PACK>
+    <INPUT>
+    <UFTP>
+    <MsgHdrRq>
+    <RefId/><TrnCode>1605</TrnCode><SvcClass/><Originator/><Acceptor/><WorkDate/><Sender/><Recver/><AcctOper/><Auditor/><TermType/><TermId/><MAC/><Reserve/></MsgHdrRq>
+    <SysStatus>
+    <Status/><WorkDate/><WorkRound/><ClearDate/><ClearRound/><ExchgDate/><ExchgRound/><TrnEnd/>
+    </SysStatus>
+    </UFTP>
+    </INPUT>
+    <OUTPUT>
+    <UFTP>
+    <MsgHdrRs>
+    <RefId/><TrnCode>1605</TrnCode><SvcClass/><Originator/><WorkDate/><Result/><Desc/></MsgHdrRs>
+    </UFTP>
+    </OUTPUT>
+</PACK>

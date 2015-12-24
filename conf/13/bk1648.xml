@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1648</BKTrnCode> <!--提出本票-->
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKAcctNo/>
+        <BKChoice>2</BKChoice>  <!--选项 0：他行汇票 1:本行本票  2:他行本票-->
+        <BKHPNo/>
+        <BKDFAcctNo>0</BKDFAcctNo>
+        <BKSummaryCode>207</BKSummaryCode>
+        <BKCancelSerial/>
+        <BKDFExchgNo>00002</BKDFExchgNo>
+        <BKAmount/>
+        <BKFee>0</BKFee>
+        <BKPayerAcctName>0</BKPayerAcctName>
+        <BKBeneAcct/>
+        <BKBeneAcctName/>
+        <BKFullHPNo/>
+        <BKHPCipher/>
+        <BKRouteId>1</BKRouteId>
+        <BKIssueDate/>
+        <BKRegionId>  </BKRegionId>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKCancelSerial/>
+            <BKExchgSerial/>
+            <BKExchgDate/>
+            <BKExchgRound/>
+            <BKReturnDate/>
+            <BKReturnRound/>
+            <BKOrgName/>
+            <BKClientName/>
+            <BKReceiverName/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

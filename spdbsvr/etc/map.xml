@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+<notetype_c2b>
+<mapping name="01" value="zi" bkcode="8248"/>
+<mapping name="02" value="01" bkcode="8953"/>
+<mapping name="03" value="12" bkcode="8984"/>
+<mapping name="04" value="20" bkcode=""/>
+<mapping name="05" value="07" bkcode="8983"/>
+<mapping name="06" value="zz" bkcode=""/>
+<mapping name="07" value="zz" bkcode=""/>
+<!--
+<mapping name="09" value="08" bkcode="9999"/>
+-->
+<mapping name="09" value="08" bkcode="EF14"/>
+<mapping name="10" value="zz" bkcode="EF16"/>
+<mapping name="11" value="zw" bkcode=""/>
+<mapping name="12" value="zz" bkcode=""/>
+<mapping name="13" value="zw" bkcode=""/>
+<mapping name="14" value="00" bkcode=""/>
+<mapping name="15" value="zw" bkcode=""/>
+<mapping name="16" value="zw" bkcode=""/>
+<mapping name="17" value="zz" bkcode=""/>
+<mapping name="18" value="zz" bkcode=""/>
+<mapping name="19" value="zz" bkcode=""/>
+<mapping name="20" value="00" bkcode=""/>
+<mapping name="21" value="zi" bkcode="8248"/>
+<mapping name="22" value="zz" bkcode=""/>
+<mapping name="23" value="zz" bkcode="8248"/>
+<mapping name="26" value="zz" bkcode=""/>
+<mapping name="28" value="zz" bkcode=""/>
+<mapping name="31" value="01" bkcode=""/>
+<mapping name="32" value="72" bkcode=""/>
+<mapping name="33" value="zz" bkcode=""/>
+<mapping name="41" value="zz" bkcode=""/>
+<mapping name="42" value="zz" bkcode=""/>
+<mapping name="43" value="43" bkcode=""/>
+<mapping name="71" value="zz" bkcode=""/>
+<mapping name="72" value="zz" bkcode=""/>
+<mapping name="73" value="zz" bkcode=""/>
+<mapping name="74" value="zz" bkcode=""/>
+</notetype_c2b>
+</map>

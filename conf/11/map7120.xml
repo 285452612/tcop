@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <ClearDate      RULE='//opWorkdate'/>
+        <strMAC         RULE='//opHreserved1'/>
+        <CliTxSeq       RULE='//opOreserved1'/>
+        <Account        RULE='//opPayacct'/>
+        <AcctName       RULE='//opPayname'/>
+        <TxUnitCode     RULE='//opBankno'/>
+        <Amount         RULE='//opSettlamt'/>
+        <TxType         RULE='//opTermno'/>
+        <BillType       RULE='//opNotetype'/>
+        <BillCode       RULE='//opNoteno'/>
+        <BillAmt        RULE='//opSettlamt'/>
+        <BillDate       RULE='//opIssuedate'/>
+        <BillUnit       RULE='//'/>
+        <EnterPrise     RULE='//'/>
+        <TxFlag         RULE='//opEXBKTxflag'/>
+        <PayPwd         RULE='//opAgreement'/>
+        <AgNo           RULE='//opAgreement'/>
+        <BeneAcctNo     RULE='//opBeneacct'/>
+        <BeneAcctName   RULE='//opBenename'/>
+        <Purpose        RULE='//opPurpose'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode    RULE='//RetCode'/>
+        <opBKRetinfo    RULE='//RetMsg'/>
+        <opHostSerial   RULE='//TxSeq'/>
+        <opOreserved1   RULE='//ClearDate'/>
+    </OUTPUT>
+</PACK>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>30</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>                                      [                          1][  2]退票理由书
+                                          [              3] 至 [4              ]
+┌────┬────┬────┬──────┬──────┬──────┬───────┬──────────┬──────┬────┐
+│原提出行│原提入行│工作日期│   流水号   │  凭证类型  │  凭证号码  │   金   额    │      退票原因      │[    5     ]│打印标志│
+</ReportHeader>
+<ReportBody>
+├────┼────┼────┼──────┼──────┼──────┼───────┼──────────┼──────┼────┤
+│[1     ]│[10    ]│[2     ]│[3         ]│[4         ]│[5         ]│[           6]│[7                 ]│[8         ]│[9     ]│
+</ReportBody>
+<ReportFooter>
+└────┴────┴────┴──────┴──────┴──────┴───────┴──────────┴──────┴────┘
+      查询行:[1      ][2                                                      ] 
+    打印时间:[3                  ]                                                                 操作员:[4               ]
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

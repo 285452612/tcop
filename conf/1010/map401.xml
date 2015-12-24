@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opInnerBank          RULE='//OpenBank'/>
+  <opOperid             RULE='//AcctOper'/>
+  <opAcctNo             RULE='//AcctId'/>
+</INPUT>
+<OUTPUT>
+  <opAcctName           RULE='//Name'/>
+  <opAcctOrgid          RULE='//OpenBank'/>
+  <opBankid             RULE='//OpenBank'/>
+  <opBKRetcode          RULE='//Result'/>
+  <opBKRetinfo          RULE='//Desc'/>
+</OUTPUT>
+</MAP>

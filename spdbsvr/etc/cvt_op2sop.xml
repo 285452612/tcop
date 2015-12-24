@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Root>
+<!--交换日期对应人行工作日期,交换场次对用人行交换场次,确认交易取得原交易的工作日期和交换场次
+-->
+<Transaction code="1650" desc="获取行内系统时间">
+<Request type="xml" opptrcode="" packfmt="Oe6501@S">
+<Item name="PDTRCD" length="4"  type="const" value="e650" desc="交易码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="GUIYDH" length="8"  type="xml"   value="//opOperid" desc="柜员代号"/>
+</Request>
+<Response type="sop" packfmt="Oe6502@R">
+<Item name="//opOreserved1"   type="sop" value="JIOYRQ" desc="交易日期"/>
+<Item name="" type="sop" value="JIOYSJ" desc="交易时间"/>
+</Response>
+</Transaction>
+
+<Transaction code="4201" desc="提出现金通存">
+<Request type="xml" opptrcode="" packfmt="O42011@S">
+<Item name="PDTRCD" length="4"  type="const" value="4201" desc="交易码"/>
+<Item name="PDAUUS" length="8"  value="//opPDAUUS" desc="授权柜员"/>
+<Item name="PDAUPS" length="16"  value="//opPDAUPS" desc="授权柜员密码"/>
+<Item name="PDAUCN" length="2"  value="//opPDAUCN" desc=""/>
+<Item name="PDAUCF" length="1"  value="//opPDAUCF" desc=""/>
+<Item name="PDOFF1" length="2"  value="//opPDOFF1" desc=""/>
+<Item name="PDOFF2" length="2"  value="//opPDOFF2" desc=""/>
+<Item name="SYSPINSEED" length="16"  value="//opSYSPINSEED" desc=""/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="ZIJNLY" length="1"  type="const" value="0" desc="资金来源"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opBeneacct" desc="帐号"/>
+<Item name="KEHZWM" length="62" type="xml"   value="//opBenename" desc="客户中文名"/>
+<Item name="XIOZXH" length="17" type="const" value="" desc="销帐序号"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opPNGZZL" desc="凭证种类"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="XJXMDM" length="10" type="const" value="1211A0000" desc="现金项目代码"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+</Request>
+<Response type="sop" packfmt="O42012@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved1" type="sop" value="ZHANGH" desc="帐号"/>
+<Item name="//opOreserved2" type="sop" value="KEHZWM" desc="客户中文名"/>
+<Item name="//opOreserved3" type="sop" value="HUOBDH" desc="货币代号"/>
+<Item name="//opOreserved4" type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opOreserved5" type="sop" value="ZHHUYE" desc="帐户余额"/>
+</Response>
+</Transaction>
+
+<Transaction code="4202" desc="提出现金通兑">
+<Request type="xml" opptrcode="" packfmt="O42021@S">
+<Item name="PDTRCD" length="4"  type="const" value="4202" desc="交易码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="ZIJNQX" length="1"  type="const" value="0" desc="资金去向"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opPayacct" desc="帐号"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opPNGZZL" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="const" value="0" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHFUED" length="13" type="xml"   value="//opIssueamt" desc="支付限额"/>
+<Item name="ZHFUMM" length="16" type="xml"   value="//opAgreement" desc="支付密码"/>
+<Item name="XJXMDM" length="10" type="const" value="1221A0000" desc="现金项目代码"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<!--测试
+<Item name="FENHDM" length="2"  type="const" value="95" desc="分行代码"/>
+-->
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opNoteno" desc="凭证号"/>
+<Item name="QNFARQ" length="8"  type="xml"   value="//opIssuedate" desc="签发日期"/>
+</Request>
+<Response type="sop" packfmt="O42022@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved1" type="sop" value="ZHANGH" desc="帐号"/>
+<Item name="//opOreserved2" type="sop" value="KEHZWM" desc="客户中文名"/>
+<Item name="//opOreserved3" type="sop" value="HUOBDH" desc="货币代号"/>
+<Item name="//opOreserved4" type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opOreserved5" type="sop" value="ZHHUYE" desc="帐户余额"/>
+</Response>
+</Transaction>
+
+<Transaction code="4302" desc="对公账户信息查询">
+<Request type="xml" opptrcode="" packfmt="O43021@S">
+<Item name="PDTRCD" length="4"  type="const" value="4302" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"    desc="交易柜员"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opZHANGH"    desc="帐号"/>
+</Request>
+<Response type="sop" packfmt="O43022@R">
+<Item name="//opKEHZWM" type="sop" value="KEHZWM" desc="户名"/>
+</Response>
+</Transaction>
+
+<Transaction code="1982" desc="对公账户信息查询(账户开户使用)">
+<Request type="xml" opptrcode="" packfmt="O89821@S">
+<Item name="PDTRCD" length="4"  type="const" value="8982" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"    desc="交易柜员"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opAcctNo"    desc="帐号"/>
+</Request>
+<Response type="sop" packfmt="O89822@R">
+<Item name="//opAcctName" type="sop" value="KEHZWM" desc="户名"/>
+<!--
+<Item name="//opCardName" type="sop" value="ZHUZWM" desc="户名"/>
+-->
+</Response>
+</Transaction>
+
+<Transaction code="1302" desc="对公账户信息查询">
+<Request type="xml" opptrcode="" packfmt="O43021@S">
+<Item name="PDTRCD" length="4"  type="const" value="4302" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"    desc="交易柜员"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opAcctNo"    desc="帐号"/>
+</Request>
+<Response type="sop" packfmt="O43022@R">
+<Item name="//opAcctName" type="sop" value="KEHZWM" desc="户名"/>
+</Response>
+</Transaction>
+
+<Transaction code="9982" desc="对公账户信息查询">
+<Request type="xml" opptrcode="" packfmt="O89821@S">
+<Item name="PDTRCD" length="4"  type="const" value="8982" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"    desc="交易柜员"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opZHANGH"    desc="帐号"/>
+</Request>
+<Response type="sop" packfmt="O89822@R">
+<Item name="//opKEHZWM" type="sop" value="ZHUZWM" desc="户名"/>
+<!--
+<Item name="//opCardName" type="sop" value="ZHUZWM" desc="户名"/>
+-->
+</Response>
+</Transaction>
+
+<Transaction code="7130" desc="获取支付密码支票批号">
+<Request type="xml" opptrcode="" packfmt="O71301@S">
+<Item name="PDTRCD" length="4"  type="const" value="7130" desc="交易码"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO"     desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="CAOZBZ" length="1"  type="const" value="1" desc="操作标志"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opPNGZZL" desc="凭证种类"/>
+<Item name="GUASYH" length="2"  type="const" value="" desc="挂失银行"/>
+<Item name="PNGZPH" length="1"  type="const" value="" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="const" value="" desc="凭证序号"/>
+<Item name="GSCLPH" length="13" type="const" value="" desc="挂失处理编号"/>
+<Item name="FKLXRM" length="8"  type="xml"   value="//opTJJXTS" desc="前8位"/>
+<Item name="CKLXRM" length="8"  type="xml"   value="//opNoteno" desc="后8位"/>
+<!--
+<Item name="FKLXRM" length="8"  type="xml"   value="//opNoteno" dll="dll/libconvert.so" func="cvt_cut_noteno" expr="0" desc="前8位"/>
+<Item name="CKLXRM" length="8"  type="xml"   value="//opNoteno" dll="dll/libconvert.so" func="cvt_cut_noteno" expr="1" desc="后8位"/>
+-->
+</Request>
+<Response type="sop" packfmt="O71302@R">
+<Item name="//opSHFOBZ" type="sop" value="SHFOBZ" desc="是否标志"/>
+<Item name="//opPNGZPH" type="sop" value="PNGZPH" desc="凭证批号"/>
+</Response>
+</Transaction>
+
+<Transaction code="7702" desc="查询个人客户信息">
+<Response type="xml" opptrcode="" packfmt="O77020@R">
+<Item name="PDTRCD" length="4"  type="const"  value="1004" desc="交易码"/>
+<Item name="QSZXDH" length="4"  type="const"  value="0089" desc="清算中心代号"/>
+<Item name="KHZHLX" length="1"  type="xml"    value="//opAccttype" desc="客户账号类型"/>
+<Item name="KEHUZH" length="20" type="xml"    value="//opAcctid" desc="客户账号"/>
+<Item name="MMJYFS" length="1"  type="const"  value="0"    desc="密码校验方式"/>
+<Item name="JIOYMM" length="16" type="const"  value=""     desc="交易密码"/>
+</Response>
+<Response type="sop" packfmt="O77021@R">
+<Item name="" type="sop" value="KEHHAO" desc="客户号"/>
+<Item name="//opAcctname" type="sop" value="KEHUXM" desc="客户姓名"/>
+<Item name="" type="sop" value="GUOJII" desc="国籍"/>
+<Item name="" type="sop" value="ZHJNZL" desc="证件种类"/>
+<Item name="" type="sop" value="ZHJHAO" desc="证件号码"/>
+<Item name="" type="sop" value="DIZHII" desc="地址"/>
+<Item name="" type="sop" value="LXDIAH" desc="联系电话"/>
+<Item name="" type="sop" value="YOUZBM" desc="邮政编码"/>
+<Item name="" type="sop" value="DZYJDZ" desc="邮箱地址"/>
+<Item name="" type="sop" value="CZHENH" desc="传真号码"/>
+<Item name="" type="sop" value="KEHUZT" desc="客户状态"/>
+<Item name="" type="sop" value="GNGZDW" desc="工作单位"/>
+<Item name="" type="sop" value="LXSHSL" desc="利息税税率"/>
+<Item name="" type="sop" value="KEHUXE" desc="客户限额"/>
+</Response>
+</Transaction>
+
+<Transaction code="7704" desc="冲正">
+<Request type="xml" opptrcode="" packfmt="O77040@S">
+<Item name="PDTRCD" length="4"  type="const" value="7704" desc="交易码"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO"     desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5" desc="前台流水"/>
+<Item name="YNJYRQ" length="8"  type="xml" value="//opWorkdate" desc="交易日期"/>
+<Item name="QANTLS" length="12" type="xml" value="//opHostSerial" desc="交易流水"/>
+</Request>
+<Response type="sop" packfmt="O77041@R">
+</Response>
+</Transaction>
+
+<Transaction code="9038" desc="按柜员流水冲正">
+<Request type="xml" opptrcode="" packfmt="O90381@S">
+<Item name="PDTRCD" length="4"  type="const" value="9038" desc="交易码"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO"     desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5" desc="前台流水"/>
+<Item name="JIOYRQ" length="8"  type="xml" value="//opWorkdate" desc="交易日期"/>
+<Item name="YNGYLS" length="12" type="xml" value="//opHostSerial" desc="交易流水"/>
+</Request>
+<Response type="sop" packfmt="O90382@R">
+<Item name="//opOreserved1" type="sop" value="JIOYRQ" desc="交易日期"/>
+<Item name="//opOreserved2" type="sop" value="YNGYLS" desc="原柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="CZFLBS" desc="被冲正会计分录笔数"/>
+<Item name="//opOreserved4" type="sop" value="CZDJBS" desc="被冲正登记簿记录笔数"/>
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+</Response>
+</Transaction>
+
+<!--暂时不使用-->
+<Transaction code="9928" desc="冲正(商业银行汇票EF16,承兑汇票EF14记账冲正)">
+<Request type="xml" opptrcode="" packfmt="OEF281@S">
+<Item name="PDTRCD" length="4"  type="const" value="EF28" desc="交易码"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO"     desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5" desc="前台流水"/>
+<Item name="YNJYRQ" length="8"  type="xml" value="//opWorkdate" desc="交易日期"/>
+<Item name="QANTLS" length="12" type="xml" value="//opHostSerial" desc="交易流水"/>
+</Request>
+<Response type="sop" packfmt="OEF282@R">
+<Item name="//opOreserved1" type="sop" value="CHLIBZ" desc="处理标志"/>
+</Response>
+</Transaction>
+
+<!--暂时不使用-->
+<Transaction code="7708" desc="个人业务转帐">
+<Request type="xml" opptrcode="" packfmt="O77080@S">
+<Item name="SYSSADDR" length="16"  type="const" value="99" desc=""/>
+<Item name="SYSDADDR" length="16"  type="const" value="99" desc=""/>
+<Item name="SYSRSRVD" length="16"  type="const" value="99" desc=""/>
+<Item name="SYSMACVALUE" length="16"  value="//opSYSMACVALUE" desc=""/>
+<Item name="SYSMACSBNO" length="4"  value="//opSYSMACSBNO" desc=""/>
+<Item name="SYSPINSEED" length="16"  value="//opSYSPINSEED" desc=""/>
+<Item name="SYSEFLAG" length="1"  value="//opSYSEFLAG" desc=""/>
+<Item name="SYSMACFLAG" length="1"  value="//opSYSMACFLAG" desc=""/>
+<Item name="SYSMKEYVER" length="4"  value="//opSYSMKEYVER" desc=""/>
+<Item name="PDTRCD" length="4"  type="const" value="7708" desc="交易码"/>
+<Item name="PDQTDT" length="8"  value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="ZHNGDH" length="5"  value="//opZHNGDH" desc="终端号"/>
+<Item name="CHSHDM" length="4"  value="//opCHSHDM" desc="城市代码"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<!--Item name="PDUSID" length="8"  type="const" value="" desc="交易柜员"/-->
+<Item name="PDQTLS" length="12" value="//opHreserved5"  desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0095" desc="清算中心代号"/>
+<Item name="DLIYWH" length="15" type="const" value="111111111111111" desc="代理业务号"/><!-- check -->
+<Item name="ZZCZLX" length="1"  value="//opZZCZLX" desc="转出帐号类型"/>
+<Item name="ZJZZLX" length="1"  value="//opZJZZLX" desc="转入帐号类型"/>
+<Item name="MMJYFS" length="1"  value="//opMMJYFS" desc="密码校验方式"/>
+<!--
+<Item name="PNGZHH" length="13" type="const" value="zz89000000000" desc="凭证序号"/>
+-->
+<Item name="ZYZCZH" length="20" value="//opPayacct" desc="转出帐号"/>
+<Item name="ZHHUXZ" length="4"  value="//opZHHUXZ" desc="转出帐号性质"/>
+<Item name="JIOYMM" length="16" value="//opAgreement" desc="密码"/>
+<Item name="ZYZRZH" length="20" value="//opBeneacct" desc="转入帐号"/>
+<Item name="ZRZHXZ" length="4"  value="//opZRZHXZ" desc="转入帐号性质"/>
+<Item name="PNGZHH" length="13" type="const" value="" desc="凭证序号"/>
+<Item name="HUOBDH" length="2"  type="const" value="01" desc="货币代号"/>
+<Item name="CHUIBZ" length="1"  type="const" value="0" desc="钞汇标志"/>
+<Item name="JIO1JE" length="13" value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHYODM" length="22" value="//opZHYODM" desc="摘要代码"/>
+<Item name="CID2XX" length="40" value="//opCD22XX" desc="磁道2信息"/>
+<Item name="SNCDAO" length="107" value="//opCID3XX" desc="3磁道信息"/>
+</Request>
+<Response type="sop" packfmt="O77081@R">
+<Item name="//opHostSerial" type="sop" value="ZYZCZH" desc="转出帐号"/>
+<Item name="//opOreserved1" type="sop" value="ZHUZWM" desc="转出帐号名称"/>
+<Item name="//opOreserved2" type="sop" value="ZHHUYE" desc="提示信息"/>
+<Item name="//opOreserved3" type="sop" value="ZYZRZH" desc="转入帐号"/>
+<Item name="//opOreserved4" type="sop" value="DUIFMC" desc="转入帐户名称"/>
+<Item name="//opOreserved5" type="sop" value="ZHU1YE" desc="转入帐户余额"/>
+</Response>
+</Transaction>
+
+<!--暂时不使用-->
+<Transaction code="7710" desc="个人业务现金">
+<Request type="xml" opptrcode="" packfmt="O77100@S">
+<Item name="PDTRCD" length="4"  type="const" value="7710" desc="交易码"/>
+<Item name="PDQTDT" length="8"  value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="ZHNGDH" length="5"  value="//opZHNGDH" desc="终端号"/>
+<Item name="CHSHDM" length="4"  value="//opCHSHDM" desc="城市代码"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5"  desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="DLIYWH" length="15" type="const" value="111111111111111" desc="代理业务号"/><!-- check -->
+<Item name="ZJZZLX" length="1"  value="//opZJZZLX" desc="转入帐号类型"/>
+<Item name="ZYZRZH" length="20" value="//opBeneacct" desc="转入帐号"/>
+<Item name="ZRZHXZ" length="4"  value="//opZRZHXZ" desc="转入帐号性质"/>
+<Item name="PNGZHH" length="13" type="const" value="" desc="凭证序号"/>
+<Item name="HUOBDH" length="2"  type="const" value="01" desc="货币代号"/>
+<Item name="CHUIBZ" length="1"  type="const" value="0" desc="钞汇标志"/>
+<Item name="JIO1JE" length="13" value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHYODM" length="22" value="//opZHYODM" desc="摘要代码"/>
+</Request>
+<Response type="sop" packfmt="O77101@R">
+<Item name="//opOreserved3" type="sop" value="ZYZRZH" desc="转入帐号"/>
+<Item name="//opOreserved4" type="sop" value="DUIFMC" desc="转入帐户名称"/>
+<Item name="//opOreserved5" type="sop" value="ZHU1YE" desc="转入帐户余额"/>
+</Response>
+</Transaction>
+
+<Transaction code="7758" desc="个人业务(通兑)">
+<Request type="xml" opptrcode="" packfmt="O77580@S">
+<Item name="PDTRCD" length="4"  type="const" value="7758" desc="交易码"/>
+<Item name="PDQTDT" length="8"  value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="ZHNGDH" length="5"  value="//opZHNGDH" desc="终端号"/>
+<Item name="CHSHDM" length="4"  value="//opCHSHDM" desc="城市代码"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5"  desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="DLIYWH" length="15" type="const" value="" desc="代理业务号"/>
+<Item name="SHFOBZ" length="1"  type="const" value="0" desc="代销账标志"/>
+<Item name="SHURFS" length="1"  type="const" value="0" desc=""/>
+<Item name="KHZHLX" length="1"  type="const" value="0" desc=""/>
+<Item name="KEHUZH" length="20" value="//opPayacct" desc=""/>
+<Item name="ZHHUXZ" length="4"  value="//opZHHUXZ" desc="转出帐号性质"/>
+<Item name="ZHFUTJ" length="1"  value="//opZHFUTJ" desc=""/>
+<Item name="JIOYMM" length="16" value="//opAgreement" desc="密码"/>
+<Item name="PNGZHH" length="13" type="const" value="" desc="凭证序号"/>
+<Item name="HUOBDH" length="2"  type="const" value="01" desc="货币代号"/>
+<Item name="CHUIBZ" length="1"  type="const" value="0" desc="钞汇标志"/>
+<Item name="JIO1JE" length="13" value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHJNZL" length="1"  type="const" value="" desc=""/>
+<Item name="ZHJHAO" length="20" value="//opPayacct" desc=""/>
+<Item name="ZHYODM" length="22" value="//opZHYODM" desc="摘要代码"/>
+<Item name="CID2XX" length="40" value="//opCID2XX" desc="磁道2信息"/>
+<Item name="SNCDAO" length="107" value="//opSNCDAO" desc="3磁道信息"/>
+</Request>
+<Response type="sop" packfmt="O77581@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved1" type="sop" value="ZHYODM" desc="摘要代码"/>
+<Item name="//opOreserved2" type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opOreserved4" type="sop" value="FUKRZH" desc="付款人账号"/>
+<Item name="//opOreserved5" type="sop" value="PNGZHH" desc="凭证号码"/>
+</Response>
+</Transaction>
+
+<Transaction code="8227" desc="个人业务转帐">
+<Request type="xml" opptrcode="" packfmt="O82271@S">
+<Item name="PDTRCD" length="4"  type="const" value="8227" desc="交易码"/>
+<Item name="PDAUUS" length="8"  value="//opPDAUUS" desc="授权柜员"/>
+<Item name="PDAUPS" length="16"  value="//opPDAUPS" desc="授权柜员密码"/>
+<Item name="PDAUCN" length="2"  value="//opPDAUCN" desc=""/>
+<Item name="PDAUCF" length="1"  value="//opPDAUCF" desc=""/>
+<Item name="PDOFF1" length="2"  value="//opPDOFF1" desc=""/>
+<Item name="PDOFF2" length="2"  value="//opPDOFF2" desc=""/>
+<Item name="SYSPINSEED" length="16"  value="//opSYSPINSEED" desc=""/>
+<Item name="PDQTDT" length="8"  value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="ZHNGDH" length="5"  value="//opZHNGDH" desc="终端号"/>
+<Item name="CHSHDM" length="4"  value="//opCHSHDM" desc="城市代码"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<!--
+<Item name="SYSBAWMAC" length="16"  value="//opSYSMACVALUE" desc=""/>
+<Item name="SYSMACJGH" length="4"  value="//opSYSMACSBNO" desc=""/>
+<Item name="SYSPINZHZ" length="16"  value="//opSYSPINSEED" desc=""/>
+<Item name="SYSMYAOBBH" length="4"  value="//opSYSMKEYVER" desc=""/>
+-->
+<Item name="PDQTLS" length="12" value="//opHreserved5"  desc="平台流水"/>
+<!--
+<Item name="QSZXDH" length="4"  type="const" value="0095" desc="清算中心代号"/>
+-->
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="DLIYWH" length="15" type="const" value="" desc="代理业务号"/>
+<Item name="ZZCZLX" length="1"  value="//opZZCZLX" desc="转出帐号类型"/>
+<Item name="ZYZCZH" length="20" value="//opPayacct" desc="转出帐号"/>
+<Item name="ZHHUXZ" length="4"  value="//opZHHUXZ" desc="转出帐号性质"/>
+<Item name="MMJYFS" length="1"  value="//opMMJYFS" desc="密码校验方式"/>
+<Item name="JIOYMM" length="16" value="//opAgreement" desc="密码"/>
+<Item name="ZJZZLX" length="1"  value="//opZJZZLX" desc="转入帐号类型"/>
+<Item name="ZYZRZH" length="20" value="//opBeneacct" desc="转入帐号"/>
+<Item name="ZRZHXZ" length="4"  value="//opZRZHXZ" desc="转入帐号性质"/>
+<Item name="PNGZHH" length="13" type="const" value="" desc="凭证序号"/>
+<Item name="HUOBDH" length="2"  type="const" value="01" desc="货币代号"/>
+<Item name="CHUIBZ" length="1"  type="const" value="0" desc="钞汇标志"/>
+<Item name="JIO1JE" length="13" value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHYODM" length="22" value="//opZHYODM" desc="摘要代码"/>
+<Item name="CID2XX" length="40" value="//opCD22XX"  desc="磁道2信息"/>
+<Item name="SNCDAO" length="107" value="//opCID3XX" desc="3磁道信息"/>
+<Item name="QANTRQ" length="8"  value="//opWorkdate" desc="前台日期"/>
+<Item name="ZHFUMM" length="16" value="//opPaykey" desc="支付密码"/>
+<Item name="SKRZWM" length="62" type="xml" value="//opBenename" desc="收款人姓名"/>
+<Item name="ZJCYHH" length="12" type="const" value="" desc="直接参与行号"/>
+<Item name="SHKHHM" length="62" type="const" value="" desc="收款行名"/>
+<Item name="BEIZXX" length="42" value="//opBEIZXX" desc="备注信息"/>
+<Item name="SHFOBZ" length="1"  value="//opSHFOBZ" desc="待销账标志"/>
+<Item name="XIOZXH" length="17" value="//opXIOZXH" desc="销账序号"/>
+<Item name="SXIORQ" length="8"  type="const" value="" desc="生效日期"/>
+<Item name="ZHFUED" length="13" value="//opIssueamt" desc="支付限额"/>
+<Item name="ZHUZWM" length="62" type="xml" value="//opPayname" desc="付款人姓名"/>
+<Item name="HUILUU" length="1"  type='const' value="3" desc="汇路"/>
+<Item name="DUIFZH" length="32" type="xml" value="//opBeneacct" desc="收款人帐号"/>
+<Item name="SKDWMC" length="62" type="xml" value="//opBenename" desc="收款人姓名"/>
+<Item name="JIOHLX" length="1"  type="xml" value="//opJIOHLX" desc="交换类型"/>
+<Item name="JILUBZ" length="1"  type="xml" value="//opJILUBZ" desc="记录标志"/>
+<Item name="SLBHAO" length="18" type="xml" value="//opSLBHAO" desc="受理编号"/>
+<!--
+<Item name="JIOHCC" length="1"  value="//opWorkround" desc="交换场次"/>
+-->
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="ZDJHCC" length="1"  type="xml"   value="//opExchground"    desc="最大交换场次"/>
+<Item name="WAIGDM" length="12" value="//opWAIGDM" desc="外管代码"/>
+<!--
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZPH" length="1"  value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  value="//opNoteno" desc="凭证序号"/>
+<Item name="JIOHRQ" length="8"  value="//opWorkdate" desc="交换日期"/>
+<Item name="FQHHAO" length="12" value="//opAcceptor" desc="提入行号"/>
+<Item name="QNFARQ" length="8"  value="//opIssuedate" desc="出票日期"/>
+<Item name="PNGZZL" length="2"  value="//opPNGZZL" desc="凭证种类"/>
+<Item name="FUKRZH" length="32" type="xml" value="//opPayacct" desc="付款人帐号"/>
+<Item name="SHKRZH" length="32" type="xml" value="//opBeneacct" desc="收款人帐号"/>
+-->
+</Request>
+<Response type="sop" packfmt="O82272@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<!--
+<Item name="//opOreserved1" type="sop" value="ZHYODM" desc="摘要代码"/>
+<Item name="//opOreserved2" type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opOreserved4" type="sop" value="FUKRZH" desc="付款人账号"/>
+<Item name="//opOreserved5" type="sop" value="PNGZHH" desc="凭证号码"/>
+-->
+</Response>
+</Transaction>
+
+<Transaction code="8247" desc="提入贷记退票宕账">
+<Request type="xml" opptrcode="0007" packfmt="O82471@S">
+<Item name="PDTRCD" length="4"  type="const" value="8247" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089"     desc="清算中心代号"/>
+<Item name="TCHTCH" length="20" type="xml"   value="//opTCHTCH" desc="同城提出号"/>
+<Item name="TUIPLX" length="1"  type="const" value="1" desc="退票类型"/>
+<!-- 退票使用原交易的收付款帐号-->
+<Item name="SHKRZH" length="32" type="xml"   value="//opSHKRZH" desc="收款人帐号"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opFUKRZH" desc="付款人帐号"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opWorkdate" desc="交换日期"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opAcceptor" desc="发起行行号"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="0" desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opOriginator" desc="清算行行号"/>
+</Request>
+<Response type="sop" packfmt="O82472@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opBeneacct"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opPayacct"    type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="8248" desc="提入贷记(自动)">
+<Request type="xml" opptrcode="" packfmt="O82481@S">
+<Item name="PDTRCD" length="4"  type="const" value="8248" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="JYDZLX" length="2"  type="const" value="00" desc="交易对帐类型"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="JIOHLX" length="1"  type="xml"   value="//opJIOHLX" desc="交换类型"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="ZDKZBZ" length="1"  type="xml"   value="//opZDKZBZ" desc="自动扣帐标志"/>
+<Item name="SHFOBZ" length="1"  type="const" value="0" desc="是否标志"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opPayacct" desc="付款人账号"/>
+<Item name="FUKRXM" length="62" type="xml"   value="//opPayname" desc="付款人姓名"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX" desc="备注信息"/>
+<Item name="ZHYODM" length="22" type="const" value="000" desc="摘要代码"/>
+<Item name="DIZHII" length="62" type="xml"   value="//opDIZHII" desc="地址"/>
+<Item name="WAIGDM" length="12" type="xml"   value="//opOriginator" desc="外管代码"/>
+<Item name="PJFKHM" length="62" type="xml"   value="//opPJFKHM" desc="票据付款行名称"/>
+<Item name="CHUPRQ" length="8"  type="xml"   value="//opIssuedate" desc="出票日期"/>
+<Item name="FUKURQ" length="8"  type="xml"   value="//opWorkdate" desc="付款日期"/>
+<Item name="WEITRQ" length="8"  type="xml"   value="//opWorkdate" desc="委托日期"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="2" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="const" value="0" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct" desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename" desc="收款人姓名"/>
+<Item name="ZZZCDZ" length="62" type="xml"   value="//opZZZCDZ" desc="执照注册地址"/>
+<Item name="SBHHAO" length="12" type="xml"   value="//opAcceptor" desc="收报行行号"/>
+<Item name="PJSKHM" length="62" type="xml"   value="//opBenename" desc="票据收款行名称"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="HUOBFH" length="3"  type="const" value="01" desc="货币符号"/>
+<Item name="ZHFUMM" length="16" type="xml"   value="//opAgreement" desc="支付密码"/>
+<Item name="KXNGYT" length="42" type="xml"   value="//opPurpose" desc="款项用途"/>
+<Item name="BWZTXX" length="60" type="xml"   value="//opBWZTXX" desc="报文状态信息"/>
+<Item name="SHULIA" length="10" type="xml"   value="//opSHULIA" desc="数量"/>
+<Item name="FUKUQX" length="10" type="xml"   value="//opFUKUQX" desc="付款期限"/>
+<Item name="ZYWXYH" length="8"  type="xml"   value="//opZYWXYH" desc="中间业务协议号"/>
+<Item name="ZJCYHH" length="12" type="xml"   value="//opAcceptor" desc="直接参与行号"/>
+</Request>
+<Response type="sop" packfmt="O82482@R">
+<Item name="//opHostSerial"     type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3"     type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opPayacct"        type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opNoteno"         type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opSettlamt"       type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opXIOZXH"         type="sop" value="XIOZXH" desc="销帐序号"/>
+<Item name="//opWorkround"      type="sop" value="TRJHCC" desc="提入交换场次"/>
+<Item name="//opTISHXI"         type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opYYCWDM"         type="sop" value="YYCWDM" desc="应用错误代码"/>
+</Response>
+</Transaction>
+
+<Transaction code="8249" desc="提入贷记手工确认">
+<Request type="xml" opptrcode="0002" packfmt="O82491@S">
+<Item name="PDTRCD" length="4"  type="const" value="8249" desc="交易码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="CHSHDM" length="4"  type="xml"   value="//opCHSHDM" desc="城市代码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="TCHTCH" length="20" type="xml"   value="//opTCHTCH" desc="同城提出号"/>
+<Item name="LZCLFS" length="1"  type="xml"   value="//opLZCLFS" desc="来帐处理方式"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opZHANGH" desc="帐号"/>
+<Item name="ZHUZWM" length="62" type="xml"   value="//opZHUZWM" desc="帐户中文名"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opWorkdate" desc="交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml" value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="JIOHLX" length="1"  type="xml"   value="//opJIOHLX" desc="交换类型"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="发起行行号"/>
+<Item name="SBHHAO" length="12" type="xml"   value="//opAcceptor" desc="收报行行号"/>
+<Item name="FUKRZH" length="20" type="xml"   value="//opPayacct" desc="付款人名称"/>
+<Item name="ZHA1ZH" length="20" type="xml"   value="//opPayacct" desc="付款人帐号"/>
+<Item name="FUKRMC" length="62" type="xml"   value="//opPayname" desc="付款人名称"/>
+<Item name="TUIPLY" length="42" type="xml"   value="//opTUIPLY" desc="退票理由"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="0" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="DUIFZH" length="32" type="xml"   value="//opPayacct" desc="对方帐号"/>
+<Item name="XINX01" length="62" type="xml"   value="//opPayname" desc="对方户名"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+</Request>
+<Response type="sop" packfmt="O82492@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved1" type="sop" value="ZHYODM" desc="摘要代码"/>
+<Item name="//opOreserved2" type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+</Response>
+</Transaction>
+
+<Transaction code="8299" desc="支付密码校验">
+<Request type="xml" opptrcode="" packfmt="O82991@S">
+<Item name="PDTRCD" length="4"  type="const" value="8299" desc="交易码"/>
+<Item name="PDQTDT" length="8"  type="xml" value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml" value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml" value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml" value="//opOperid" desc="交易柜员"/>
+<Item name="FUKRZH" length="32" type="xml" value="//opPayacct" desc="付款人帐号"/>
+<Item name="FUKRXM" length="62" type="xml" value="//opPayer" desc="付款人姓名"/>
+<Item name="JIO1JE" length="13" type="xml" value="//opSettlamt" desc="交易金额"/>
+<Item name="PNGZZL" length="2"  type="xml" value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="3" desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZXH" length="8"  type="xml" value="//opNoteno" desc="凭证序号"/>
+<Item name="HUOBDH" length="2"  type="const" value="01" desc="货币代号"/>
+<Item name="ZHFUED" length="13" type="xml" value="//opIssueamt" desc="支付限额"/>
+<Item name="QNFARQ" length="8"  type="xml" value="//opIssuedate" desc="签发日期"/>
+<Item name="ZHFUMM" length="16" type="xml" value="//opAgreement" desc="支付密码"/>
+</Request>
+<Response type="sop" packfmt="O82992@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opPayacct"    type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opNotetype"   type="sop" value="PNGZZL" desc="凭证种类"/>
+<Item name="//opNoteno"     type="sop" value="PNGZXH" desc="凭证序号"/>
+<Item name="//opYYCWDM"     type="sop" value="YYCWDM" desc="应用错误代码"/>
+<Item name="//opOreserved2" type="sop" value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="8307" desc="提出本票(汇票)登记薄查询">
+<Request type="xml" opptrcode="" packfmt="O83071@S">
+<Item name="PDTRCD" length="4"  type="const" value="8307" desc="交易码"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="KAIHRQ" length="8"  type="const" value="" desc="签发起始日期"/>
+<Item name="BQHKRQ" length="8"  type="const" value="" desc="签发终止日期"/>
+<Item name="DFQSRQ" length="8"  type="const" value="" desc="兑付起始日期"/>
+<Item name="DFZZRQ" length="8"  type="const" value="" desc="兑付终止日期"/>
+<Item name="BENPLX" length="1"  type="const" value="" desc="本票类型"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="序号"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opPNGZHH" desc="凭证号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opPayacct" desc="申请人帐号"/>
+<Item name="BENPZT" length="1"  type="const" value="" desc="本票状态"/>
+<Item name="GUIYDH" length="8"  type="xml"   value="opOperid" desc="柜员代号"/>
+<Item name="QISHBS" length="4"  type="const" value="" desc="起始笔数"/>
+<Item name="CXUNBS" length="2"  type="const" value="" desc="查询笔数"/>
+<Item name="DAYNBZ" length="1"  type="const" value="" desc="打印标志"/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//opInnerBank" desc="营业机构号"/>
+</Request>
+<Response type="sop" packfmt="O83072@R" grid="F83072">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opBENPLX"     type="sop" value="BENPLX" desc="本票类型"/>
+<Item name="//opBENPZT"     type="sop" value="BENPZT" desc="本票状态"/>
+</Response>
+</Transaction>
+
+<Transaction code="9307" desc="提入密押本票查询本票类型">
+<Request type="xml" opptrcode="" packfmt="O83071@S">
+<Item name="PDTRCD" length="4"  type="const" value="8307" desc="交易码"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="KAIHRQ" length="8"  type="const" value="" desc="签发起始日期"/>
+<Item name="BQHKRQ" length="8"  type="const" value="" desc="签发终止日期"/>
+<Item name="DFQSRQ" length="8"  type="const" value="" desc="兑付起始日期"/>
+<Item name="DFZZRQ" length="8"  type="const" value="" desc="兑付终止日期"/>
+<Item name="BENPLX" length="1"  type="const" value="" desc="本票类型"/>
+<Item name="PNGZZL" length="2"  type="const" value="12" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="const" value="c" desc="批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="序号"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opPNGZHH" desc="凭证号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opPayacct" desc="申请人帐号"/>
+<Item name="BENPZT" length="1"  type="const" value="" desc="本票状态"/>
+<Item name="GUIYDH" length="8"  type="xml"   value="opOperid" desc="柜员代号"/>
+<Item name="QISHBS" length="4"  type="const" value="" desc="起始笔数"/>
+<Item name="CXUNBS" length="2"  type="const" value="" desc="查询笔数"/>
+<Item name="DAYNBZ" length="1"  type="const" value="" desc="打印标志"/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//opInnerBank" desc="营业机构号"/>
+</Request>
+<Response type="sop" packfmt="O83072@R" grid="F83072">
+<Item name="//opGUIYLS"     type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opBENPLX"     type="sop" value="BENPLX" desc="本票类型"/>
+<Item name="//opBENPZT"     type="sop" value="BENPZT" desc="本票状态"/>
+<Item name="//opSXIORQ"     type="sop" value="SXIORQ" desc="生效日期"/>
+</Response>
+</Transaction>
+
+<Transaction code="8359" desc="本票总行密押查询">
+<Request type="xml" opptrcode="" packfmt="O83591@S">
+<Item name="PDTRCD" length="4"  type="const" value="8359" desc="交易码"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opPNGZHH" desc="凭证号"/>
+<Item name="GUIYLS" length="12" type="xml"   value="//opGUIYLS" desc="柜员流水"/>
+<Item name="SXIORQ" length="8"  type="xml"   value="//opSXIORQ" desc="生效日期"/>
+</Request>
+<Response type="sop" packfmt="O83592@R">
+<Item name="//opHUIPMY"     type="sop" value="HUIPMY" desc="本票密押(总行)"/>
+<Item name="//opBENPLX"     type="sop" value="BENPLX" desc="本票类型"/>
+<Item name="//opBENPZT"     type="sop" value="BENPZT" desc="本票状态"/>
+</Response>
+</Transaction>
+
+<!--对公 -->
+<Transaction code="8951" desc="提出借记向核心记账(对公)">
+<Request type="xml" opptrcode="0001" packfmt="O89511@S">
+<Item name="PDTRCD" length="4"  type="const" value="8951" desc="交易码"/>
+<Item name="SYSMACSBNO" length="4"  type="xml"   value="//opSYSMACSBNO"    desc=""/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089"             desc="清算中心代号"/>
+<Item name="FENHDM" length="2"  type="const" value="89"               desc="分行代码"/>
+<Item name="TJRZFS" length="1"  type="xml"   value="//opTJRZFS"       desc="入帐方式"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct"     desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename"     desc="收款人姓名"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opWorkdate"     desc="交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground"   desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opAcceptor"     desc="发起行行号"/>
+<Item name="JIGOMC" length="62" type="xml"   value="//opJIGOMC"       desc="机构中文名称"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opPayacct"      desc="付款人帐号"/>
+<Item name="FUKRXM" length="62" type="xml"   value="//opPayname"      desc="付款人名称"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt"     desc="交易金额"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM"       desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opPNGZZL"       desc="凭证种类"/>
+<!--
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNoteType"     desc="凭证种类"/>
+-->
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno"       desc="凭证序号"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH"       desc="凭证批号"/>
+<Item name="TJJXTS" length="10" type="xml"   value="//opTJJXTS"       desc="计息天数"/>
+<Item name="CHUPRQ" length="8"  type="xml"   value="//opIssuedate"    desc="出票日期"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX"       desc="备注信息"/>
+</Request>
+<Response type="sop" packfmt="O89512@R">
+<Item name="//opHostSerial"     type="sop"   value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3"     type="sop"   value="TCHTCH" desc="同城提出号"/>
+<Item name="//opOreserved2"     type="sop"   value="JIO1JE" desc="交易金额"/>
+<Item name="//opOreserved4"     type="sop"   value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opOreserved5"     type="sop"   value="FQHHAO" desc="发起行行号"/>
+<Item name="//opOreserved6"     type="sop"   value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="8953" desc="提入借记(截留)">
+<Request type="xml" opptrcode="" packfmt="O89531@S">
+<Item name="PDTRCD" length="4"  type="const" value="8953" desc="交易码"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="SHFOBZ" length="1"  type="const" value="0" desc="是否标志"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opPayacct" desc="付款人帐号"/>
+<Item name="FUKRXM" length="62" type="xml"   value="//opPayer" desc="付款人姓名"/>
+<Item name="DJIESH" length="20" type="xml"   value="//opDJIESH" desc="冻结书号"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="发起行行号"/>
+<Item name="JIGOMC" length="62" type="xml"   value="//opJIGOMC" desc="机构中文名称"/>
+<Item name="TRJHRQ" length="8"  type="xml"   value="//opWorkdate" desc="提入交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml" value="//opExchground" desc="交换场次"/>
+<!--
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+-->
+<Item name="TRJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct" desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename" desc="收款人姓名"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="1" desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="ZHFUED" length="13" type="xml"   value="//opIssueamt" desc="支付限额"/>
+<Item name="QNFARQ" length="8"  type="xml"   value="//opIssuedate" desc="签发日期"/>
+<Item name="ZHFUMM" length="16" type="xml"   value="//opAgreement" desc="支付密码"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX" desc="备注信息"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor" desc="清算行行号"/>
+</Request>
+<Response type="sop" packfmt="O89532@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opPayacct"    type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opNoteno"     type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opXIOZXH"     type="sop" value="XIOZXH" desc="销帐序号"/>
+<Item name="//opWorkround"  type="sop" value="TRJHCC" desc="提入交换场次"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opYYCWDM"     type="sop" value="YYCWDM" desc="应用错误代码"/>
+</Response>
+</Transaction>
+
+<Transaction code="8955" desc="提入借记退票宕账">
+<Request type="xml" opptrcode="0007" packfmt="O89551@S">
+<Item name="PDTRCD" length="4"  type="const" value="8955" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="TUIPLX" length="1"  type="xml"   value="//opTUIPLX" desc="退票类型"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opSHKRZH" desc="收款人帐号"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opFUKRZH" desc="付款人帐号"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<!--
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opWorkdate" desc="交换日期"/>
+-->
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opExchgdate" desc="交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opAcceptor" desc="对方行(原交易发起)"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="1" desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opOriginator" desc="本行行号"/>
+</Request>
+<Response type="sop" packfmt="O89552@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opBeneacct"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opPayacct"    type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="1955" desc="提入借记(本票)退票宕账">
+<Request type="xml" opptrcode="0007" packfmt="O89551@S">
+<Item name="PDTRCD" length="4"  type="const" value="8955" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="TUIPLX" length="1"  type="xml"   value="//opTUIPLX" desc="退票类型"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opSHKRZH" desc="收款人帐号"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opFUKRZH" desc="付款人帐号"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opWorkdate" desc="交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="对方行(原交易发起)"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="1" desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor" desc="本行行号"/>
+</Request>
+<Response type="sop" packfmt="O89552@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opBeneacct"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opPayacct"    type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="8956" desc="提入交易退票">
+<Request type="xml" opptrcode="" packfmt="O89561@S">
+<Item name="PDTRCD" length="4"  type="const" value="8956" desc="交易码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="TCHTCH" length="20" type="xml"   value="//opTCHTCH"       desc="同城提出号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opSHKRXM"     desc="收款人姓名"/>
+<Item name="FUKRXM" length="62" type="xml"   value="//opFUKRXM"        desc="付款人姓名"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opSHKRZH"  desc="收款人帐号"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opFUKRZH"  desc="付款人帐号"/>
+<!--
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype"     desc="凭证种类"/>
+-->
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype"     dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="2" desc="凭证种类"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opNoteno"       desc="凭证号"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt"     desc="交易金额"/>
+<!--
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opWorkdate"    desc="交换日期"/>
+-->
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opExchgdate" desc="交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml" value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opAcceptor"    desc="对方行行号(原交易发起行)"/>
+</Request>
+<Response type="sop" packfmt="O89562@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opBeneacct"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opBenename"   type="sop" value="SHKRXM" desc="收款人姓名"/>
+<Item name="//opPayingacct" type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opPayname"    type="sop" value="FUKRXM" desc="付款人姓名"/>
+<Item name="//opNotetype"   type="sop" value="PNGZZL" desc="凭证种类"/>
+<Item name="//opNoteno"     type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opXIOZXH"     type="sop" value="XIOZXH" desc="销帐序号"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<!--对公-->
+<Transaction code="8963" desc="提出贷记核心记账(对公业务)">
+<Request type="xml" opptrcode="0002" packfmt="O89631@S">
+<Item name="PDTRCD" length="4"  type="const" value="8963" desc="交易码"/>
+<Item name="PDAUUS" length="8"  value="//opPDAUUS" desc="授权柜员"/>
+<Item name="PDAUPS" length="16"  value="//opPDAUPS" desc="授权柜员密码"/>
+<Item name="PDAUCN" length="2"  value="//opPDAUCN" desc=""/>
+<Item name="PDAUCF" length="1"  value="//opPDAUCF" desc=""/>
+<Item name="PDOFF1" length="2"  value="//opPDOFF1" desc=""/>
+<Item name="PDOFF2" length="2"  value="//opPDOFF2" desc=""/>
+<Item name="SYSPINSEED" length="16"  value="//opSYSPINSEED" desc=""/>
+<Item name="SYSMACSBNO" length="4"  type="xml"   value="//opSYSMACSBNO"    desc=""/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="ZHNGDH" length="5"  value="//opZHNGDH" desc="终端号"/>
+<Item name="CHSHDM" length="4"  value="//opCHSHDM" desc="城市代码"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5"  desc="平台流水"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="SHFOBZ" length="1"  value="//opSHFOBZ" desc="待销账标志"/>
+<Item name="XIOZXH" length="17" value="//opXIOZXH" desc="销账序号"/>
+<Item name="FUKRZH" length="32" value="//opPayacct" desc="付款账号"/>
+<Item name="FUKRXM" length="62" value="//opPayname" desc="付款户名"/>
+<Item name="SHKRZH" length="32" value="//opBeneacct" desc="收款账号"/>
+<Item name="SHKRXM" length="62" value="//opBenename" desc="收款姓名"/>
+<Item name="BEIZXX" length="42" value="//opBEIZXX" desc="备注信息"/>
+<Item name="JIO1JE" length="13" value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHYODM" length="22" value="//opZHYODM" desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  value="//opPNGZZL" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  value="//opNoteno" desc="凭证序号"/>
+<Item name="JIOHRQ" length="8"  value="//opWorkdate" desc="交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml" value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="FQHHAO" length="12" value="//opAcceptor" desc="提出行号"/>
+<Item name="ZHFUED" length="13" value="//opIssueamt" desc="支付限额"/>
+<Item name="QNFARQ" length="8"  value="//opIssuedate" desc="出票日期"/>
+<Item name="ZHFUMM" length="16" value="//opAgreement" desc="支付密码"/>
+</Request>
+<Response type="sop" packfmt="O89632@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved1" type="sop" value="ZHYODM" desc="摘要代码"/>
+<Item name="//opOreserved2" type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opOreserved4" type="sop" value="FUKRZH" desc="付款人账号"/>
+<Item name="//opOreserved5" type="sop" value="PNGZHH" desc="凭证号码"/>
+</Response>
+</Transaction>
+
+<Transaction code="8978" desc="获取柜员信息">
+<Request type="xml" opptrcode="" packfmt="O89781@S">
+<Item name="PDTRCD" length="4"  type="const" value="8978" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="GUIYDH" length="8"  type="xml"   value="//opOperid" desc="柜员代号"/>
+<Item name="JIOYRQ" length="8"  type="xml"   value="//opWorkdate" desc="交易日期"/>
+</Request>
+<Response type="sop" packfmt="O89782@R">
+<Item name="//opOreserved1" type="sop" value="GUIYZT" desc="柜员状态"/>
+<Item name="//opOreserved2" type="sop" value="JILUZT" desc="记录状态"/>
+<Item name="//opOreserved3" type="sop" value="QDAOSJ" desc="签到时间"/>
+<Item name="//opOreserved4" type="sop" value="QTUISJ" desc="签退时间"/>
+<Item name="//opPDWSNO" type="sop" value="ZHNGDH" desc="终端号"/>
+<Item name="//opOreserved5" type="sop" value="SHFOBZ" desc="是否标志"/>
+<Item name="" type="sop" value="CAOZBZ" desc="操作标志"/>
+</Response>
+</Transaction>
+
+<Transaction code="8982" desc="个人账户信息查询">
+<Request type="xml" opptrcode="" packfmt="O89821@S">
+<Item name="PDTRCD" length="4"  type="const" value="8982" desc="交易码"/>
+<!--测试
+<Item name="PDSBNO" length="4"  type="const" value="9501" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="const" value="99501056" desc="交易柜员"/>
+-->
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opAcctNo" desc="帐号"/>
+</Request>
+<Response type="sop" packfmt="O89822@R">
+<Item name="//opCardName" type="sop" value="ZHUZWM" desc="户名"/>
+</Response>
+</Transaction>
+
+<Transaction code="3982" desc="个人账户信息查询(扣税使用)">
+<Request type="xml" opptrcode="" packfmt="O89821@S">
+<Item name="PDTRCD" length="4"  type="const" value="8982" desc="交易码"/>
+<!--测试
+<Item name="PDSBNO" length="4"  type="const" value="9501" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="const" value="99501056" desc="交易柜员"/>
+-->
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="ZHANGH" length="20" type="xml"   value="//opPayacct" desc="帐号"/>
+</Request>
+<Response type="sop" packfmt="O89822@R">
+<Item name="//opCardName" type="sop" value="ZHUZWM" desc="户名"/>
+</Response>
+</Transaction>
+
+<Transaction code="8983" desc="提入借记确认(银行汇票)">
+<Request type="xml" opptrcode="0111" packfmt="O89831@S">
+<Item name="PDTRCD" length="4"  type="const" value="8983" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="ZIJNLY" length="1"  type="const" value="C"                desc="资金来源"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089"             desc="清算中心代号"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opExchgdate"    desc="交换日期(原交易工作日期)"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground"   desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator"   desc="发起行行号"/>
+<Item name="HUIPLX" length="1"  type="xml"   value="//opBENPLX"       desc="汇票类型"/>
+<Item name="YEWUXZ" length="2"  type="xml"   value="//opYEWUXZ"       desc="业务性质"/>
+<Item name="MSGSNO" length="20" type="xml"   value="//opMSGSNO"       desc="报文序列号"/>
+<Item name="YWZLBH" length="4"  type="xml"   value="//opYWZLBH"       desc="业务种类编号"/>
+<!--
+<Item name="YNGYJG" length="4"  type="xml"   value="//opInnerorganid" desc="营业机构号"/>
+-->
+<Item name="YNGYJG" length="4"  type="xml"   value="//opYNGYJG" desc="营业机构号"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype"     dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="0" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH"       desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno"       desc="凭证序号"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt"     desc="交易金额"/>
+<Item name="DUIFJE" length="13" type="xml"   value="//opDUIFJE"       desc="兑付金额"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX"       desc="备注信息"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opNoteno"       desc="凭证号"/>
+<Item name="WAIGDM" length="12" type="xml"   value="//opOriginator"   desc="外管代码"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct"     desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename"     desc="收款人姓名"/>
+<Item name="FENHDM" length="2"  type="const" value="89"               desc="分行代码"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM"       desc="摘要代码"/>
+<Item name="ZUANZH" length="20" type="xml"   value="//opZUANZH"       desc="转帐帐号"/>
+<Item name="HUIPMY" length="8"  type="xml"   value="//opHUIPMY"       desc="汇票密押"/>
+<Item name="JYDZLX" length="2"  type="const" value="00"               desc="交易对帐类型"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor"   desc="清算行行号"/>
+</Request>
+<Response type="sop" packfmt="O89832@R">
+<Item name="//opNoteno"     type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opOriginator" type="sop" value="WAIGDM" desc="外管代码"/>
+<Item name="//opQFHLHM"     type="sop" value="QFHLHM" desc="签发行联行行名"/>
+<Item name="//opZHANGH"     type="sop" value="ZHANGH" desc="帐号"/>
+<Item name="//opKEHZWM"     type="sop" value="KEHZWM" desc="客户中文名"/>
+<Item name="//opHUIPLX"     type="sop" value="HUIPLX" desc="汇票类型"/>
+<Item name="//opYEWUXZ"     type="sop" value="YEWUXZ" desc="业务性质"/>
+<Item name="//opIssuedate"  type="sop" value="QNFARQ" desc="签发日期"/>
+<Item name="//opBenename"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opDUIFMC"     type="sop" value="DUIFMC" desc="对方名称"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opPurpose"    type="sop" value="BEIZXX" desc="备注信息"/>
+<Item name="//opBEIZXX"     type="sop" value="DUIFJE" desc="对方金额"/>
+<Item name="//opYYCWDM"     type="sop" value="YYCWDM" desc="应用错误代码"/>
+</Response>
+</Transaction>
+
+<Transaction code="8984" desc="提入借记确认(本票)">
+<Request type="xml" opptrcode="0111" packfmt="O89841@S">
+<Item name="PDTRCD" length="4"  type="const" value="8984" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="MSGSNO" length="20" type="xml"   value="//opRefid" desc="报文序列号"/>
+<Item name="YWZLBH" length="4"  type="xml"   value="//opYWZLBH" desc="业务种类编号"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="0" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="ZIJNQX" length="1"  type="const" value="A" desc="资金去向"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opNoteno" desc="凭证号"/>
+<Item name="BENPLX" length="1"  type="xml"   value="//opBENPLX" desc="本票类型"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct" desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename" desc="收款人姓名"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="发起行行号"/>
+<Item name="SXIORQ" length="8"  type="xml"   value="//opSXIORQ" desc="生效日期"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX" desc="备注信息"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opExchgdate" desc="交换日期(原交易工作日期)"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="WTJGDH" length="4"  type="xml"   value="//opWTJGDH" desc="委托机构代号"/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//opInnerorganid" desc="营业机构号"/>
+<Item name="JYDZLX" length="2"  type="const" value="00" desc="交易对帐类型"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor" desc="清算行行号"/>
+<Item name="HUIPMY" length="8"  type="xml"   value="//opHUIPMY" desc="汇票密押"/>
+</Request>
+<Response type="sop" packfmt="O89842@R">
+<Item name="//opNoteno"     type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opZHANGH"     type="sop" value="ZHANGH" desc="帐号"/>
+<Item name="//opBENPLX"     type="sop" value="BENPLX" desc="本票类型"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opBeneacct"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opBenename"   type="sop" value="SHKRXM" desc="收款人姓名"/>
+<Item name="//opKEHZWM"     type="sop" value="KEHZWM" desc="客户中文名"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opYYCWDM"     type="sop" value="YYCWDM" desc="应用错误代码"/>
+</Response>
+</Transaction>
+
+<!--暂不使用-->
+<Transaction code="9984" desc="本票截流">
+<Request type="xml" opptrcode="0111" packfmt="O89841@S">
+<Item name="PDTRCD" length="4"  type="const" value="8984" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="MSGSNO" length="20" type="xml"   value="//opRefid" desc="报文序列号"/>
+<Item name="YWZLBH" length="4"  type="xml"   value="//opYWZLBH" desc="业务种类编号"/>
+<!--
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="1" desc="凭证种类"/>
+-->
+<Item name="PNGZZL" length="2"  type="const" value="12" desc="凭证种类"/><!-- check it -->
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="ZIJNQX" length="1"  type="const" value="A" desc="资金去向"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opNoteno" desc="凭证号"/>
+<Item name="BENPLX" length="1"  type="xml"   value="//opBENPLX" desc="本票类型"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct" desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename" desc="收款人姓名"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="发起行行号"/>
+<Item name="SXIORQ" length="8"  type="xml"   value="//opSXIORQ" desc="生效日期"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX" desc="备注信息"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opExchgdate" desc="交换日期(原交易工作日期)"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="WTJGDH" length="4"  type="xml"   value="//opWTJGDH" desc="委托机构代号"/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//opInnerorganid" desc="营业机构号"/>
+<Item name="JYDZLX" length="2"  type="const" value="00" desc="交易对帐类型"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor" desc="清算行行号"/>
+<Item name="HUIPMY" length="8"  type="xml"   value="//opHUIPMY" desc="汇票密押"/>
+</Request>
+<Response type="sop" packfmt="O89842@R">
+<Item name="//opNoteno"     type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opZHANGH"     type="sop" value="ZHANGH" desc="帐号"/>
+<Item name="//opBENPLX"     type="sop" value="BENPLX" desc="本票类型"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opBeneacct"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opBenename"   type="sop" value="SHKRXM" desc="收款人姓名"/>
+<Item name="//opKEHZWM"     type="sop" value="KEHZWM" desc="客户中文名"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opYYCWDM"     type="sop" value="YYCWDM" desc="应用错误代码"/>
+</Response>
+</Transaction>
+
+<Transaction code="8992" desc="入帐方式查询">
+<Request type="xml" opptrcode="" packfmt="O89921@S">
+<Item name="PDTRCD" length="4"  type="const" value="8992" desc="交易码"/>
+<Item name="PDQTDT" length="8"  type="xml" value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml" value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml" value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml" value="//opOperid" desc="交易柜员"/>
+<Item name="TCHTCH" length="20" type="xml" value="//opTCHTCH" desc="原交易同城提出号"/>
+</Request>
+<Response type="sop" packfmt="O89922@R">
+<Item name="//opTJRZFS" type="sop" value="TJRZFS" desc="入帐方式"/>
+</Response>
+</Transaction>
+
+<Transaction code="9328" desc="营业机构查询">
+<Request type="xml" opptrcode="" packfmt="O93281@S">
+<Item name="PDTRCD" length="4"  type="const" value="9328" desc=""/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc=""/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc=""/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc=""/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc=""/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//YNGYJG" desc="营业机构号"/>
+<Item name="GUIYSX" length="1"  type="const" value="0" desc="柜员属性"/>
+<Item name="GUIYDH" length="8"  type="xml"   value="//opOperid"   desc="柜员代号"/>
+<Item name="QISHBS" length="4"  type="const" value="" desc="起始笔数"/>
+<Item name="CXUNBS" length="2"  type="const" value="" desc="查询笔数"/>
+</Request>
+<Response type="sop" packfmt="O93282@R">
+<Item name="//opHostSerial" type="sop" value="YNGYJG" desc="营业机构号"/>
+</Response>
+</Transaction>
+
+<Transaction code="1328" desc="营业机构查询(地区查询)">
+<Request type="xml" opptrcode="" packfmt="O93281@S">
+<Item name="PDTRCD" length="4"  type="const" value="9328" desc=""/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//Workdate" desc=""/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//PDWSNO" desc=""/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//TermId" desc=""/>
+<Item name="PDUSID" length="8"  type="xml"   value="//AcctOper" desc=""/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//YNGYJG" desc="营业机构号"/>
+<Item name="GUIYSX" length="1"  type="const" value="0" desc="柜员属性"/>
+<Item name="GUIYDH" length="8"  type="xml"   value="//AcctOper"   desc="柜员代号"/>
+<Item name="QISHBS" length="4"  type="const" value="" desc="起始笔数"/>
+<Item name="CXUNBS" length="2"  type="const" value="" desc="查询笔数"/>
+</Request>
+<Response type="sop" packfmt="O93282@R">
+<Item name="//TermId" type="sop" value="YNGYJG" desc="营业机构号"/>
+</Response>
+</Transaction>
+
+<Transaction code="9579" desc="扣手续费">
+<Request type="xml" opptrcode="" packfmt="O95791@S">
+<Item name="PDTRCD" length="4"  type="const" value="9579" desc="交易代码"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端代码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="发起机构"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="发起柜员"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5"  desc="平台流水"/>
+<Item name="XNZHBZ" length="1"  type="const"   value="1" desc="现转标志"/>
+<Item name="KEHHAO" length="10" type="xml"   value="//opKEHHAO"   desc=""/>
+<Item name="KHZHLX" length="1"  type="const" value="0" desc="客户类型"/>
+<Item name="KEHUZH" length="20"  type="xml" value="//opBeneacct" desc="客户账号"/>
+<Item name="CHUIBZ" length="1"  type="const" value="0" desc="钞汇标志"/>
+<Item name="HUOBDH" length="2"  type="const" value="01" desc="货币代号"/>
+<Item name="MAIRBZ" length="2"  type="const" value="01" desc="付费帐号币种"/>
+<Item name="XJXMDM" length="10"  type="xml" value="//opXJXMDM" desc=""/>
+<Item name="XIEYBH" length="8"  type="const" value="01020273" desc="业务种类"/>
+<Item name="QUDAOO" length="2"  type="const" value="00" desc="渠道"/>
+<!--F9569-->
+<grid name="F95691">
+<Item name="FEILZL" length="2"  type="const" value="e2" desc="费率种类"/>
+<Item name="JIOYJE" length="13"  type="xml" value="//opSettlamt" desc="交易金额"/>
+<Item name="SHULNG" length="10"  type="const" value="1" desc="数量"/>
+</grid>
+</Request>
+<Response type="sop" packfmt="O95792@R" grid="F95692">
+<Item name="//opFEILZL"     type="sop" value="FEILZL" desc="费率种类"/>
+<Item name="//opJIOYJE"     type="sop" value="JIOYJE" desc="交易金额"/>
+<Item name="//opSHULNG"     type="sop" value="SHULNG" desc="数量"/>
+<Item name="//opSHXFJE"     type="sop" value="SHXFJE" desc=""/>
+<Item name="//opYOUHB1"     type="sop" value="YOUHB1" desc=""/>
+<Item name="//opSHSHJE"     type="sop" value="SHSHJE" desc=""/>
+<Item name="//opZHANGH"     type="sop" value="ZHANGH" desc=""/>
+<Item name="//opZUANZH"     type="sop" value="ZUANZH" desc=""/>
+<Item name="//opSHOFZQ"     type="sop" value="SHOFZQ" desc=""/>
+<Item name="//opZHIDRQ"     type="sop" value="ZHIDRQ" desc=""/>
+<Item name="//opSHOQBZ"     type="sop" value="SHOQBZ" desc=""/>
+<Item name="//opKEHZWM"     type="sop" value="KEHZWM" desc=""/>
+<Item name="//opGUIYLS"     type="sop" value="GUIYLS" desc="柜员流水"/>
+<Item name="//opHostSerial"     type="sop" value="GUIYLS" desc="柜员流水"/>
+</Response>
+<Response type="sop" packfmt="O95793@R" grid="F95693">
+<Item name="//opJIGOMC"     type="sop" value="JIGOMC" desc="机构中文名称"/>
+<Item name="//opNIANNN"     type="sop" value="NIANNN" desc=""/>
+<Item name="//opYUEFEN"     type="sop" value="YUEFEN" desc=""/>
+<Item name="//opRIIIII"     type="sop" value="RIIIII" desc=""/>
+<!--F95693-->
+<Item name="//opZHQ1DM"     type="sop" value="ZHQ1DM" desc=""/>
+<Item name="//opHUOBMC"     type="sop" value="HUOBMC" desc=""/>
+<Item name="//opSHMUMC"     type="sop" value="SHMUMC" desc=""/>
+<Item name="//opZHYODM"     type="sop" value="ZHYODM" desc=""/>
+<!--F95693-->
+<Item name="//opRIZHXH"     type="sop" value="RIZHXH" desc=""/>
+<Item name="//opJIO1GY"     type="sop" value="JIO1GY" desc=""/>
+<Item name="//opGUIYXM"     type="sop" value="GUIYXM" desc="柜员姓名"/>
+</Response>
+</Transaction>
+
+<Transaction code="9914" desc="提入借记确认(承兑汇票)">
+<Request type="xml" opptrcode="" packfmt="OEF141@S">
+<Item name="PDTRCD" length="4"  type="const" value="EF14" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="MSGSNO" length="20" type="xml"   value="//opRefid" desc="报文序列号"/>
+<Item name="YWZLBH" length="4"  type="xml"   value="//opYWZLBH" desc="业务种类编号"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opPNGZZL" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opPNGZHH" desc="凭证号"/>
+<Item name="ZHANGH" length="32" type="xml"   value="//opPayacct" desc="帐号"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="CHPRZH" length="32" type="xml"   value="//opBeneacct" desc="持票人帐号"/>
+<Item name="CHPRMC" length="62" type="xml"   value="//opBenename" desc="持票人名称"/>
+<Item name="KAIHHM" length="32" type="xml"   value="//opKAIHHM" desc="开户行名"/>
+<Item name="HUILUU" length="1"  type="const" value="0" desc="汇路-提入借"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opExchgdate" desc="交换日期(原交易工作日期)"/>
+<Item name="TRJHCC" length="1"  type="xml"   value="//opExchground"    desc="提入交换场次"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="发起行行号"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//opInnerorganid" desc="营业机构号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor" desc="清算行行号"/>
+<Item name="ZJCYHH" length="12" type="xml"   value="//opOriginator" desc="直接参与行号"/>
+<Item name="JYDZLX" length="2"  type="const" value="00" desc="交易对帐类型"/>
+</Request>
+<Response type="sop" packfmt="OEF142@R">
+<Item name="" type="sop" value="GBCGBZ" desc="广播成功标志"/>
+</Response>
+</Transaction>
+
+<Transaction code="9916" desc="提入借记确认(商业汇票)">
+<Request type="xml" opptrcode="" packfmt="OEF161@S">
+<Item name="PDTRCD" length="4"  type="const" value="EF16" desc="交易码"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerorganid" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="SHFOBZ" length="2"  type="const" value="0" desc="是否标志"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opPayacct" desc="付款人帐号"/>
+<Item name="FUKRXM" length="62" type="xml"   value="//opPayname" desc="付款人姓名"/>
+<Item name="DJIESH" length="20" type="xml"   value="//opDJIESH" desc="冻结书号"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="发起行行号"/>
+<Item name="JIGOMC" length="62" type="xml"   value="//opOriginator" desc="机构中文名称"/>
+<Item name="TRJHRQ" length="8"  type="xml"   value="//opExchgdate"  desc="提入交换日期(原交易工作日期)"/>
+<Item name="TRJHCC" length="1"  type="xml"   value="//opExchground"    desc="提入交换场次"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct"  desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename"  desc="收款人姓名"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt"  desc="交易金额"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM"    desc="摘要代码"/>
+<Item name="PNGZZL" length="1"  type="xml"   value="//opPNGZZL" desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="ZHFUED" length="13" type="xml"   value="//opRemnamt" desc="支付限额"/>
+<Item name="QNFARQ" length="8"  type="xml"   value="//opIssuedate" desc="签发日期"/>
+<Item name="ZHFUMM" length="6"  type="xml"   value="//opAgreement" desc="支付密码"/>
+<Item name="BEIZXX" length="100" type="xml"  value="//opPurpose" desc="备注信息"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor" desc="清算行行号"/>
+<Item name="FUKNHH" length="12" type="xml"   value="//opOriginator" desc="付款行号"/>
+<Item name="DAOQRQ" length="8"  type="xml"   value="//opDAOQRQ" desc="到期日"/>
+</Request>
+<Response type="sop" packfmt="OEF162@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opNoteno"     type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opPayacct"    type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opYYCWDM"     type="sop" value="YYCWDM" desc="应用错误代码"/>
+<Item name="//opXIOZXH"     type="sop" value="XIOZXH" desc="销帐序号"/>
+<Item name="//opTRJHCC"     type="sop" value="TRJHCC" desc="提入交换场次"/>
+</Response>
+</Transaction>
+
+<!--对私-->
+<Transaction code="9951" desc="提出借记向核心记账(个人业务,内部帐户入帐)">
+<Request type="xml" opptrcode="0001" packfmt="O89511@S">
+<Item name="PDTRCD" length="4"  type="const" value="8951" desc="交易码"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<!--测试
+<Item name="QSZXDH" length="4"  type="const" value="0095"             desc="清算中心代号"/>
+<Item name="FENHDM" length="2"  type="const" value="95"               desc="分行代码"/>
+-->
+<Item name="QSZXDH" length="4"  type="const" value="0089"             desc="清算中心代号"/>
+<Item name="FENHDM" length="2"  type="const" value="89"               desc="分行代码"/>
+<!--对私-->
+<Item name="TJRZFS" length="1"  type="const"   value="1"       desc="入帐方式"/>
+<!--
+<Item name="TJRZFS" length="1"  type="xml"   value="//opTJRZFS"       desc="入帐方式"/>
+-->
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct"     desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename"     desc="收款人姓名"/>
+<Item name="JIOHRQ" length="8"  type="xml"   value="//opWorkdate"     desc="交换日期"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<!--
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator"   desc="发起行行号"/>
+-->
+<Item name="FQHHAO" length="12" type="xml"   value="//opAcceptor"     desc="发起行行号"/>
+<Item name="JIGOMC" length="62" type="xml"   value="//opJIGOMC"       desc="机构中文名称"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opPayacct"      desc="付款人帐号"/>
+<Item name="FUKRXM" length="62" type="xml"   value="//opPayname"      desc="付款人名称"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt"     desc="交易金额"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM"       desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opPNGZZL"       desc="凭证种类"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno"       desc="凭证序号"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH"       desc="凭证批号"/>
+<Item name="TJJXTS" length="10" type="xml"   value="//opTJJXTS"       desc="计息天数"/>
+<Item name="CHUPRQ" length="8"  type="xml"   value="//opIssuedate"    desc="出票日期"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX"       desc="备注信息"/>
+</Request>
+<Response type="sop" packfmt="O89512@R">
+<Item name="//opHostSerial"     type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3"     type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opOreserved2"     type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opOreserved4"     type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opOreserved5"     type="sop" value="FQHHAO" desc="发起行行号"/>
+<Item name="//opOreserved6"     type="sop" value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="9953" desc="提入一般借记(确认)">
+<Request type="xml" opptrcode="" packfmt="O89531@S">
+<Item name="PDTRCD" length="4"  type="const" value="8953" desc="交易码"/>
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank"    desc="机构代码"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO"       desc="终端号TTY"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid"       desc="交易柜员"/>
+<!--
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate"     desc="前台日期"/>
+<Item name="PDQTLS" length="12" type="xml"   value="//opHreserved5"   desc="平台流水"/>
+-->
+<Item name="SHFOBZ" length="1"  type="const" value="0" desc="是否标志"/>
+<Item name="FUKRZH" length="32" type="xml"   value="//opPayacct" desc="付款人帐号"/>
+<Item name="FUKRXM" length="62" type="xml"   value="//opPayer" desc="付款人姓名"/>
+<Item name="DJIESH" length="20" type="xml"   value="//opDJIESH" desc="冻结书号"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opOriginator" desc="发起行行号"/>
+<Item name="JIGOMC" length="62" type="xml"   value="//opJIGOMC" desc="机构中文名称"/>
+<Item name="TRJHRQ" length="8"  type="xml"   value="//opExchgdate" desc="提入交换日期(原交易工作日期)"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<!--
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+-->
+<Item name="TRJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="SHKRZH" length="32" type="xml"   value="//opBeneacct" desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml"   value="//opBenename" desc="收款人姓名"/>
+<Item name="JIO1JE" length="13" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHYODM" length="22" type="xml"   value="//opZHYODM" desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml"   value="//opNotetype" dll="dll/libconvert.so" func="cvt_notetype_c2b" expr="0" desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<Item name="PNGZPH" length="1"  type="xml"   value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  type="xml"   value="//opNoteno" desc="凭证序号"/>
+<Item name="ZHFUED" length="13" type="xml"   value="//opIssueamt" desc="支付限额"/>
+<Item name="QNFARQ" length="8"  type="xml"   value="//opIssuedate" desc="签发日期"/>
+<Item name="ZHFUMM" length="16" type="xml"   value="//opAgreement" desc="支付密码"/>
+<Item name="BEIZXX" length="42" type="xml"   value="//opBEIZXX" desc="备注信息"/>
+<Item name="QISHHH" length="12" type="xml"   value="//opAcceptor" desc="清算行行号"/>
+</Request>
+<Response type="sop" packfmt="O89532@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opPayacct"    type="sop" value="FUKRZH" desc="付款人帐号"/>
+<Item name="//opNoteno"     type="sop" value="PNGZHH" desc="凭证号"/>
+<Item name="//opSettlamt"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opXIOZXH"     type="sop" value="XIOZXH" desc="销帐序号"/>
+<Item name="//opWorkround"  type="sop" value="TRJHCC" desc="提入交换场次"/>
+<Item name="//opPurpose"    type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opYYCWDM"     type="sop" value="YYCWDM" desc="应用错误代码"/>
+</Response>
+</Transaction>
+
+<Transaction code="9960" desc="提入贷记(财政非税)">
+<Request type="xml" opptrcode="" packfmt="OSZ601@S">
+<Item name="PDTRCD" length="4"   type="const" value="SZ60" desc="交易码"/>
+<Item name="PDSBNO" length="4"   type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"   type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTLS" length="12"  type="xml"   value="//opHreserved5" desc="前台流水"/>
+<Item name="PDQTDT" length="8"   type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="BEIYZF" length="20"  type="xml"   value="//opNoteno" desc="非税唯一标志码"/>
+<Item name="GJZIQZ" length="100" type="xml"   value="//opPayname" desc="缴费人(单位)名称"/>
+<Item name="JIOYJE" length="13"  type="xml"   value="//opSettlamt" desc="应收金额"/>
+</Request>
+<Response type="sop" packfmt="OSZ602@R">
+<Item name="//opTIOZLX" type="sop" value="TIOZLX" desc="是否成功标志"/>
+</Response>
+</Transaction>
+
+<!--对私-->
+<Transaction code="9963" desc="提出贷记核心记账(个人业务,内部帐户入帐)">
+<Request type="xml" opptrcode="0002" packfmt="O89631@S">
+<Item name="PDTRCD" length="4"  type="const" value="8963" desc="交易码"/>
+<Item name="PDSBNO" length="4"  value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  value="//opOperid" desc="交易柜员"/>
+<Item name="PDQTDT" length="8"  value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="ZHNGDH" length="5"  value="//opZHNGDH" desc="终端号"/>
+<Item name="CHSHDM" length="4"  value="//opCHSHDM" desc="城市代码"/>
+<Item name="PDQTLS" length="12" value="//opHreserved5"  desc="平台流水"/>
+<!--对公
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+-->
+<!--测试
+<Item name="QSZXDH" length="4"  type="const" value="0095" desc="清算中心代号"/>
+<Item name="FENHDM" length="2"  type="const" value="95" desc="分行代码"/>
+-->
+<Item name="QSZXDH" length="4"  type="const" value="0089" desc="清算中心代号"/>
+<Item name="FENHDM" length="2"  type="const" value="89" desc="分行代码"/>
+<!--对私-->
+<Item name="SHFOBZ" length="1"  value="//opSHFOBZ" desc="待销账标志"/>
+<Item name="XIOZXH" length="17" value="//opXIOZXH" desc="销账序号"/>
+<Item name="FUKRZH" length="32" value="//opPayacct" desc="付款账号"/>
+<Item name="FUKRXM" length="62" value="//opPayname" desc="付款户名"/>
+<Item name="SHKRZH" length="32" value="//opBeneacct" desc="收款账号"/>
+<Item name="SHKRXM" length="62" value="//opBenename" desc="收款姓名"/>
+<Item name="BEIZXX" length="42" value="//opBEIZXX" desc="备注信息"/>
+<Item name="JIO1JE" length="13" value="//opSettlamt" desc="交易金额"/>
+<Item name="ZHYODM" length="22" value="//opZHYODM" desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  value="//opPNGZZL" desc="凭证种类"/>
+<Item name="PNGZPH" length="1"  value="//opPNGZPH" desc="凭证批号"/>
+<Item name="PNGZXH" length="8"  value="//opNoteno" desc="凭证序号"/>
+<Item name="JIOHRQ" length="8"  value="//opWorkdate" desc="交换日期"/>
+<Item name="TCJHCC" length="1"  type="xml"   value="//opExchground"    desc="提出交换场次"/>
+<Item name="JIOHCC" length="1"  type="xml"   value="//opExchground" desc="交换场次"/>
+<!--
+<Item name="FQHHAO" length="12" value="//opOriginator" desc="提出行号"/>
+-->
+<Item name="FQHHAO" length="12" value="//opAcceptor" desc="提出行号"/>
+<Item name="ZHFUED" length="13" value="//opIssueamt" desc="支付限额"/>
+<Item name="QNFARQ" length="8"  value="//opIssuedate" desc="出票日期"/>
+<Item name="ZHFUMM" length="16" value="//opPaykey" desc="支付密码"/>
+</Request>
+<Response type="sop" packfmt="O89632@R">
+<Item name="//opHostSerial" type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved1" type="sop" value="ZHYODM" desc="摘要代码"/>
+<Item name="//opOreserved2" type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opOreserved3" type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opOreserved4" type="sop" value="FUKRZH" desc="付款人账号"/>
+<Item name="//opOreserved5" type="sop" value="PNGZHH" desc="凭证号码"/>
+<!--<Item name="//JIO1JE" type="sop" value="JIO1JE" desc="交易金额"/>-->
+</Response>
+</Transaction>
+
+<Transaction code="9989" desc="本票核押">
+<Request type="xml" opptrcode="" packfmt="Osz611@S">
+<Item name="PDTRCD" length="4"  type="const" value="sz61" desc="交易码"/>
+<Item name="PDQTDT" length="8"  type="xml"   value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml"   value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml"   value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml"   value="//opOperid" desc="交易柜员"/>
+<Item name="FQHHAO" length="12" type="xml"   value="//opAcceptor" dll="dll/libconvert.so" func="cvt_bankid2payno" expr="" desc="支付系统行号"/>
+<Item name="QNFARQ" length="8"  type="xml"   value="//opIssuedate" desc="签发日期"/>
+<Item name="JIO1JE" length="15" type="xml"   value="//opSettlamt" desc="交易金额"/>
+<Item name="PNGZHH" length="13" type="xml"   value="//opNoteno" desc="凭证号"/>
+<Item name="BENPLX" length="1"  type="xml"   value="//opBENPLX" desc="本票类型"/>
+<Item name="SZBPMY" length="10" type="xml"   value="//opAgreement" desc="本票密押"/>
+<Item name="YNGYJG" length="4"  type="xml"   value="//opInnerBank"  desc="营业机构号"/>
+</Request>
+<Response type="sop" packfmt="Osz612@R">
+<Item name="//opYYCWDM" type="sop" value="YYCWDM" desc="应用错误代码"/>
+<Item name="//opOreserved2" type="sop" value="TISHXI" desc="提示信息"/>
+</Response>
+</Transaction>
+
+<Transaction code="8263" desc="个人核心记帐明细">
+<Request type="xml" opptrcode="" packfmt="O82630@S">
+<Item name="PDTRCD" length="4"  type="const" value="8263" desc="交易码"/>
+<Item name="PDQTDT" length="8"  type="xml" value="//opWorkdate" desc="前台日期"/>
+<Item name="PDWSNO" length="5"  type="xml" value="//opPDWSNO" desc="终端号TTY"/>
+<Item name="PDSBNO" length="4"  type="xml" value="//opInnerBank" desc="机构代码"/>
+<Item name="PDUSID" length="8"  type="xml" value="//opOperid" desc="交易柜员"/>
+<Item name="DLIYWH" length="15" type="const" value="111111111111111" desc="代理业务号"/>
+<Item name="JIOYRQ" length="8" type="xml" value="//opJIOYRQ" desc="交易日期"/>
+<Item name="QANTRQ" length="8" type="xml" value="//opWorkdate" desc="前台日期"/>
+</Request>
+<Response type="sop" packfmt="O82631@R">
+<Item name="//opBAOBLJ" type="sop" value="BAOBLJ" desc="报表路径"/>
+</Response>
+</Transaction>
+
+</Root>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<EXTRA>
+    <BANK ID='10'><opEXBKNotetype/><opEXBKDrawType/></BANK>
+    <BANK ID='13'><opEXBKNotetype/><opEXBKDrawType/></BANK>
+    <opPrintFlag/><opAcctCheck/><opOppBank/><opOppBankName/><opOppCustAddr/><opOppBankAddr/>
+</EXTRA>

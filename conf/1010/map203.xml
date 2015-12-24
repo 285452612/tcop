@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opRefid              RULE='//MailId'/>
+    <opClassid            RULE='//SvcClass'/>
+    <opOriginator         RULE='//Originator'/>
+    <opAcceptor           RULE='//Acceptor'/>
+    <opWriter             RULE='//Writer'/>
+    <opAuditor            RULE='//Auditor'/>
+    <opMsgTitle           RULE='//Title'/>
+    <opMsgContent         RULE='//Content'/>
+</INPUT>
+<PHRSP>
+    <opTCRetcode          RULE='//Result'/>
+    <opTCRetinfo          RULE='//Desc'/>
+</PHRSP>
+<OUTPUT>
+    <Result               RULE='//opTCRetcode'/>
+    <Desc                 RULE='//opTCRetinfo'/>
+</OUTPUT>
+</MAP>

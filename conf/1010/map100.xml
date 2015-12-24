@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//RefId'/>
+  <!--
+  <opOperid             RULE='//AcctOper'/>
+  <opChecker            RULE='//AcctOper'/>
+  -->
+  <opChecker            RULE='//PDUSID'/>
+  <opOperid             RULE='//PDUSID'/>
+  <opClassid            RULE='//SvcClass'/>
+  <opOriginator         RULE='//Originator'/>
+  <opAcceptor           RULE='//Acceptor'/>
+  <opWorkdate           RULE='//WorkDate'/>
+  <opInnerBank          RULE='//TermId'/>
+  <opInnerorganid       RULE='//TermId'/>
+  <opDcflag             RULE='//DCFlag'/>
+  <opNotetype           RULE='//NoteType'/>
+  <opNoteno             RULE='//NoteNo'/>
+  <opCurcode            RULE='//CurCode'/>
+  <opCurtype            RULE='//CurType'/>
+  <opIssuedate          RULE='//IssueDate'/>
+  <opSettlamt           RULE='//SettlAmt'/>
+  <opIssueamt           RULE='//IssueAmt'/>
+  <opRemnamt            RULE='//RemnAmt'/>
+  <opPayacct            RULE='//PayingAcct'/>
+  <opPayname            RULE='//Payer'/>
+  <opPaybank            RULE='//PayingBank'/>
+  <opBeneacct           RULE='//BeneAcct'/>
+  <opBenename           RULE='//BeneName'/>
+  <opBenebank           RULE='//BeneBank'/>
+  <opAgreement          RULE='//Agreement'/>
+  <opPurpose            RULE='//Purpose'/>
+  <opPaykey             RULE='//PayKey'/>
+  <opClearround         RULE='//ClearRound'/>
+  <opWorkround          RULE='//WorkRound'/>
+  <opCleardate          RULE='//ClearDate'/>
+  <opClearstate         RULE='//ClearState'/>
+  <opTruncflag          RULE='//TruncFlag'/>
+  <opReserved           RULE='//Reserve'/>
+  <opPNGZZL             RULE='//PNGZZL'/>
+  <opPDWSNO             RULE='//PDWSNO'/>
+  <opPNGZPH             RULE='//PNGZPH'/>
+</INPUT>
+<OUTPUT>
+  <opTCRetinfo          RULE='//Desc'/>
+  <opHostSerial         RULE='/UFTP/MsgHdrRs/Reserve'/>
+  <opOreserved3         RULE='/UFTP/MsgHdrRs/MAC'/>
+  <opGUIYLS             RULE='//GUIYLS'/>
+  <opTCHTCH             RULE='//TCHTCH'/>
+  <opPNGZZL             RULE='//PNGZZL'/>
+</OUTPUT>
+</MAP>

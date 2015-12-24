@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>3</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader></PageHeader>
+<ReportHeader></ReportHeader>
+<ReportBody>
+
+  [                             15                               ]
+
+  [                     1] 提出交换票据汇总单 [2     ]
+
+  提入行:[3                             ] [4           ] 第[ 5 ]场
+ ┌─────┬─────────┬─────┬─────────┐
+ │  提入行  │     [6      ]    │  提出行  │     [7     ]     │
+ ├─────┼─────────┼─────┼─────────┤
+ │   笔数   │     借记金额     │   笔数   │     贷记金额     │
+ ├─────┼─────────┼─────┼─────────┤
+ │[    8   ]│[               9]│[   10   ]│[              11]│
+ ├─────┴─────────┴─────┴─────────┤
+ │   提入行线路号:[12] [        14         ] 提出行线路号:[13]  │
+ └───────────────────────────────┘
+
+  [                             16                               ]
+
+
+
+</ReportBody>
+<ReportFooter></ReportFooter>
+<PageFooter></PageFooter>
+</Report>

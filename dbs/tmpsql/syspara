@@ -1,0 +1,21 @@
+10|SYSNAME                         |苏州同城清算系统                                                |系统名称
+10|CBANKNO                         |290000                                                          |清算行号
+10|CLASSLIST                       |1010                                                            |业务种类(本币公,本币私,外币,批量)
+10|CURWORKDATE                     |20100407                                                        |当前系统工作日期
+10|PREWORKDATE                     |20100406                                                        |前一系统工作日期
+10|CLEARDATE                       |20100407                                                        |清算日期
+10|PRECLEARDATE                    |20100406-1                                                      |前一清算日期
+10|CURROUND                        |1                                                               |当前系统工作场次
+10|CLEARROUND                      |2                                                               |清算场次
+10|SETTLMSG_DATEROUND              |20100406-2                                                      |对账通知工作日期场次
+10|ROUNDS_TRNEND                   |01                                                              |场次对账未决标志列表
+10|SETTLED_DATEROUND               |20100331-1                                                      |已取对账工作日期场次
+10|ARCHIVEDATE                     |20091222                                                        |归档日期
+10|DEFOPER                         |9988                                                            |默认记账柜员
+10|DEFORG                          |XYZ                                                             |默认记账机构
+10|AUTHDEVID                       |20814000                                                        |密押机安全设备ID
+10|PWDEXPDAY                       |30                                                              |密码有效期
+10|MACKEY                          |abcdefg123456789                                                | 
+10|SYSSTAT                         |1                                                               |系统状态："0" 停止 "1"启动
+10|EXCHGDATE                       |20100312                                                        |当前交换日期。格式YYYYMMDD
+10|EXCHGROUND                      |1                                                               |当前交换场次

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!-- 对账取消或冲正 -->
+<PACK>
+  <INPUT>
+    <ROOT>
+      <HEAD>
+        <SysCode>3214001</SysCode>
+        <TxCode>8111</TxCode>
+        <ClearDate/>
+        <CliTxSeq/>
+        <strMAC/>
+      </HEAD>
+      <PARAM>
+        <OrgClearDate/>
+        <OrgTxSeq/>
+        <OrgAmount/>
+        <TxFlag/>
+      </PARAM>
+    </ROOT>
+  </INPUT>
+  <OUTPUT>
+    <RESPONSE FLAG='0'>
+      <ROOT>
+        <HEAD>
+          <SysCode/>
+          <TxCode/>
+          <ClearDate/>
+          <TxSeq/>
+          <SuccFlag/>
+          <RetCode/>
+          <RetMsg/>
+        </HEAD>
+        <PARAM/>
+      </ROOT>
+    </RESPONSE>
+  </OUTPUT>
+</PACK>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//RefId'/>
+  <opClassid            RULE='//SvcClass'/>
+  <opPresdate           RULE='//WorkDate'/>
+  <opOriginator         RULE='//Originator'/>
+  <opAcceptor           RULE='//Acceptor'/>
+  <opWorkdate           RULE='//WorkDate'/>
+  <opDcflag             RULE='//DCFlag'/>
+  <opNotetype           RULE='//NoteType'/>
+  <opNoteno             RULE='//NoteNo'/>
+  <opCurcode            RULE='//CurCode'/>
+  <opCurtype            RULE='//CurType'/>
+  <opIssuedate          RULE='//IssueDate'/>
+  <opSettlamt           RULE='//SettlAmt'/>
+  <opIssueamt           RULE='//IssueAmt'/>
+  <opRemnamt            RULE='//RemnAmt'/>
+  <opPayacct            RULE='//PayingAcct'/>
+  <opPayname            RULE='//Payer'/>
+  <opPaybank            RULE='//PayingBank'/>
+  <opBeneacct           RULE='//BeneAcct'/>
+  <opBenename           RULE='//BeneName'/>
+  <opBenebank           RULE='//BeneBank'/>
+  <opAgreement          RULE='//Agreement'/>
+  <opPurpose            RULE='//Purpose'/>
+  <opInputer            RULE='//AcctOper'/>
+  <opChecker            RULE='//Auditor'/>
+  <opPaykey             RULE='//PayKey'/>
+  <opClearround         RULE='//ClearRound'/>
+  <opWorkround          RULE='//WorkRound'/>
+  <opCleardate          RULE='//ClearDate'/>
+  <opClearstate         RULE='//ClearState'/>
+  <opTruncflag          RULE='//TruncFlag'/>
+  <opReserved           RULE='//Reserve'/>
+  <opOppBank            RULE='//OppBank'/>
+  <opOppBankName        RULE='//OppBankName'/>
+  <opOppBankAddr        RULE='//OppBankAddr'/>
+  <opOppCustAddr        RULE='//OppCustAddr'/>
+  <opOriginAcct         RULE='//OriginAcct'/>
+  <opOriginCustName     RULE='//OriginCustName'/>
+  <opBillSerial         RULE='//BillSerial'/>
+  <opInterBank          RULE='//InterBank'/>
+  <opSenderProxy        RULE='//SenderProxy'/>
+  <opRecverProxy        RULE='//RecverProxy'/>
+  <opChargesBearer      RULE='//ChargesBearer'/>
+  <opPrintFlag          RULE='//PrintFlag'/>
+  <opTrnDetail          RULE='//TrnDetail'/>
+  <opPS                 RULE='//PS'/>
+  <opSendersPS          RULE='//SendersPS'/>
+  <opValueDate          RULE='//ValueDate'/>
+  <opExchRate           RULE='//ExchRate'/>
+  <opTrackInfo          RULE='//TrackInfo'/>
+  <opAcctCheck          RULE='//AcctCheck'/>
+  <opPrintInfo1         RULE='//PrintInfo1'/>
+  <opPrintInfo2         RULE='//PrintInfo2'/>
+</INPUT>
+<OUTPUT>
+</OUTPUT>
+</MAP>

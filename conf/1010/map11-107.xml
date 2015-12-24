@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+    <INPUT>
+        <opIssuedate    RULE='//TrnCtl/WorkDate'/>
+        <opOriginator   RULE='//TrnCtl/Originator'/>
+        <opSettlamt     RULE='//SettlAmt'/>
+        <opInoutflag    RULE='//InOutFlag'/>
+        <opRefid        RULE='//TrnCtl/RefId'/>
+    </INPUT>
+    <OUTPUT>
+        <Result         RULE='//opBKRetcode'/>
+        <Desc           RULE='//opBKRetinfo'/>
+    </OUTPUT>
+</MAP>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 提入贷查询户名 -->
+<PACK>
+    <INPUT>
+        <BKTrnCode>1004</BKTrnCode>
+        <BKSysCode>320500</BKSysCode>
+        <BKOrgId/>
+        <BKOperNo/>
+        <BKAcctNo/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='0'>
+            <BKRspHead/>
+            <BKResult0/>
+            <BKBankNo/>
+            <BKAcctName/>
+        </RESPONSE>
+        <RESPONSE FLAG='1'>
+            <BKRspHead/>
+            <BKResult/>
+            <BKRetmsg/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1643</BKTrnCode>     <!--提入借 截留本票-->
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKGrantOperId/>
+        <BKNoteType/>
+        <BKNoteId/>
+        <BKHPNo/>
+        <BKAmount/>
+        <BKAcctNo/>
+        <BKBeneAcctNo/>
+        <BKBeneAcctName/>
+        <BKRouteId>1</BKRouteId>
+        <BKDFExchgNo>00002</BKDFExchgNo>
+        <BKIssueDate/>
+        <BKSysPackId/>
+        <BKAttachNumber/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKAcctNo/>
+            <BKClientName/>
+            <BKHPAmount/>
+            <BKCancelSerial/>
+            <BKSenderName/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>30</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>              [                              1]提出[2             ]
+                       [               3] 至 [4               ]
+  行号:[5           ][6                                                           ] 
+┌──────┬──────┬─────────────────┬────┬────┐
+│  编    号  │   提入行   │              主  题              │发送日期│传输标志│
+</ReportHeader>
+<ReportBody>
+├──────┼──────┼─────────────────┼────┼────┤
+│[1         ]│[2         ]│[3                               ]│[4     ]│[5     ]│
+</ReportBody>
+<ReportFooter>
+└──────┴──────┴─────────────────┴────┴────┘
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

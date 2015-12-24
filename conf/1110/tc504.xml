@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB18030"?>
+<PACK>
+<OUTPUT>
+<UFTP>
+<MsgHdrRs>
+<RefId/><TrnCode/><SvcClass/><Originator/><WorkDate/><Result/><Desc/><MAC/><Reserve/>
+</MsgHdrRs>
+<MailInfo>
+<MailId/><MailType/><Sender/><Recver/><Writer/><Auditor/><Sended/><SendDate/><SendTime/><Readed/><RecvDate/><RecvTime/><Title/><Content/>
+</MailInfo>
+</UFTP>
+</OUTPUT>
+</PACK>

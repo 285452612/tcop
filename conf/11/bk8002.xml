@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!-- 密钥申请(重置) -->
+<PACK>
+  <INPUT>
+    <ROOT>
+      <HEAD>
+        <SysCode>3214001</SysCode>
+        <TxCode>8002</TxCode>
+        <ClearDate/>
+        <CliTxSeq/>
+        <strMAC/>
+      </HEAD>
+      <PARAM>
+        <TxFlag>0</TxFlag> <!-- 操作标志:0-MAC密钥 1-PIN密钥,目前只需要申请MAC密钥 -->
+      </PARAM>
+    </ROOT>
+  </INPUT>
+  <OUTPUT>
+    <RESPONSE FLAG='0'>
+      <ROOT>
+        <HEAD>
+          <SysCode/>
+          <TxCode/>
+          <ClearDate/>
+          <TxSeq/>
+          <SuccFlag/>
+          <RetCode/>
+          <RetMsg/>
+        </HEAD>
+        <PARAM>
+          <strMAC/>
+        </PARAM>
+      </ROOT>
+    </RESPONSE>
+  </OUTPUT>
+</PACK>

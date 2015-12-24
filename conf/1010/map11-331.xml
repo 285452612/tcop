@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+    <INPUT>
+        <opHreserved2   RULE='//Reserve'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode    RULE='//Result'/>
+        <opBKRetinfo    RULE='//Desc'/>
+    </OUTPUT>
+</MAP>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 提出借截留或见票即付票据(本票,三省一市汇票)直接入账 -->
+<PACK>
+    <INPUT>
+        <BKTrnCode>0002</BKTrnCode>
+        <BKSysCode/>
+        <BKOrgId/>
+        <BKOperNo/>
+        <BKRefId/>
+        <BKAmount/>
+        <BKCurCode/>
+        <BKCurType/>
+        <BKClearDate/>
+        <BKPayerAcctNo>951210010116703001</BKPayerAcctNo>
+        <BKPayerAcctName>资金清算应收款-提出借方</BKPayerAcctName>
+        <BKPayerBankNo/>
+        <BKBeneAcctNo/>
+        <BKBeneAcctName/>
+        <BKBeneBankNo/>
+        <BKMemo/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='0'>
+            <BKRspHead/>
+            <BKResult0/>
+            <BKIssueDate/>
+            <BKHostSerialNo/>
+        </RESPONSE>
+        <RESPONSE FLAG='1'>
+            <BKRspHead/>
+            <BKResult/>
+            <BKRetmsg/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

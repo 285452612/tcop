@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+        <opBeneid           RULE='//BeneId'/>
+        <opUserid           RULE='//UserId'/>
+        <opUsername         RULE='//BeneName'/>
+        <opClassid          RULE='//SVCId'/>
+        <opCityid           RULE='//CityId'/>
+        <opInputname        RULE='//AcctOper'/>
+        <opPayacct          RULE='//PayingAcct'/>
+        <opPayname          RULE='//Payer'/>
+        <opPayertype        RULE='//PayerType'/>
+        <opBankid           RULE='//PayingBankId'/>
+        <opPsbankid         RULE='//PayingPSBankId'/>
+        <opAddr             RULE='//PayerAddr'/>
+        <opPostalcode       RULE='//PostalCode'/>
+        <opLiknkman         RULE='//LinkMan'/>
+        <opPhone1           RULE='//Phone1'/>
+        <opPhone2           RULE='//Phone2'/>
+        <!--<opAgreementid      RULE='//AgreementId'/>-->
+        <opAmtlimit         RULE='//AmtLimit'/>
+        <opEnddate          RULE='//EndDate'/>
+        <opInnerBank        RULE='//TermId'/>
+        <opInneragreement   RULE='//InnerAgreement'/>
+</INPUT>
+<PHRSP>
+    <opTCRetcode        RULE='//Result'/>
+    <opTCRetinfo        RULE='//Desc'/>
+    <opAgreementid      RULE='//AgreementId'/>
+</PHRSP>
+<OUTPUT>
+    <opAgreementid      RULE='//AgreementId'/>
+</OUTPUT>
+</MAP>

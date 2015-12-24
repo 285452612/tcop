@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <ClearDate      RULE='//opWorkdate'/>
+        <CliTxSeq       RULE='//opOreserved2'/>
+        <strMAC         RULE='//opMemo'/>
+        <OrgClearDate   RULE='//opIssuedate'/>
+        <OrgTxSeq       RULE='//opSeqno'/>
+        <OrgAmount      RULE='//opSettlamt'/>
+        <TxFlag         RULE='//opReserved'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode    RULE='//RetCode'/>
+        <opBKRetinfo    RULE='//RetMsg'/>
+    </OUTPUT>
+</PACK>

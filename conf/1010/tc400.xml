@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB18030" ?> 
+<PACK>
+<OUTPUT>
+    <UFTP>
+        <MsgHdrRs>
+            <RefId/>
+            <TrnCode/>
+            <SvcClass/>
+            <Originator/>
+            <WorkDate/>
+            <Result/>
+            <Desc/>
+            <MAC/>
+            <Reserve/>
+        </MsgHdrRs>
+        <AcctDetail>
+            <OpenBank/>
+            <InterBankNo/>
+            <Name/>
+        </AcctDetail>
+    </UFTP>
+</OUTPUT>
+</PACK>

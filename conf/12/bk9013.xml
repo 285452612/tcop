@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 借记取消交易 -->
+<PACK>
+    <INPUT>
+        <BKTrnCode>0013</BKTrnCode>
+        <BKSysCode/>
+        <BKRefId/>
+        <BKOTrnCode/>
+        <BKORefId/>
+        <BKAmount/>
+        <BKClearDate/>
+        <BKOAcctNo/>
+        <BKOAcctName/>
+        <BKOperNo/>
+        <BKOrgId/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='0'>
+            <BKRspHead/>
+            <BKResult0/>
+            <BKIssueDate/>
+            <BKHostSerialNo/>
+        </RESPONSE>
+        <RESPONSE FLAG='1'>
+            <BKRspHead/>
+            <BKResult/>
+            <BKRetmsg/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

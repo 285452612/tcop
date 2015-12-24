@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>3</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+</ReportHeader>
+<ReportBody>
+
+                [                            1]提入凭证计数单
+
+                     [2               ] 传递场次:[3]
+      提出行:[5     ][6                                                          ]
+     ┌───────────────┬───────────────┐
+     │           提入借方           │           提入贷方           │
+     ├─────┬─────────┼─────┬─────────┤
+     │   笔数   │     金    额     │   笔数   │     金    额     │
+     ├─────┼─────────┼─────┼─────────┤
+     │[9       ]│[              10]│[11      ]│[              12]│
+     └─────┴─────────┴─────┴─────────┘
+      提入行:[7   ][8                                                          ]
+      打印时间:[4        ]                          操作员:[13                 ]
+
+
+
+
+
+
+</ReportBody>
+<ReportFooter>
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

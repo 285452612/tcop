@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1632</BKTrnCode>     <!--提入贷 汇票类-->
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKGrantOperId/>
+        <BKNoteType>99</BKNoteType>
+        <BKNoteId/>
+        <BKAcctNo/>
+        <BKInwardOrgId/>
+        <BKBeneAcctName/>
+        <BKAmount/>
+        <BKPayerAcctNo/>
+        <BKPayerAcctName/>
+        <BKRouteId>1</BKRouteId>
+        <BKDFExchgNo>00002</BKDFExchgNo>
+        <BKAttachNumber/>
+        <BKSummaryCode>108</BKSummaryCode>
+        <BKIssueDate/>
+        <BKInPaySerial/>
+        <BKCurType>01</BKCurType>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKClientName/>
+            <BKCancelSerial/>
+            <BKExchgRound/>
+            <BKExchgSerial/>
+            <BKOrgName/>
+            <BKSenderName/>
+            <BKReceiverName/>
+            <BKAcctBal/>
+            <BKAvailBal/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

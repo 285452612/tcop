@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 转账收手续费 -->
+<PACK>
+    <INPUT>
+        <BKTrnCode>0001</BKTrnCode>
+        <BKSysCode/>
+        <BKOrgId/>
+        <BKOperNo/>
+        <BKRefId/>
+        <BKAmount/>
+        <BKCurCode/>
+        <BKCurType/>
+        <BKClearDate/>
+        <BKPayerAcctNo/>
+        <BKPayerAcctName/>
+        <BKPayerBankNo/>
+        <BKBeneAcctNo>951210010152301001</BKBeneAcctNo>
+        <BKBeneAcctName>银行卡特约商户手续费收入</BKBeneAcctName>
+        <BKBeneBankNo/>
+        <BKNoteType>72</BKNoteType>
+        <BKNoteNo/>
+        <BKPayKey/>
+        <BKMemo>收手续费</BKMemo>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='0'>
+            <BKRspHead/>
+            <BKResult0/>
+            <BKIssueDate/>
+            <BKHostSerialNo/>
+        </RESPONSE>
+        <RESPONSE FLAG='1'>
+            <BKRspHead/>
+            <BKResult/>
+            <BKRetmsg/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

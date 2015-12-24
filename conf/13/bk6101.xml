@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>6101</BKTrnCode>
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKNoteType>99</BKNoteType>
+        <BKDCFlag>0</BKDCFlag>
+        <BKAcctNo/>
+        <BKNoteNo/>
+        <BKDrawType/>
+        <BKXZFlag>1</BKXZFlag>
+        <BKPassword/>
+        <BKAmount/>
+        <BKTmpAcctNo/>
+        <BKMBusinessNo/>
+        <BKUnitNO>0001</BKUnitNO>
+        <BKBusinessCode>00001</BKBusinessCode>
+        <BKProtocolNo/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKAcctNo/>
+            <BKAcctBal/>
+            <BKAcctName/>
+            <BKDFAcctBal/>
+            <BKClientName/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

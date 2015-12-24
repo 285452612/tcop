@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<EXTRA>
+    <BANK ID='11'><opEXBKTxflag/></BANK>
+    <BANK ID='12'><opEXBKTaxtype/><opEXBKBankPwd/></BANK>
+    <BANK ID='13'><opEXBKNotetype/><opEXBKDrawType/></BANK>
+    <opOppBank/><opOppBankName/><opOppBankAddr/><opOppCustAddr/><opOriginAcct/><opOriginCustName/><opBillSerial/><opInterBank/><opAmtTypeNo/><opAmtType/>
+    <opSenderProxy/><opRecverProxy/><opChargesBearer/><opPrintFlag/><opTrnDetail/><opPS/><opSendersPS/><opValueDate/><opExchRate/>
+    <opTrackInfo/><opTrackInfo2/><opAcctCheck/><opPrintInfo1/><opPrintInfo2/>
+    <BANK ID='15'><opQSZXDH/><opDUIFJE/><opGUIYLS/><opTCHTCH/><opXIOZXH/><opZHYODM/><opBEIZXX/><opFENHDM/><opPNGZPH/><opZHNGDH/><opCHSHDM/><opPNGZZL/><opPDWSNO/><opPDQTLS/><opTJRZFS/><opZZCZLX/><opZJZZLX/><opSHFOBZ/><opJIOHLX/><opJIOHCC/><opMMJYFS/><opHUILUU/><opLZCLFS/><opZDKZBZ/><opBENPLX/><opBENPZT/><opPNGZHH/><opTIOZLX/><opTISHXI/><opTUIPLX/><opZRZHXZ/><opYYCWDM/><opZHHUXZ/><opCD22XX/><opCID3XX/><opCID2XX/><opSNCDAO/><opZHANGH/><opKEHZWM/><opZHUZWM/><opYEWUXZ/><opHUIPMY/><opSYSLENGTH/><opSYSMACVALUE/><opSYSMACSBNO/><opSYSPINSEED/><opSYSSADDR/><opSYSDADDR/><opSYSRSRVD/><opSYSEFLAG/><opSYSSEQNUM/><opSYSMACFLAG/><opSYSMKEYVER/><opXINX03/><opTJJXTS/><opSHKRZH/><opFUKRZH/><opSHFEBZ/><opSHKRXM/><opFUKRXM/><opBAOBLJ/><opJIOYRQ/><opJIGOMC/><opNIANNN/><opYUEFEN/><opRIIIII/><opFEILZL/><opZHQ1DM/><opSHMUMC/><opJIOYJE/><opSHULNG/><opSHXFJE/><opSHSHJE/><opJIO1GY/><opYJLXZE/><opHUOBMC/><opZIJNQX/><opTRJHRQ/><opJIOHRQ/><opPNG1ZL/><opQISHHH/><opSXIORQ/><opPDAUPS/><opPDAUUS/><opPDAUCF/><opPDAUCN/><opPDOFF1/><opPDOFF2/><opPJFKHM/><opTUIPLY/></BANK>
+</EXTRA>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<ITEMDICT>
+    <XMRITEM>
+        <!-- 银行接口相关的元素定义 -->
+        <BKTrnCode          FMT='M=4'       DESC='交易代码'/>
+        <BKIssueDate        FMT='M=8'       DESC='签发日期'/>
+        <BKTranDate         FMT='M=8'       DESC='交易日期'     HFUNC='OPFgetCurrentDate'/>
+        <BKExchgDate        FMT='M=8'       DESC='交换日期'/>
+        <BKReturnDate       FMT='M=8'       DESC='退票日期'/>
+        <BKHPIssueDate      FMT='M=8'       DESC='汇票签发日期'/>
+        <BKTranTime         FMT='M=6'       DESC='交易时间'     HFUNC='OPFgetCurrentTime'/>
+        <BKRegionId         FMT='M=2'       DESC='地区代号'     HFUNC='HFGetRegionIdInfo'/>
+        <BKIssueRegion      FMT='M=2'       DESC='签发地区'/>
+        <BKSysTrackId       FMT='M=8R '     DESC='系统跟踪号'/>
+        <BKSysPackId        FMT='M=6R '     DESC='系统内报文序号'/>
+        <BKSmallId          FMT='M=3R '     DESC='小序号'/>
+        <BKOrgId            FMT='M=3'       DESC='机构代号'/>
+        <BKRegionOrgId      FMT='M=5'       DESC='地区机构'/>
+        <BKOperId           FMT='M=4R '     DESC='交易柜员'/>
+        <BKGrantOperId      FMT='M=4R '     DESC='授权柜员'/>
+        <BKGrantPasswd      FMT='M=6R '     DESC='授权密码'/>
+        <BKOperSerial       FMT='M=8R '     DESC='柜员流水号'/>
+        <BKErrOperSerial    FMT='M=8R '     DESC='错账柜员流水'/>
+        <BKCancelSerial     FMT='M=10R '    DESC='销账序号'/>
+        <BKExchgSerial      FMT='M=4R '     DESC='票交序号'/>
+        <BKTermNo           FMT='M=8R '     DESC='终端代号'     HFUNC='HFGetTermNoInfo'/>
+        <BKAcctNo           FMT='M=18R '    DESC='账户代号'/>
+        <BKAcctName         FMT='M=50R '    DESC='账户名称'/>
+        <BKPayerAcctNo      FMT='M=32R '    DESC='付款单位账号'/>
+        <BKPayerAcctName    FMT='M=50R '    DESC='付款单位名称'/>
+        <BKPayerName        FMT='M=60R '    DESC='付款人名称'/>
+        <BKPayerAddr        FMT='M=60R '    DESC='付款人地址'/>
+        <BKPayerBank        FMT='M=12R '    DESC='付款人开户行行号'/>
+        <BKBeneAcctNo       FMT='M=32R '    DESC='收款单位账号'/>
+        <BKBeneName         FMT='M=60R '    DESC='收款人名称'/>
+        <BKBeneAddr         FMT='M=60R '    DESC='收款人地址'/>
+        <BKBeneBank         FMT='M=12R '    DESC='收款人开户行行号'/>
+        <BKBeneAcctName     FMT='M=50R '    DESC='收款单位名称'/>
+        <BKDFAcctId         FMT='M=18R '    DESC='对方账户代号'/>
+        <BKAmount           FMT='M=15R '    DESC='交易金额'/>
+        <BKHPAmount         FMT='M=15R '    DESC='汇票金额'/>
+        <BKLimitAmount      FMT='M=15R '    DESC='支票限额'/>
+        <BKAcctBal          FMT='M=15R '    DESC='账户余额'/>
+        <BKAvailBal         FMT='M=15R '    DESC='可用余额'/>
+        <BKDFAcctBal        FMT='M=15R '    DESC='对方账户余额'/>
+        <BKPostFee          FMT='M=15R '    DESC='邮电费'/>
+        <BKFee              FMT='M=15R '    DESC='手续费'/>
+        <BKFee2             FMT='M=17R '    DESC='手续费2'/>
+        <BKTotalFee         FMT='M=15R '    DESC='总费用'/>
+        <BKFeeAccount       FMT='M=1R '     DESC='手续费计收账户'/>
+        <BKFeeType          FMT='M=1'       DESC='收费方式'/>
+        <BKFeeCalcType      FMT='M=1'       DESC='费用计算方式'/>
+        <BKNoteType         FMT='M=2R '     DESC='凭证种类'/>
+        <BKONoteType        FMT='M=2R '     DESC='原凭证种类'/>
+        <BKNoteId           FMT='M=7R '     DESC='凭证序号'/>
+        <BKNoteNo           FMT='M=9R '     DESC='凭证代号'/>
+        <BKONoteNo          FMT='M=8R '     DESC='原凭证号码'/>
+        <BKBillNo           FMT='M=12R '    DESC='票据号码'/>
+        <BKHPNo             FMT='M=9R '     DESC='汇票号码'/>
+        <BKFullHPNo         FMT='M=11R '    DESC='完整汇票号码'/>
+        <BKHPCipher         FMT='M=8R '     DESC='汇票密押'/>
+        <BKIssueRegionId    FMT='M=2R '     DESC='签发地区代号'/>
+        <BKDFNoteType       FMT='M=2R '     DESC='对方凭证种类'/>
+        <BKDFNoteNo         FMT='M=7R '     DESC='对方凭证序号'/>
+        <BKDFAcctNo         FMT='M=32R '    DESC='对方账号'/>
+        <BKDFAcctName       FMT='M=50R '    DESC='对方账户名称'/>
+        <BKTmpAcctNo        FMT='M=18R '    DESC='过渡账号'/>
+        <BKDFExchgNo        FMT='M=5R '     DESC='对方交换代号'/>
+        <BKSummaryCode      FMT='M=3R '     DESC='摘要代号'/>
+        <BKSummaryName      FMT='M=30R '    DESC='摘要名称'/>
+        <BKRouteId          FMT='M=1'       DESC='由路选择(汇入邮路)'/>
+        <BKPurpose          FMT='M=50R '    DESC='事由'/>
+        <BKMemo             FMT='M=60R '    DESC='备注'/>
+        <BKRetryTimes       FMT='M=4R '     DESC='重复次数'/>
+        <BKExchgRound       FMT='M=2'       DESC='交换场次'/>
+        <BKExchgType        FMT='M=1'       DESC='交换类型'/>
+        <BKReturnRound      FMT='M=2'       DESC='退票场次'/>
+        <BKOrgName          FMT='M=50R '    DESC='网点名称'/>
+        <BKReceiverBank     FMT='M=12R '    DESC='收报行行号'/>
+        <BKPayReceiverName  FMT='M=60R '    DESC='支付收报行名'/>
+        <BKReceiverName     FMT='M=50R '    DESC='收报行名'/>
+        <BKSenderBank       FMT='M=12R '    DESC='发报行行号'/>
+        <BKSenderName       FMT='M=50R '    DESC='发报行名'/>
+        <BKSenderType       FMT='M=1R '     DESC='报文发送方式'/>
+        <BKIssueBank        FMT='M=12R '    DESC='签发网点号'/>
+        <BKCashBank         FMT='M=12R '    DESC='兑付网点号'/>
+        <BKInwardOrgId      FMT='M=3R '     DESC='汇入行机构号'/>
+        <BKInwardName       FMT='M=30R '    DESC='汇入行名'/>
+        <BKClientName       FMT='M=50R '    DESC='客户名称'/>
+        <BKCompanyName      FMT='M=30R '    DESC='单位名称'/>
+        <BKCompanyName2     FMT='M=50R '    DESC='单位名称'/>
+        <BKDCFlag           FMT='M=1'       DESC='借贷标志(0借1贷)'/>
+        <BKXZFlag           FMT='M=1R'      DESC='现转标志(0现1转)'/>
+        <BKCashPrjId        FMT='M=5'       DESC='现金项目代号'     VALUE='11111'/>
+        <BKDrawType         FMT='M=1R '     DESC='取款方式(0存折存单1密码2证件3印鉴4联名账户)'/>
+        <BKPassword         FMT='M=6R '     DESC='密码'/>
+        <BKZPPassword       FMT='M=16R '    DESC='(新)支票密码'/>
+        <BKChoice           FMT='M=1'       DESC='选项(0他行汇票1本行本票2他行本票)'/>
+        <BKCheckDesc        FMT='M=60R '    DESC='核验说明'/>
+        <BKPayRevel         FMT='M=1'       DESC='支付级别'/>
+        <BKAttachNumber     FMT='M=5R '     DESC='附件张数'/>
+        <BKCollNo           FMT='M=10R '    DESC='托收号码'/>
+        <BKCollSummary      FMT='M=1R '     DESC='托收摘要'/>
+        <BKRejectReason     FMT='M=30R '    DESC='拒绝原因'/>
+        <BKAccountType      FMT='M=1'       DESC='入帐方式'/>
+        <BKPackData3        FMT='M=60R '    DESC='报文数据3'/>
+        <BKPackId           FMT='M=3R '     DESC='报文编号'/>
+        <BKInPaySerial      FMT='M=6R '     DESC='来帐支付序号'/>
+        <BKCurType          FMT='M=2R '     DESC='货币种类'/>
+        <BKBusinessType     FMT='M=5R '     DESC='业务类型号'/>
+        <BKSBusinessType    FMT='M=12R '    DESC='小额业务种类'/>
+        <BKBusinessId       FMT='M=16R '    DESC='业务参考号'/>
+        <BKBusinessNo       FMT='M=3R '     DESC='业务代号'/>
+        <BKTrack2Content    FMT='M=37R '    DESC='第二磁道内容'/>
+        <BKTrack3Content    FMT='M=104R '   DESC='第三磁道内容'/>
+        <BKVersionId        FMT='M=2R '     DESC='版本号'/>
+        <BKAccountFlag      FMT='M=1'       DESC='(信用卡)记账标志'/>
+        <BKPayCardFlag      FMT='M=1'       DESC='付款信用卡标志'/>
+        <BKBeneCardFlag     FMT='M=1'       DESC='收款信用卡标志'/>
+        <BKCityFlag         FMT='M=1'       DESC='同城异地标志'/>
+        <BKFunctionFlag     FMT='M=1'       DESC='操作功能'/>
+        <BKUseFlag          FMT='M=1R '     DESC='使用标志'/>
+        <BKAcceptFlag       FMT='M=1'       DESC='受理成功标志'/>
+        <BKReserved1        FMT='M=60R '    DESC='备用字段1'/>
+        <BKReserved2        FMT='M=60R '    DESC='备用字段2'/>
+        <BKReserved3        FMT='M=60R '    DESC='备用字段3'/>
+        <BKMsgId            FMT='M=5'       DESC='消息标识'/>
+        <BKMBusinessNo      FMT='M=8R '     DESC='中间业务流水号'/>
+        <BKUnitNO           FMT='M=4R '     DESC='单位编码'/>
+        <BKBusinessCode     FMT='M=5R '     DESC='业务编码'/>
+        <BKProtocolNo       FMT='M=60R '    DESC='协议编码'/>
+        <BKResult           FMT='M=5'       DESC='错误码'/>
+        <BKErrinfo          FMT='O-0'       DESC='错误信息'/>
+    </XMRITEM>
+</ITEMDICT>

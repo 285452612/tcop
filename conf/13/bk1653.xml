@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1653</BKTrnCode>     <!--托收凭证-->
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKGrantOperId/>
+        <BKNoteType/>
+        <BKNoteId/>
+        <BKONoteType/>
+        <BKONoteNo/>
+        <BKIssueDate/>
+        <BKCollNo/>
+        <BKAmount/>
+        <BKAcctNo/>
+        <BKCollSummary>0</BKCollSummary>
+        <BKRejectReason/>
+        <BKRouteId>1</BKRouteId>
+        <BKPayLevel/>
+        <BKDFExchgNo>00002</BKDFExchgNo>
+        <BKAttachNumber>0</BKAttachNumber>
+        <BKBeneAcctNo/>
+        <BKRegionOrgId/>
+        <BKInwardName/>
+        <BKBeneAcctName/>
+        <BKAccountType>3</BKAccountType>
+        <BKPackData3/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKPayerAcctNo/>
+            <BKExchgRound/>
+            <BKExchgSerial/>
+            <BKOrgName/>
+            <BKCancelSerial/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

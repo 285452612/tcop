@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//TrnCtl/RefId'/>
+  <opInoutflag          RULE='//TrnCtl/InOutFlag'/>
+  <opClassid            RULE='//TrnCtl/SvcClass'/>
+  <opOriginator         RULE='//TrnCtl/Originator'/>
+  <opAcceptor           RULE='//TrnCtl/Acceptor'/>
+  <opWorkdate           RULE='//TrnCtl/WorkDate'/>
+  <opDcflag             RULE='//TrnCtl/DCFlag'/>
+  <opNotetype           RULE='//TrnCtl/NoteType'/>
+  <opNoteno             RULE='//TrnCtl/NoteNo'/>
+  <opCurcode            RULE='//CurCode'/>
+  <opCurtype            RULE='//CurType'/>
+  <opIssuedate          RULE='//IssueDate'/>
+  <opSettlamt           RULE='//SettlAmt'/>
+  <opIssueamt           RULE='//IssueAmt'/>
+  <opPayacct            RULE='//PayingAcct'/>
+  <opPayname            RULE='//Payer'/>
+  <opPaybank            RULE='//PayingBank'/>
+  <opBeneacct           RULE='//BeneAcct'/>
+  <opBenename           RULE='//BeneName'/>
+  <opBenebank           RULE='//BeneBank'/>
+  <opInputer            RULE='//TrnCtl/AcctOper'/>
+  <opChecker            RULE='//TrnCtl/Auditor'/>
+  <opClearround         RULE='//TrnCtl/ClearRound'/>
+  <opWorkround          RULE='//TrnCtl/WorkRound'/>
+  <opClearstate         RULE='//TrnCtl/ClearState'/>
+  <opTruncflag          RULE='//TrnCtl/TruncFlag'/>
+  <opReserved           RULE='//TrnCtl/Reserved'/>
+</INPUT>
+<OUTPUT>
+  <opFilenames          RULE='//Reserve'/>
+</OUTPUT>
+</MAP>

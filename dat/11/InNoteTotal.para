@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>24</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+
+        [                            1]提入凭证汇总表
+
+ [2                      ]   清算场次:[3]     币种:[4]    [5          ]
+┌───┬──────────────┬───────────────┐
+│  提  │         借    方           │           贷    方           │
+│  出  ├────┬─────────┼─────┬─────────┤
+│  行  │  笔数  │     金    额     │   笔数   │     金    额     │
+├───┼────┼─────────┼─────┼─────────┤
+</ReportHeader>
+<ReportBody>
+│[1   ]│[     2]│[               3]│[       4]│[               5]│
+├───┼────┼─────────┼─────┼─────────┤
+</ReportBody>
+<ReportFooter>
+│ 合计 │[     1]│[               2]│[       3]│[               4]│
+└───┴────┴─────────┴─────┴─────────┘
+ 提入行:[5     ][6                                                    ]
+ 打印时间:[7                  ]              操作员: [8               ]
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

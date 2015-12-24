@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 柜员管理类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opOrganid/>
+    <opOperName/>
+    <opOperBklevel/>
+    <opOperClass/>
+    <opOperPwd/>
+    <opOperNewPwd/>
+    <opOperState/>
+    <opAmtLimit/>
+    <opRegDate/>
+    <opLLoginDate/>
+    <opLLoginTime/>
+    <opPwdChgDate/>
+    <opCancelDate/>
+    <opOperRights/>
+</INPUT><OUTPUT><opOreserved1/><opOreserved2/><opOreserved3/><opOreserved4/><opOreserved5/>
+</OUTPUT></BODY>
+<TAIL/></ROOT>

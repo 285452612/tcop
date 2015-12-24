@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//RefId'/>
+  <opOperid             RULE='//AcctOper'/>
+  <opClassid            RULE='//SvcClass'/>
+  <opOriginator         RULE='//Originator'/>
+  <opAcceptor           RULE='//Acceptor'/>
+  <opWorkdate           RULE='//WorkDate'/>
+  <opInnerBank          RULE='//TermId'/>
+  <opInnerorganid       RULE='//TermId'/>
+  <opDcflag             RULE='//DCFlag'/>
+  <!--
+  <opNotetype           RULE='//NoteType'/>
+  <opIssuedate          RULE='//IssueDate'/>
+  <opIssueamt           RULE='//IssueAmt'/>
+  <opRemnamt            RULE='//RemnAmt'/>
+  <opBeneacct           RULE='//BeneAcct'/>
+  <opBenename           RULE='//BeneName'/>
+  <opPurpose            RULE='//Purpose'/>
+  <opChecker            RULE='//AcctOper'/>
+  <opPaykey             RULE='//PayKey'/>
+  <opBenebank           RULE='//BeneBank'/>-->
+  <opNoteno             RULE='//NoteNo'/>
+  <opCurcode            RULE='//CurCode'/>
+  <opCurtype            RULE='//CurType'/>
+  <opPaybank            RULE='//Originator'/>
+  <opPayacct            RULE='//PayingAcct'/>
+  <opPayname            RULE='//Payer'/>
+  <opBenebank           RULE='//Originator'/>
+  <opSettlamt           RULE='//SettlAmt'/>
+  <opAgreement          RULE='//Agreement'/>
+  <opEXBKTaxtype        RULE='//TaxType'/>
+</INPUT>
+<OUTPUT>
+    <opTCRetinfo        RULE='//Desc'/>
+</OUTPUT>
+</MAP>

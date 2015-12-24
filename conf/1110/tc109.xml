@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030" ?> 
+<PACK>
+    <OUTPUT>
+    <UFTP>
+    <MsgHdrRs>
+    <RefId/><TrnCode>0006</TrnCode><SvcClass/><Originator/><WorkDate/><Result/><Desc/><MAC/><Reserve/>
+    </MsgHdrRs>
+    <Content>
+    <UFTP>
+    <MsgHdrRq>
+    <RefId/><TrnCode></TrnCode><SvcClass/><Originator/><Acceptor/><WorkDate/><Sender/><Recver/><AcctOper/><Auditor/><TermType/><TermId/><MAC/><Reserve/>
+    </MsgHdrRq>
+    <NoteInfo>
+    <DCFlag/><NoteType/><NoteNo/><IssueDate/><PayingAcct/><Payer/><PayingBank/><BeneAcct/><BeneName/><BeneBank/><CurCode/><CurType/><SettlAmt/><IssueAmt/><RemnAmt/><PayKey/><TestKey/><AuthDevId/><Agreement/><Purpose/><ExtraData><OppBank/><OppBankName/><OppCustAddr/><OriginAcct/><OriginCustName/><InterBank/><SenderProxy/><RecverProxy/><PrintFlag/><TrnDetail/><PS/><SendersPS/><ValueDate/><ExchRate/><TrackInfo/><OldNoteType/></ExtraData>
+    </NoteInfo>
+    <SettlInfo>
+    <ClearState/><ClearDate/><ClearRound/><WorkRound/><ClearArea/><TruncFlag/><ExchArea/><ExchRoute/><Fee/><FeePayer/>
+    </SettlInfo>
+    <MsgHdrRs><Result/><Desc/></MsgHdrRs>
+    </UFTP>
+    </Content>
+    </UFTP>
+    </OUTPUT>
+</PACK>

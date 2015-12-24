@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<TABLES>
+    <queryinfo ID='201|211' C='1'>
+        <nodeid         RULE='//opNodeid'       TYPE='I'/>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <originator     RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <outbank        RULE='//opOutbank'/>
+        <inbank         RULE='//opInbank'/>
+        <inoutflag      RULE='//opInoutflag'    TYPE='C'/>
+        <classid        RULE='//opClassid'      TYPE='I'/>
+        <otrandate      RULE='//opOWorkDate'/>
+        <orefid         RULE='//opORefId'/>
+        <oinoutflag     RULE='//opOInoutflag'   TYPE='C'/>
+        <ooriginator    RULE='//opOOriginator'/>
+        <dcflag         RULE='//opDcflag'       TYPE='C'/>
+        <notetype       RULE='//opNoteType'/>
+        <noteno         RULE='//opNoteNo'/>
+        <settlamt       RULE='//opSettlAmt'     TYPE='D'/>
+        <issuedate      RULE='//opIssueDate'/>
+        <secret         RULE='//opAgreement'/>
+        <paykey         RULE='//opPayKey'/>
+        <testkey        RULE='//opTestKey'/>
+        <payingacct     RULE='//opPayingAcct'/>
+        <payer          RULE='//opPayer'/>
+        <beneacct       RULE='//opBeneAcct'/>
+        <benename       RULE='//opBeneName'/>
+        <content        RULE='//opMsgContent'/>
+        <inputoper      RULE='//opInputer'/>
+    </queryinfo>
+    <queryinfo ID='202|212' U='1'>
+        <replydate      RULE='//opTrdate'/>
+        <checkoper      RULE='//opChecker'/>
+        <regressdate    RULE='//opRegressDate'/>
+        <regressrefid   RULE='//opRegressRefid'/>
+        <replycontent   RULE='//opMsgReContent'/>
+        <state          RULE=''     VALUE='1'/>
+    </queryinfo>
+    <queryinfo ID='204' R='1'>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <originator     RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <inoutflag      RULE='//opInoutflag'/>
+        <classid        RULE='//opClassid'/>
+        <otrandate      RULE='//opOWorkDate'/>
+        <orefid         RULE='//opORefId'/>
+        <oinoutflag     RULE='//opOInoutflag'/>
+        <ooriginator    RULE='//opOOriginator'/>
+        <outbank        RULE='//opOutbank'/>
+        <inbank         RULE='//opInbank'/>
+        <dcflag         RULE='//opDcflag'/>
+        <notetype       RULE='//opNoteType'/>
+        <noteno         RULE='//opNoteNo'/>
+        <settlamt       RULE='//opSettlAmt'/>
+        <issuedate      RULE='//opIssueDate'/>
+        <paykey         RULE='//opPayKey'/>
+        <testkey        RULE='//opTestKey'/>
+        <payingacct     RULE='//opPayingAcct'/>
+        <payer          RULE='//opPayer'/>
+        <beneacct       RULE='//opBeneAcct'/>
+        <benename       RULE='//opBeneName'/>
+        <inputoper      RULE='//opWriter'/>
+        <state          RULE='//opQueryState'/>
+    </queryinfo>
+    <freemsg ID='203|213' C='1'>
+        <nodeid         RULE='//opNodeid'       TYPE='I'/>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <originator     RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <inoutflag      RULE='//opInoutflag'    TYPE='C'/>
+        <classid        RULE='//opClassid'      TYPE='I'/>
+        <title          RULE='//opMsgTitle'/>
+        <content        RULE='//opMsgContent'/>
+        <sender         RULE='//opWriter'/>
+        <sendtime       RULE='//opTrtime'/>
+    </freemsg>
+</TABLES>

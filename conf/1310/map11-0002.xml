@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <tcCurtype            RULE='//opCurtype'/>
+  <tcClassid            RULE='//opClassid'/>
+  <tcClasstype          RULE='//opClassid'/>
+  <tcOutAcctno          RULE='//opPayacct'/>
+  <tcOutBankno          RULE='//opOriginator'/>
+  <tcOutClientName      RULE='//opPayname'/>
+  <tcDFAcctno           RULE='//opBeneacct'/>
+  <tcDFBankno           RULE='//opAcceptor'/>
+  <tcDFClientno         RULE='//opAcceptor'/>
+  <tcReceiveBank        RULE='//opAcceptor'/>
+  <tcDcflag             RULE='//opDcflag'/>
+  <tcAmount             RULE='//opSettlamt'/>
+  <tcNoteno             RULE='//opNoteno'/>
+  <tcMemo               RULE='//opMemo'/>
+  <tcTestKey            RULE='//opPaykey'/>
+  <tcPayKey             RULE='//opPaykey'/>
+  <tcIssueDate          RULE='//opIssuedate'/>
+  <tcIssueAmt           RULE='//opSettlamt'/>
+  <tcRemnAmt            RULE='//opSettlamt'/>
+  <tcNoteSerial         RULE='//opNoteno'/>
+  <tcCheckSum           RULE='//opMemo'/>
+  <tcTranSerial         RULE='//opMemo'/>
+  <tcRemitBank          RULE='//opMemo'/>
+  <tcSendPackbank       RULE='//opMemo'/>
+  <tcRecvpackbank       RULE='//opMemo'/>
+  <tcSubmitSerial       RULE='//opMemo'/>
+</INPUT>
+<PHRSP>
+    <opTCRetcode        RULE='//Result'/>
+    <opTCRetinfo        RULE='//Desc'/>
+</PHRSP>
+<OUTPUT>
+</OUTPUT>
+</MAP>

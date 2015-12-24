@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1202</BKTrnCode>     <!--支付密码验证-->
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKAcctNo/>
+        <BKNoteType/>
+        <BKNoteId/>
+        <BKIssueDate/>
+        <BKAmount/>
+        <BKLimitAmount>0</BKLimitAmount>
+        <BKZPPassword/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKReserved1/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

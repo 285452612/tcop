@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//RefId'/>
+  <!--
+  <opOperid             RULE='//AcctOper'/>
+  -->
+  <opOperid             RULE='//PDUSID'/>
+  <opClassid            RULE='//SvcClass'/>
+  <opOriginator         RULE='//Originator'/>
+  <opAcceptor           RULE='//Acceptor'/>
+  <opWorkdate           RULE='//WorkDate'/>
+  <opInnerBank          RULE='//TermId'/>
+  <opInnerorganid       RULE='//TermId'/>
+  <opPDWSNO             RULE='//PDWSNO'/>
+  <opQANTLS             RULE='//QANTLS'/>
+</INPUT>
+<PHRSP>
+  <opTCRetcode        RULE='//Result'/>
+  <opTCRetinfo        RULE='//Desc'/>
+  <opTruncflag        RULE='//TruncFlag'/>
+  <opExchground       RULE='//ExchgRound'/>
+  <opExchgdate        RULE='//ExchgDate'/>
+  <opWorkround        RULE='//WorkRound'/>
+  <opCleardate        RULE='//ClearDate'/>
+  <opClearstate       RULE='//ClearState'/>
+  <opClearround       RULE='//ClearRound'/>
+  <opRegioncode       RULE='//ClearArea'/>
+  <opFee              RULE='//Fee'/>
+  <opFeePayer         RULE='//FeePayer'/>
+  <opGUIYLS             RULE='//GUIYLS'/>
+  <opTCHTCH             RULE='//TCHTCH'/>
+  <opPNGZZL             RULE='//PNGZZL'/>
+</PHRSP>
+<OP2REQ>
+  <opAgreement        RULE='//Agreement'/>
+  <opOperid           RULE='//AcctOper'/>
+</OP2REQ>
+<OUTPUT>
+  <opQANTLS           RULE='//RefId'/>
+  <opWorkdate         RULE='//WorkDate'/>
+</OUTPUT>
+</MAP>

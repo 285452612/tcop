@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKRefId          RULE='//opHreserved5'/>
+        <BKORefId         RULE='//opHreserved1'/>
+        <BKAmount         RULE='//opSettlamt'/>
+        <BKClearDate      RULE='//opWorkdate'/>
+        <BKOAcctNo        RULE='//opBeneacct'/>
+        <BKOAcctName      RULE='//opBenename'/>
+        <BKOperNo         RULE='//opOperid'/>
+        <BKOrgId          RULE='//opInnerBank'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode      RULE='//BKResult'/>
+        <opHostSerial     RULE='//BKHostSerialNo'/>
+        <opBKRetinfo      RULE='//BKRetmsg'/>
+    </OUTPUT>
+</PACK>

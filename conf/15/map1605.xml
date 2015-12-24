@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKClearDate      RULE='//opWorkdate'/>
+        <BKOperNo         RULE='//opOperid'/>
+        <BKOrgId          RULE='//opInnerBank'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode      RULE='//BKResult'/>
+        <opBKRetinfo      RULE='//BKRetmsg'/>
+        <opDebitNum       RULE='//BKDebitNum'/>
+        <opDebitAmt       RULE='//BKDebitAmt'/>
+        <opCreditNum      RULE='//BKCreditNum'/>
+        <opCreditAmt      RULE='//BKCreditAmt'/>
+    </OUTPUT>
+</PACK>

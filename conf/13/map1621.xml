@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKOrgId RULE='//opBankno'/>    <!--行内机构号-->
+        <BKOperId RULE='//opOperid'/>
+        <BKAcctNo RULE='//Payacct'/>
+        <BKAmount RULE='//Settlamt'/>
+        <BKDFNoteNo RULE='//Noteno'/>
+        <BKDFAcctNo RULE='//Beneacct'/>
+        <BKDFAcctName RULE='//Benename'/>
+        <BKPurpose RULE='//Purpose'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode RULE='//BKResult'/>
+        <opRetinfo RULE='//BKErrinfo'/>
+        <opHostSerial RULE='//BKOperSerial'/>
+        <opOreserved1 RULE='//BKCancelSerial'/>
+    </OUTPUT>
+</PACK>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opWorkdate           RULE='/UFTP/TrnCtl/WorkDate'/>
+  <opDcflag             RULE='/UFTP/TrnCtl/DCFlag'/>
+  <opExchground          RULE='/UFTP/TrnCtl/WorkRound'/>
+</INPUT>
+<OUTPUT>
+  <opReserved         RULE='//Reserve'/>
+</OUTPUT>
+</MAP>

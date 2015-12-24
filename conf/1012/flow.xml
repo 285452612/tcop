@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAINFLOW>
+    <FLOWNODE NAME='AFTER_REQUEST' DESC='收到交易请求后'>
+        <FUNC PLACE='R'>FF_AfterRequest</FUNC>
+    </FLOWNODE>
+    <FLOWNODE NAME='AFTER_RESPONSE' DESC='响应交易请求后'>
+        <FUNC PLACE='B'>FF_AfterResponse</FUNC>
+    </FLOWNODE>
+</MAINFLOW>

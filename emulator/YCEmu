@@ -1,0 +1,37 @@
+#!/bin/env python
+#encoding=utf-8
+
+import socket, os, sys, string
+
+datafile = 'yc.emu'
+
+def GetRspData(tcode):
+    msg = ''
+    lines = open(datafile).readlines() #map(lambda s : s.strip(), open(datafile).readlines())
+
+    print 'tcode=[' + str(tcode) + ']'
+    bidx = lines.index(tcode + '[\n')
+    eidx = lines.index(tcode + ']\n')
+    for line in lines[bidx+1:eidx]:
+        msg += line
+    return msg
+
+   
+if __name__ == '__main__':    
+    commaddr = os.getenv('TCOP_BANKADDR', 'localhost:6789:30')
+    (ip, port, timeout) = commaddr.split(':')
+
+    print 'Server is started\n[%s:%s]waiting for connection...\n'%(ip, port)
+
+    a=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    a.bind((ip, int(port)))
+    a.listen(5)
+    while 1:
+        cs,ca=a.accept()
+        msg=cs.recv(10)
+        msg=cs.recv(int(msg))
+        print 'recved[' + str(len(msg)) + '][' + msg + ']\n'
+        index = msg.index('<TxCode>')
+        msg = GetRspData(msg[index+8:index+12])
+        print 'sended[' + str(len(msg)) + '][' + msg + ']\n\n'
+        cs.send(str(len(msg)).zfill(10) + msg)

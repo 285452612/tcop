@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 账户管理类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opAcceptor/>
+    <opClassid/>
+    <opAcctNo/>
+    <opAcctOrgid/>
+    <opName/>
+    <opAgreement/>
+    <opAcctType/>
+    <opAcctAttr/>
+    <opBankid/>
+    <opPsBankid/>
+    <opCurcode/>
+    <opCurtype/>
+    <opBasicAcctLic/>
+    <opIndustid/>
+    <opState/>
+    <opOpenDate/>
+    <opRegDate/>
+    <opCancelDate/>
+    <opLastTrndt/>
+    <opExpDate/>
+    <opCtrlFlag/>
+    <opIreserved1/><opIreserved2/>
+</INPUT><OUTPUT>
+    <opAcctName/><opCardName/><opAcctBalance/><opAcctAvailBal/><opAcctState/><opOreserved1/><opOreserved2/>
+</OUTPUT>
+</BODY><TAIL/></ROOT>

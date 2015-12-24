@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!-- 外系统签到签退 -->
+<PACK>
+  <INPUT>
+    <ROOT>
+      <HEAD>
+        <SysCode>3214001</SysCode>
+        <TxCode>8001</TxCode>
+        <ClearDate></ClearDate>
+        <CliTxSeq></CliTxSeq>
+        <strMAC></strMAC>
+      </HEAD>
+      <PARAM>
+        <TxFlag/>
+      </PARAM>
+    </ROOT>
+  </INPUT>
+  <OUTPUT>
+    <RESPONSE FLAG='0'>
+      <ROOT>
+        <HEAD>
+          <SysCode/>
+          <TxCode/>
+          <ClearDate/>
+          <TxSeq/>
+          <SuccFlag/>
+          <RetCode/>
+          <RetMsg/>
+        </HEAD>
+        <PARAM/>
+      </ROOT>
+    </RESPONSE>
+  </OUTPUT>
+</PACK>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+    <INPUT/>
+    <OUTPUT>
+        <Result         RULE='//opBKRetcode'/>
+        <Desc           RULE='//opBKRetinfo'/>
+    </OUTPUT>
+</MAP>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 通用管理类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opRefid/>
+    <opInoutflag/>
+    <opSeqno/>
+    <opOriginator/>
+    <opIssuedate/>
+</INPUT><OUTPUT></OUTPUT></BODY>
+<TAIL/></ROOT>

@@ -1,0 +1,20 @@
+#!/bin/bash
+if [ ${#} -eq 0 ]; then
+exit
+fi
+
+prglist=$*
+
+for theprg in $prglist
+do
+    for i in `ps -u $LOGNAME | grep "$theprg" | grep -v grep | awk '{ print $1 }'`
+    do
+        echo -e -n "Killing $theprg pid=$i ...\t\t "
+        kill -9 $i >/dev/null 2>/dev/null
+        if [ $? -ne 0 ]; then
+            echo -n "fail."
+        else
+            echo "success."
+    fi
+    done
+done

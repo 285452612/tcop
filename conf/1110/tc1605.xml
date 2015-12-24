@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB18030" ?> 
+<PACK>
+    <INPUT>
+    <UFTP>
+    <MsgHdrRq>
+    <RefId/><TrnCode>1606</TrnCode><SvcClass/><Originator/><Acceptor/><WorkDate/><WorkRound/><Sender/><Recver/><AcctOper/><Auditor/><TermType/><TermId/><MAC/><Reserve/></MsgHdrRq>
+    </UFTP>
+    </INPUT>
+</PACK>

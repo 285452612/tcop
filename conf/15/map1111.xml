@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKOrgId          RULE='//opInnerBank'/>
+        <BKOperNo         RULE='//opOperid'/>
+        <BKNoteType       RULE='//opNotetype'/>
+        <BKNoteNo         RULE='//opNoteno'/>
+        <BKNoteNoEnd      RULE='//opNotenoEnd'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode      RULE='//BKResult'/>
+        <opHostSerial     RULE='//BKHostSerialNo'/>
+        <opBKRetinfo      RULE='//BKRetmsg'/>
+    </OUTPUT>
+</PACK>

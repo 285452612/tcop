@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>26</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>yes</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+        [                             1]错误信息查询
+                    查询日期:[2               ]
+                        
+┏━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃错误代码│                     错误信息                       ┃
+</ReportHeader>
+<ReportBody>
+┠────┼──────────────────────────┨
+┃[     1]│[2                                                 ]┃
+</ReportBody>
+<ReportFooter>
+┗━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

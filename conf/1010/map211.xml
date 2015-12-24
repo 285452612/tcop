@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//QueryId'/>
+  <opClassid            RULE='//SvcClass'/>
+  <opOriginator         RULE='//MsgHdrRq/Originator'/>
+  <opAcceptor           RULE='//Acceptor'/>
+  <opInputer            RULE='//Writer'/>
+  <opORefId             RULE='//RefId'/>
+  <opTradedate          RULE='//QueryInfo/TradeDate'/>
+  <opOOriginator        RULE='//QueryInfo/OutBank'/>
+  <opOutbank            RULE='//QueryInfo/OutBank'/>
+  <opInbank             RULE='//QueryInfo/InBank'/>
+  <opNotetype           RULE='//NoteType'/>
+  <opNoteno             RULE='//NoteNo'/>
+  <opDcflag             RULE='//DCFlag'/>
+  <opSettlamt           RULE='//SettlAmt'/>
+  <opIssuedate          RULE='//IssueDate'/>
+  <opOWorkdate          RULE='//TradeDate'/>
+  <opAgreement          RULE='//Agreement'/>
+  <opPayingacct         RULE='//PayingAcct'/>
+  <opPayer              RULE='//Payer'/>
+  <opBeneacct           RULE='//BeneAcct'/>
+  <opBenename           RULE='//BeneName'/>
+  <opMsgcontent         RULE='//Purpose'/>
+</INPUT>
+<OUTPUT>
+  <Result               RULE='//opTCRetcode'/>
+  <Desc                 RULE='//opTCRetinfo'/>
+</OUTPUT>
+</MAP>

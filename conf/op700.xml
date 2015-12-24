@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 查询打印类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opOriginator/>
+    <opAcceptor/>
+    <opStartdate/>
+    <opEnddate/>
+    <opStartRefid/>
+    <opEndRefid/>
+    <opMaxAmount/>
+    <opMinAmount/>
+    <opClassid/>
+    <opCurtype/>
+    <opCurcode/>
+    <opDcflag/>
+    <opNotetype/>
+    <opTruncflag/>
+    <opCleardate/>
+    <opClearround/>
+    <opClearstate/>
+</INPUT><OUTPUT><opOreserved1/><opOreserved2/><opOreserved3/>
+</OUTPUT></BODY>
+<TAIL/></ROOT>

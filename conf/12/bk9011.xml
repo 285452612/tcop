@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 贷记(存款)的冲正交易 -->
+<PACK>
+    <INPUT>
+        <BKTrnCode>0011</BKTrnCode>
+        <BKSysCode/>
+        <BKRefId/>
+        <BKORefId/>
+        <BKOTrnCode>0001</BKOTrnCode>
+        <BKAmount/>
+        <BKClearDate/>
+        <BKOAcctNo/>
+        <BKOAcctName/>
+        <BKOperNo/>
+        <BKOrgId/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='0'>
+            <BKRspHead/>
+            <BKIssueDate/>
+            <BKResult0/>
+            <BKHostSerialNo/>
+        </RESPONSE>
+        <RESPONSE FLAG='1'>
+            <BKRspHead/>
+            <BKResult/>
+            <BKRetmsg/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

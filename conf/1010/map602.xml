@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opArgsName     RULE='//Reserve'/>
+</INPUT>
+<OUTPUT>
+    <opArgsValue    RULE='//Reserve'/>
+</OUTPUT>
+</MAP>

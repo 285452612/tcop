@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Report>
+<Lines>3</Lines>
+<PageBreak>12</PageBreak>
+<PageNumber>no</PageNumber>
+<PageHeader>
+</PageHeader>
+<ReportHeader>
+</ReportHeader>
+<ReportBody>  [                                         1]退票理由书
+───────────────────────────────────────
+ [2                                                         ][3]
+                   
+ 你行于 [4       ] 日提交给 [15    ]的([5           ]), 流水号为 [6       ], 
+ 凭证号为([7         ]), 金额为([8           ])的[9 ]凭证, 由于
+ ([10                                ]), 谨以退票。
+                   
+
+
+───────────────────────────────────────
+             退票行: [11                                       ][12]
+             打印时间:[13                ]          操作员:[14               ]
+
+
+
+
+
+
+</ReportBody>
+<ReportFooter>
+</ReportFooter>
+<PageFooter>
+</PageFooter>
+</Report>

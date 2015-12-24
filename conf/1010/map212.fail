@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+  <opRefid              RULE='//QueryId'/>
+  <opClassid            RULE='//SvcClass'/>
+  <opOriginator         RULE='//MsgHdrRq/Acceptor'/>
+  <opWorkDate           RULE='//WorkDate'/>
+  <opAgreement          RULE='//Agreement'/>
+  <opPayingAcct         RULE='//PayingAcct'/>
+  <opPayer              RULE='//Payer'/>
+  <opBeneAcct           RULE='//BeneAcct'/>
+  <opBeneName           RULE='//BeneName'/>
+  <opMsgContent         RULE='//Purpose'/>
+</INPUT>
+<OUTPUT>
+  <Result               RULE='//opTCRetcode'/>
+  <Desc                 RULE='//opTCRetinfo'/>
+</OUTPUT>
+</MAP>

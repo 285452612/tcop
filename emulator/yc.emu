@@ -1,0 +1,128 @@
+8001[
+<?xml version="1.0" encoding = "GBK"?>
+<root>
+    <head>
+        <SysCode></SysCode>
+        <TxCode></TxCode>
+        <ClearDate></ClearDate>
+        <TxSeq></TxSeq >
+        <SuccFlag></SuccFlag>
+        <RetCode>00120</RetCode>
+        <RetMsg>行内出错</RetMsg>
+    </head>
+    <param>
+    </param>
+</root>
+8001]
+8002[
+<?xml version="1.0" encoding = "GBK"?>
+<root>
+    <head>
+        <SysCode></SysCode>
+        <TxCode></TxCode>
+        <ClearDate></ClearDate>
+        <TxSeq></TxSeq >
+        <SuccFlag></SuccFlag>
+        <RetCode>00000</RetCode>
+        <RetMsg>交易成功</RetMsg>
+    </head>
+    <param>
+        <strMAC>abcdefg123456789</strMAC>
+    </param>
+</root>
+8002]
+8202[
+<?xml version="1.0" encoding = "GBK"?>
+<ROOT>
+    <HEAD>
+      <SysCode/>
+      <TxCode/>
+      <ClearDate/>
+      <TxSeq/>
+      <SuccFlag/>
+      <RetCode>00000</RetCode>
+      <RetMsg>交易成功</RetMsg>
+    </HEAD>
+    <PARAM>
+      <Account/>
+      <OpenUnit>320501061</OpenUnit>
+      <AcctName>测试中文名</AcctName>
+      <AcctBal>100000123.45</AcctBal>
+      <AvailBal>100000345.67</AvailBal>
+      <AcctState>0</AcctState>
+    </PARAM>
+</ROOT>
+8202]
+8120[
+<?xml version="1.0" encoding = "GBK"?>
+<ROOT>
+    <HEAD>
+      <SysCode/>
+      <TxCode/>
+      <ClearDate/>
+      <TxSeq>81208120</TxSeq>
+      <SuccFlag/>
+      <RetCode>00000</RetCode>
+      <RetMsg>交易成功</RetMsg>
+    </HEAD>
+    <PARAM>
+      <Account>11</Account>
+      <AcctName>测试中文名</AcctName>
+      <TxUnitCode></TxUnitCode >
+      <OpUnitCode></OpUnitCode >
+      <AcctBal>111.11</AcctBal >
+    </PARAM>
+</ROOT>
+8120]
+8111[
+<?xml version="1.0" encoding = "GBK"?>
+<ROOT>
+    <HEAD>
+      <SysCode/>
+      <TxCode/>
+      <ClearDate/>
+      <TxSeq/>
+      <SuccFlag/>
+      <RetCode>00000</RetCode>
+      <RetMsg>交易成功</RetMsg>
+    </HEAD>
+    <PARAM>
+    </PARAM>
+</ROOT>
+8111]
+8110[
+<?xml version="1.0" encoding = "GBK"?>
+<ROOT>
+    <HEAD>
+      <SysCode/>
+      <TxCode/>
+      <ClearDate/>
+      <TxSeq>81108110</TxSeq>
+      <SuccFlag/>
+      <RetCode>00000</RetCode>
+      <RetMsg>交易成功</RetMsg>
+    </HEAD>
+    <PARAM>
+        <Account></Account>
+        <AcctName></AcctName>
+        <OpUnitCode></OpUnitCode>
+        <AcctBal></AcctBal>
+    </PARAM>
+</ROOT>
+8110]
+8130[
+<?xml version="1.0" encoding = "GBK"?>
+<ROOT>
+    <HEAD>
+      <SysCode/>
+      <TxCode/>
+      <ClearDate/>
+      <TxSeq>81308130</TxSeq>
+      <SuccFlag/>
+      <RetCode>00000</RetCode>
+      <RetMsg>交易成功</RetMsg>
+    </HEAD>
+    <PARAM>
+    </PARAM>
+</ROOT>
+8130]

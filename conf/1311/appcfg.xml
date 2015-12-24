@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<NODES>
+    <NODE OPNODE='1310'>
+        <TRAN TCTCODE='0012' OPTCODE='104' APPTYPE='I'  DESC='提入,立即更新标志' PK='N'/>
+        <TRAN TCTCODE='0013' OPTCODE='104' APPTYPE='I'  DESC='提入,发送0014应答更新标志' PK='N'/>
+        <TRAN TCTCODE='0022' OPTCODE='104' APPTYPE='I'  DESC='提入回执确认,立即更新标志' PK='N'/>
+        <TRAN TCTCODE='0023' OPTCODE='104' APPTYPE='I'  DESC='提入回执确认,发送0014应答更新标志' PK='N'/>
+    </NODE>
+    <NODE OPNODE='1311'>
+        <TRAN TCTCODE='0501' OPTCODE='101' APPTYPE='I' DESC='提出录入'/>
+        <TRAN TCTCODE='0001' OPTCODE='102' APPTYPE='O' DESC='提出借记复核' DOINIT='1' EXTEND='0'/>
+        <TRAN TCTCODE='0002' OPTCODE='102' APPTYPE='O' DESC='提出贷记复核' DOINIT='1' EXTEND='0'/>
+        <TRAN TCTCODE='0503' OPTCODE='103' APPTYPE='L' DESC='提出修改'/>
+        <TRAN TCTCODE='0502' OPTCODE='301' APPTYPE='L' DESC='提出交易删除'/>
+        <TRAN TCTCODE='0021' OPTCODE='102' APPTYPE='O' DESC='提出回执,提入借记处理'/>
+        <TRAN TCTCODE='0006' OPTCODE='105' APPTYPE='L' DESC='单笔流水查询'/>
+
+        <TRAN TCTCODE='0007' OPTCODE='106' APPTYPE='I' DESC='手工单笔入账'/>
+        <TRAN TCTCODE='0008' OPTCODE='107' APPTYPE='I' DESC='手工单笔冲正或取消'/>
+        <TRAN TCTCODE='0110' OPTCODE='110' APPTYPE='I' DESC='收手续费'/>
+
+        <TRAN TCTCODE='1503' OPTCODE='331' APPTYPE='C' DESC='外系统签到签退' BKTCODE='8001'/>
+        <TRAN TCTCODE='8103' OPTCODE='331' APPTYPE='C' DESC='交易状态查询' BKTCODE='8201'/>
+        <TRAN TCTCODE='1504' OPTCODE='333' APPTYPE='I' DESC='密钥申请重置'/>
+
+        <TRAN TCTCODE='8104' OPTCODE='401' APPTYPE='I' DESC='行内账户查询'/>
+        <TRAN TCTCODE='0062' OPTCODE='602' APPTYPE='O' DESC='协议管理'/>
+
+        <TRAN TCTCODE='1511' OPTCODE='501' APPTYPE='L' DESC='操作员签到'/>
+        <TRAN TCTCODE='1512' OPTCODE='502' APPTYPE='L' DESC='操作员签退'/>
+
+        <TRAN TCTCODE='3001' OPTCODE='701' APPTYPE='R' DESC='提出凭证查询'/>
+        <TRAN TCTCODE='3002' OPTCODE='701' APPTYPE='R' DESC='提入凭证查询'/>
+
+        <TRAN TCTCODE='0801' OPTCODE='406' APPTYPE='R' DESC='对账单打印'/>
+        <TRAN TCTCODE='0802' OPTCODE='720' APPTYPE='R' DESC='提入补充凭证打印'/>
+
+        <TRAN TCTCODE='0031' OPTCODE='402' APPTYPE='R' DISPATCH='//OperType=0' DESC='开户'/>
+        <TRAN TCTCODE='0031' OPTCODE='403' APPTYPE='R' DISPATCH='//OperType=2' DESC='中心帐户查询'/>
+        <TRAN TCTCODE='0031' OPTCODE='404' APPTYPE='R' DISPATCH='//OperType=1' DESC='销户'/>
+        <TRAN TCTCODE='0031' OPTCODE='405' APPTYPE='R' DISPATCH='//OperType=3' DESC='帐户修改'/>
+
+        <TRAN TCTCODE='4001' OPTCODE='601' APPTYPE='L' DESC='开户行文件更新,平台参数下载'/>
+        <TRAN TCTCODE='4002' OPTCODE='601' APPTYPE='L' DESC='凭证类型文件更新,平台参数下载'/>
+
+        <TRAN TCTCODE='0042' OPTCODE='901' APPTYPE='R' DESC='取清算明细,立即更新标志'/>
+        <TRAN TCTCODE='0043' OPTCODE='901' APPTYPE='R' DESC='取清算明细,发送0044应答更新标志'/>
+        <TRAN TCTCODE='0052' OPTCODE='901' APPTYPE='R' DESC='取对账数据,立即更新标志'/>
+        <TRAN TCTCODE='0053' OPTCODE='901' APPTYPE='R' DESC='取对账数据,发送0054应答更新标志'/>
+        <TRAN TCTCODE='1609' OPTCODE='903' APPTYPE='R' DESC='手工调账置流水'/>
+    </NODE>
+</NODES>

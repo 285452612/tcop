@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<TABLES>
+    <operinfo ID='501' R='1'>
+        <bankno         RULE='//opInnerBank'/>
+        <organid        RULE='//opOrganid'/>
+        <name           RULE='//opOperName'/>
+        <bklevel        RULE='//opOperBklevel'/>
+        <class          RULE='//opOperClass'/>
+        <passwd         RULE='//opOperPwd'/>
+        <status         RULE='//opOperState'/>
+        <regdate        RULE='//opRegDate'/>
+        <canceldate     RULE='//opCancelDate'/>
+        <lastlogintime  RULE='//opLLoginDate'/>
+        <pwdchgdate     RULE='//opPwdChgDate'/>
+        <amtlimit       RULE='//opAmtLimit'/>
+        <reserved1      RULE='//opOreserved1'/>
+        <reserved2      RULE='//opOreserved2'/>
+        <reserved3      RULE='//opOreserved3'/>
+        <rights         RULE='//opOperRights' TYPE='X'/>
+    </operinfo>
+</TABLES>

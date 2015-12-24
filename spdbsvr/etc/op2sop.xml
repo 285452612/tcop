@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GB18030"?>
+<Root>
+
+<Transaction code="8951" desc="提出借记向核心记账">
+<Request type="xml" opptrcode="0001" packfmt="O89511@S">
+<Item name="QSZXDH" length="4"  type="xml" value="//opQSZXDH"       desc="清算中心号"/>
+<Item name="TJRZFS" length="1"  type="xml" value="//opTJRZFS"       desc="入帐方式"/>
+<Item name="TCJHCC" length="1"  type="xml" value="//opTCJHCC"       desc="提出交换场次"/>
+<Item name="SHKRZH" length="32" type="xml" value="//opBeneacct"     desc="收款人帐号"/>
+<Item name="SHKRXM" length="62" type="xml" value="//opBenename"     desc="收款人名称"/>
+<Item name="JIOHRQ" length="8"  type="xml" value="//opWorkdate"     desc="交换日期"/>
+<Item name="FQHHAO" length="12" type="xml" value="//opBenebank"     desc="提入行行号"/>
+<Item name="JIGOMC" length="62" type="xml" value="//opJIGOMC"       desc="提入行名称"/>
+<Item name="FUKRMC" length="62" type="xml" value="//opPayingname"   desc="付款人名称"/>
+<Item name="FUKRZH" length="32" type="xml" value="//opPayingacct"   desc="付款人账号"/>
+<Item name="ZHYODM" length="22" type="xml" value="//opZHYODM"       desc="摘要代码"/>
+<Item name="PNGZZL" length="2"  type="xml" value="//opPNGZZL"       desc="凭证种类"/>
+<Item name="FENHDM" length="2"  type="xml" value="//opFENHDM"       desc="分行代码"/>
+<Item name="PNGZXH" length="8"  type="xml" value="//opNoteno"       desc="凭证序号"/>
+<Item name="PNGZPH" length="1"  type="xml" value="//opPNGZPH"       desc="凭证批号"/>
+<Item name="TJJXTS" length="10" type="xml" value="//opTJJXTS"       desc="计息天数"/>
+<Item name="CHUPRQ" length="8"  type="xml" value="//opIssuedate"    desc="出票日期"/>
+<Item name="JIO1JE" length="13" type="xml" value="//opIssueamt"     desc="交易金额"/>
+<Item name="BEIZXX" length="42" type="xml" value="//opBEIZXX"       desc="备注信息"/>
+</Request>
+<Response type="sop" packfmt="O89512@R">
+<Item name="//opHostSerial"     type="sop" value="GUIYLS" desc="柜员流水号"/>
+<Item name="//opOreserved1"     type="sop" value="TCHTCH" desc="同城提出号"/>
+<Item name="//opOreserved2"   type="sop" value="JIO1JE" desc="交易金额"/>
+<Item name="//opOreserved3"     type="sop" value="PNGZZL" desc="凭证种类"/>
+<Item name="//opOreserved4"   type="sop" value="SHKRZH" desc="收款人帐号"/>
+<Item name="//opOreserved5"   type="sop" value="FQHHAO" desc="提入行行号"/>
+<Item name="//opOreserved6"     type="sop" value="TISHXI" desc="提示信息"/>
+<Item name="//opOreserved7"     type="sop" value="LIXILX" desc="利息"/>
+</Response>
+</Transaction>
+</Root>

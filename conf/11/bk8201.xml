@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!-- 交易状态查询 -->
+<PACK>
+  <INPUT>
+    <ROOT>
+      <HEAD>
+        <SysCode>3214001</SysCode>
+        <TxCode>8201</TxCode>
+        <ClearDate/>
+        <CliTxSeq/>
+        <strMAC/>
+      </HEAD>
+      <PARAM>
+        <OrgClearDate/>
+        <OrgTxSeq/>
+      </PARAM>
+    </ROOT>
+  </INPUT>
+  <OUTPUT>
+    <RESPONSE FLAG='0'>
+      <ROOT>
+        <HEAD>
+          <SysCode/>
+          <TxCode/>
+          <ClearDate/>
+          <TxSeq/>
+          <SuccFlag/>
+          <RetCode/>
+          <RetMsg/>
+        </HEAD>
+        <PARAM>
+          <OrgClearDate/>
+          <OrgTxSeq/>
+          <Result/>
+        </PARAM>
+      </ROOT>
+    </RESPONSE>
+  </OUTPUT>
+</PACK>

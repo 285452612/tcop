@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<TABLES>
+    <acctinfo ID='402' C='1'>
+        <nodeid         RULE='//opNodeid'       TYPE='I'/>
+        <acctid         RULE='//opAcctNo'/>
+        <name           RULE='//opAcctName'/>
+        <interbankno    RULE='//opAcctOrgid'/>
+        <agreement      RULE='//opAgreement'/>
+        <accttype       RULE='//opAcctType'      TYPE='C'/>
+        <acctattr       RULE='//opAcctAttr'     TYPE='C'/>
+        <bankid         RULE='//opBankid'/>
+        <branchid       RULE='//opBankid'/>
+        <psbankid       RULE='//opPsBankid'/>
+        <curcode        RULE='//opCurcode'/>
+        <curtype        RULE='//opCurtype'      TYPE='C'/>
+        <basicacctlic   RULE='//opBasicAcctLic'/>
+        <industid       RULE='//opIndustid'/>
+        <state          RULE='//opState'        TYPE='C'/>
+        <opendate       RULE='//opOpenDate'/>
+        <regdate        RULE='//opRegDate'/>
+        <canceldate     RULE='//opCancelDate'/>
+        <lasttrndt      RULE='//opLastTrndt'/>
+        <expdate        RULE='//opExpDate'/>
+        <ctrlflag       RULE='//opCtrlFlag'/>
+    </acctinfo>
+    <acctinfo ID='404' U='1'>
+        <state          RULE=''     VALUE='2'/>
+    </acctinfo>
+    <acctinfo ID='405' U='1'>
+        <nodeid         RULE='//opNodeid'       TYPE='I'/>
+        <acctid         RULE='//opAcctNo'/>
+        <name           RULE='//opAcctName'/>
+        <interbankno    RULE='//opAcctOrgid'/>
+        <agreement      RULE='//opAgreement'/>
+        <accttype       RULE='//opAcctType'      TYPE='C'/>
+        <acctattr       RULE='//opAcctAttr'     TYPE='C'/>
+        <bankid         RULE='//opBankid'/>
+        <branchid       RULE='//opBankid'/>
+        <psbankid       RULE='//opPsBankid'/>
+        <curcode        RULE='//opCurcode'/>
+        <curtype        RULE='//opCurtype'      TYPE='C'/>
+        <basicacctlic   RULE='//opBasicAcctLic'/>
+        <industid       RULE='//opIndustid'/>
+        <state          RULE='//opState'        TYPE='C'/>
+        <opendate       RULE='//opOpenDate'/>
+        <regdate        RULE='//opRegDate'/>
+        <canceldate     RULE='//opCancelDate'/>
+        <lasttrndt      RULE='//opLastTrndt'/>
+        <expdate        RULE='//opExpDate'/>
+        <ctrlflag       RULE='//opCtrlFlag'/>
+    </acctinfo>
+</TABLES>

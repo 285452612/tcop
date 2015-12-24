@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 用于定义某地区平台报文与同城XML报文的转换规则,map+地区号+平台(基础)交易码.xml -->
+<MAP>
+    <INPUT>
+        <opWorkdate     RULE='//WorkDate'/>
+        <opOperid       RULE='//AcctOper'/>
+        <opBankno       RULE='//TermId'/>
+        <Refid          RULE='//RefId'/>
+        <Classid        RULE='//SvcClass'/>
+        <Presdate       RULE='//WorkDate'/>
+        <Originator     RULE='//Originator'/>
+        <Acceptor       RULE='//Acceptor'/>
+        <Dcflag         RULE='//DCFlag'/>
+        <Notetype       RULE='//NoteType'/>
+        <Noteno         RULE='//NoteNo'/>
+        <Curcode        RULE='//CurCode'/>
+        <Curtype        RULE='//CurType'/>
+        <Issuedate      RULE='//IssueDate'/>
+        <Settlamt       RULE='//SettlAmt'/>
+        <Issueamt       RULE='//IssueAmt'/>
+        <Remnamt        RULE='//RemnAmt'/>
+        <Payacct        RULE='//PayingAcct'/>
+        <Payname        RULE='//Payer'/>
+        <Paybank        RULE='//PayingBank'/>
+        <Beneacct       RULE='//BeneAcct'/>
+        <Benename       RULE='//BeneName'/>
+        <Benebank       RULE='//BeneBank'/>
+        <Agreement      RULE='//Agreement'/>
+        <Purpose        RULE='//Purpose'/>
+        <Inputer        RULE='//AcctOper'/>
+        <Paykey         RULE='//PayKey'/>
+        <opEXBKNotetype RULE='//SenderProxy'/>
+        <opEXBKDrawType RULE='//RecverProxy'/>
+        <OppCustAddr    RULE='//OppCustAddr'/>
+        <OppBankName    RULE='//OppBankName'/>
+        <OppBank        RULE='//OppBank'/>
+        <OppBankAddr    RULE='//OppBankAddr'/>
+        <Cleardate      RULE='//ClearDate'/>
+        <Clearstate     RULE='//ClearState'/>
+        <Workround      RULE='//WorkRound'/>
+        <Clearround     RULE='//ClearRound'/>
+        <PrintFlag      RULE='//PrintFlag'/>
+        <AcctCheck      RULE='//AcctCheck'/>
+    </INPUT>
+    <PHRSP>
+        <opTCRetcode    RULE='//Result'/>
+        <Workround      RULE='//WorkRound'/>
+        <Cleardate      RULE='//ClearDate'/>
+        <Clearstate     RULE='//ClearState'/>
+        <Clearround     RULE='//ClearRound'/>
+        <Regioncode     RULE='//ClearArea'/>
+    </PHRSP>
+    <OUTPUT>
+        <Desc           RULE='//opRetinfo'/>
+        <Reserve        RULE='//opBKRetcode'/>
+    </OUTPUT>
+</MAP>

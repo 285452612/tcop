@@ -1,0 +1,1 @@
+ddlgen -Usa -P -SSYB_SERV -Duserdb -TU -N% -O table.ddl

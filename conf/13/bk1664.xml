@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <BKTrnCode>1664</BKTrnCode>
+        <BKRegionId/>
+        <BKOrgId/>
+        <BKOperId/>
+        <BKTermNo/>
+        <BKGrantOperId/>
+        <BKBillNo/>
+        <BKONoteType>99</BKONoteType>
+        <BKONoteNo/>
+        <BKIssueDate/>
+        <BKBeneAcctNo/>
+        <BKRegionOrgId/>
+        <BKBeneAcctName/>
+        <BKRouteId>1</BKRouteId>
+        <BKPayLevel/>
+        <BKDFExchgNo>00002</BKDFExchgNo>
+        <BKAttachNumber/>
+        <BKCollNo/>
+        <BKMemo/>
+    </INPUT>
+    <OUTPUT>
+        <RESPONSE FLAG='1'>
+            <BKResult/>
+            <BKErrinfo/>
+        </RESPONSE>
+        <RESPONSE FLAG='0'>
+            <BKMsgId/>
+            <BKRetryTimes/>
+            <BKTranDate/>
+            <BKTranTime/>
+            <BKOperSerial/>
+            <BKBeneAcctName/>
+            <BKAcctNo/>
+            <BKClientName/>
+            <BKExchgRound/>
+            <BKExchgSerial/>
+            <BKOrgName/>
+            <BKReceiverName/>
+            <BKHPAmount/>
+        </RESPONSE>
+    </OUTPUT>
+</PACK>

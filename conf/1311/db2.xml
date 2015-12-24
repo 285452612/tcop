@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<TABLES>
+    <queryinfo ID='201' C='1' R='1' U='1'>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <originator     RULE='//opOriginator'/>
+        <outbank        RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <inbank         RULE='//opAcceptor'/>
+        <rebankno       RULE='//opInnerBank'/>
+        <inoutflag      RULE='//opInoutflag'/>
+        <classid        RULE='//opClassid'/>
+        <otrandate      RULE='//opOWorkDate'/>
+        <orefid         RULE='//opORefId'/>
+        <oinoutflag     RULE='//opOInoutflag'/>
+        <ooriginator    RULE='//opOOriginator'/>
+        <dcflag         RULE='//opDcflag'/>
+        <notetype       RULE='//opNoteType'/>
+        <noteno         RULE='//opNoteNo'/>
+        <settlamt       RULE='//opSettlAmt'/>
+        <issuedate      RULE='//opIssueAmt'/>
+        <secret         RULE='//opAgreement'/>
+        <paykey         RULE='//opAgreement'/>
+        <payingacct     RULE='//opPayingAcct'/>
+        <payer          RULE='//opPayer'/>
+        <beneacct       RULE='//opBeneAcct'/>
+        <benename       RULE='//opBeneName'/>
+        <content        RULE='//opMsgContent'/>
+        <replycontent   RULE='//opMsgReContent'/>
+        <readflag       RULE='//opReadflag'/>
+        <prtnum         RULE='//opPrtnum'/>
+        <inputoper      RULE='//opInputer'/>
+        <checkoper      RULE='//opChecker'/>
+    </queryinfo>
+    <queryinfo ID='204' C='1' R='1' U='1'>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <originator     RULE='//opOriginator'/>
+        <outbank        RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <inbank         RULE='//opAcceptor'/>
+        <rebankno       RULE='//opInnerBank'/>
+        <inoutflag      RULE='//opInoutflag'/>
+        <classid        RULE='//opClassid'/>
+        <otrandate      RULE='//opOWorkDate'/>
+        <orefid         RULE='//opORefId'/>
+        <oinoutflag     RULE='//opOInoutflag'/>
+        <ooriginator    RULE='//opOOriginator'/>
+        <dcflag         RULE='//opDcflag'/>
+        <notetype       RULE='//opNoteType'/>
+        <noteno         RULE='//opNoteNo'/>
+        <settlamt       RULE='//opSettlAmt'/>
+        <issuedate      RULE='//opIssueAmt'/>
+        <secret         RULE='//opAgreement'/>
+        <paykey         RULE='//opAgreement'/>
+        <payingacct     RULE='//opPayingAcct'/>
+        <payer          RULE='//opPayer'/>
+        <beneacct       RULE='//opBeneAcct'/>
+        <benename       RULE='//opBeneName'/>
+        <content        RULE='//opMsgContent'/>
+        <replycontent   RULE='//opMsgReContent'/>
+        <readflag       RULE='//opReadflag'/>
+        <prtnum         RULE='//opPrtnum'/>
+        <inputoper      RULE='//opInputer'/>
+        <checkoper      RULE='//opChecker'/>
+    </queryinfo>
+    <msginfo ID='208' R='1'>
+        <workdate       RULE='//opWorkdate'/>
+        <refid          RULE='//opRefid'/>
+        <originator     RULE='//opOriginator'/>
+        <acceptor       RULE='//opAcceptor'/>
+        <!--rebankno       RULE='//opOriginator'/-->
+        <inoutflag      RULE='//opInoutflag'/>
+        <classid        RULE='//opClassid'/>
+        <title          RULE='//opMsgTitle'/>
+        <content        RULE='//opMsgContent'/>
+        <replycontent   RULE='//opMsgReContent'/>
+        <sender         RULE='//opWriter'/>
+        <replyer        RULE='//opAuditor'/>
+        <replyflag      RULE='//opReplyflag'/>
+        <readflag       RULE='//opReadflag'/>
+    </msginfo>
+</TABLES>

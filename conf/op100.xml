@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 交易类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opRefid/>
+    <opInoutflag/>
+    <opRegioncode/>
+    <opSeqno/>
+    <opOriginator/>
+    <opAcceptor/>
+    <opIssuedate/>
+    <opClassid/>
+    <opInnerorganid/>
+    <opDcflag/>
+    <opNotetype/>
+    <opNoteno/>
+    <opNotenoEnd/>
+    <opCurcode/>
+    <opCurtype/>
+    <opSettlamt/>
+    <opIssueamt/>
+    <opRemnamt/>
+    <opPayacct/>
+    <opPayname/>
+    <opPaybank/>
+    <opPcbank/>
+    <opBeneacct/>
+    <opBenename/>
+    <opBenebank/>
+    <opBcbank/>
+    <opAgreement/>
+    <opPurpose/>
+    <opMemo/>
+    <opInputer/>
+    <opChecker/>
+    <opPaykey/>
+    <opFeePayer/>
+    <opFee/>
+    <opBankFee/>
+    <opTruncflag/>
+    <opReserved/>
+    <opAccountType/>
+    <opClearround/>
+    <opWorkround/>
+    <opCleardate/>
+    <opCleartime/>
+    <opExchgdate/>
+    <opExchground/>
+    <opClearstate/>
+    <opFeeflag/>
+    <opStflag/>
+    <opChkflag/>
+    <opTpflag/>
+</INPUT>
+<OUTPUT><opHostSerial/><opOreserved1/><opOreserved2/><opOreserved3/><opOreserved4/><opOreserved5/><opOreserved6/><opOreserved7/><opCardName/></OUTPUT>
+</BODY><TAIL/>
+<EXTRA/></ROOT>

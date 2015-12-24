@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<ITEMDICT>
+    <XMLITEM>
+        <!-- 银行接口相关的元素定义 -->
+        <BKTrnCode          FMT='M=6R '     DESC='交易代码'/>
+        <BKOTrnCode         FMT='M=6R '     DESC='交易代码'/>
+        <BKSysCode          FMT='M=6R '     DESC='区域代码'     VALUE='320500'/>
+        <BKOrgId            FMT='M=12R '    DESC='机构代号'/>
+        <BKOperNo           FMT='M=9R '     DESC='交易柜员'/>
+        <BKAcctNo           FMT='M=32R '    DESC='账户代号'/>
+        <BKAcctName         FMT='M=80R '    DESC='账户名称'/>
+        <BKOAcctNo          FMT='M=32R '    DESC='原账户代号'/>
+        <BKOAcctName        FMT='M=60R '    DESC='原账户名称'/>
+        <BKBankNo           FMT='M=12R '    DESC='付款机构号'/>
+        <BKResult0          FMT='M=4R '     DESC='错误码'/>
+        <BKResult           FMT='M=4R '     DESC='错误码'/>
+        <BKRetmsg           FMT='O-0'       DESC='错误信息'/>
+        <BKRefId            FMT='M=16R '    DESC='系统参考号' />
+        <BKORefId           FMT='M=16R '    DESC='原系统参考号' />
+        <BKAmount           FMT='M=20R '    DESC='交易金额'/>
+        <BKCurCode          FMT='M=3R '     DESC='货币种类'/>
+        <BKCurType          FMT='M=1'       DESC='种类'/>
+        <BKClearDate        FMT='M=8R '     DESC='清算日期' />
+        <BKPayerAcctNo      FMT='M=32R '    DESC='付款单位账号'/>
+        <BKPayerAcctName    FMT='M=60R '    DESC='付款单位名称' VALUE='资金清算应收款'/>
+        <BKPayerAddr        FMT='M=60R '    DESC='付款人地址'/>
+        <BKPayerBankNo      FMT='M=12R '    DESC='付款人开户行行号'/>
+        <BKBeneAcctNo       FMT='M=32R '    DESC='收款单位账号'/>
+        <BKBeneAcctName     FMT='M=60R '    DESC='收款单位名称'/>
+        <BKBeneAddr         FMT='M=60R '    DESC='收款人地址'/>
+        <BKBeneBankNo       FMT='M=12R '    DESC='收款人开户行行号'/>
+        <BKHostSerialNo     FMT='M=16L '    DESC='主机流水号' />
+        <BKNoteType         FMT='M=2R '     DESC='凭证种类'/>
+        <BKNoteNo           FMT='M=10R '    DESC='(起始)凭证代号'/>
+        <BKNoteNoEnd        FMT='M=10R '    DESC='(结束)凭证代号'/>
+        <BKPayKey           FMT='M=32R '    DESC='支付密码' />
+        <BKIssueDate        FMT='M=8R '     DESC='签发日期'/>
+        <BKMemo             FMT='M=60R '    DESC='备注'/>
+        <BKDebitNum         FMT='M=8R '     DESC='借记笔数' />
+        <BKDebitAmt         FMT='M=20R '    DESC='借记金额' />
+        <BKCreditNum        FMT='M=8R '     DESC='贷记笔数' />
+        <BKCreditAmt        FMT='M=20R '    DESC='贷记金额' />
+        <BKBeginSeq         FMT='M=16R '    DESC='起始流水号' />
+        <BKData             FMT='M=16R '    DESC='对账数据' />
+        <BKRspHead          FMT='M=68'      DESC='响应报文头' />
+        <BKAcctType         FMT='M=1R '     DESC='记账类型' />
+    </XMLITEM>
+</ITEMDICT>

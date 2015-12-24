@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+    <INPUT>
+        <Refid          RULE='//TrnCtl/RefId'/>
+        <opWorkdate     RULE='//TrnCtl/WorkDate'/>
+        <Inoutflag      RULE='//InOutFlag'/>
+        <Originator     RULE='//TrnCtl/Originator'/>
+    </INPUT>
+    <OUTPUT>
+        <Originator     RULE='//Originator'/>
+        <AcctOper       RULE='//Inputer'/>
+        <Acceptor       RULE='//Acceptor'/>
+        <NoteType       RULE='//Notetype'/>
+        <NoteNo         RULE='//Noteno'/>
+        <DCFlag         RULE='//Dcflag'/>
+        <SvcClass       RULE='//Classid'/>
+        <PayingAcct     RULE='//Payacct'/>
+        <Payer          RULE='//Payname'/>
+        <PayingBank     RULE='//Paybank'/>
+        <BeneAcct       RULE='//Beneacct'/>
+        <BeneName       RULE='//Benename'/>
+        <BeneBank       RULE='//Benebank'/>
+        <SettlAmt       RULE='//Settlamt'/>
+        <IssueDate      RULE='//Issuedate'/>
+        <CurType        RULE='//Curtype'/>
+        <CurCode        RULE='//Curcode'/>
+        <Agreement      RULE='//Agreement'/>
+        <Purpose        RULE='//Purpose'/>
+        <ClearState     RULE='//Clearstate'/>
+        <SenderProxy    RULE='//opEXBKNotetype'/>
+        <RecverProxy    RULE='//opEXBKDrawType'/>
+        <OppBankName    RULE='//OppBankName'/>
+        <OppCustAddr    RULE='//OppCustAddr'/>
+        <OppBank        RULE='//OppBank'/>
+        <OppBankAddr    RULE='//OppBankAddr'/>
+        <PrintFlag      RULE='//PrintFlag'/>
+    </OUTPUT>
+</MAP>

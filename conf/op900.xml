@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<!-- 资金类 -->
+<ROOT><HEAD/><BODY><INPUT>
+    <opOriginator/>
+    <opRegioncode/>
+    <opCleardate/>
+    <opClearround/>
+    <opClassid/>
+    <opTotalNum/>
+    <opTotalAmt/>
+    <opDebitNum/>
+    <opDebitAmt/>
+    <opCreditNum/>
+    <opCreditAmt/>
+</INPUT><OUTPUT><opOreserved1/><opOreserved2/><opOreserved3/><opOreserved4/><opOreserved5/>
+</OUTPUT></BODY>
+<TAIL/></ROOT>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<MAP>
+<INPUT>
+    <opOperid       RULE='//OperId'/>
+    <opOrganid      RULE='//Originator'/>
+    <opOperPwd      RULE='//Pwd'/>
+    <opOperNewPwd   RULE='//Reserve'/>
+</INPUT>
+<OUTPUT>
+</OUTPUT>
+</MAP>

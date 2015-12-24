@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB18030" ?>
+<PACK>
+    <INPUT>
+        <Account        RULE='//opPayacct'/>
+    </INPUT>
+    <OUTPUT>
+        <opBKRetcode    RULE='//RetCode'/>
+        <opBKRetinfo    RULE='//RetMsg'/>
+        <opOreserved3   RULE='//AcctName'/>
+        <opOreserved4   RULE='//AvailBal'/>
+        <opOreserved5   RULE='//AcctState'/>
+    </OUTPUT>
+</PACK>
